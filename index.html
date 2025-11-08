@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aryan Gupta — Research Portfolio</title>
+    <meta name="description" content="Research preprints, open research software, and CV/experience for Aryan Gupta." />
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1b1f23;
+            --muted: #5e6977;
+            --accent: #1f3b73;
+            /* deep academic blue */
+            --accent-soft: #e8eef9;
+            --border: #e5e7eb;
+            --maxw: 820px;
+            --radius: 14px;
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, Inter, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 30;
+        }
+
+        .wrap {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 18px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 18px 0;
+        }
+
+        .brand h1 {
+            font-size: 1.25rem;
+            margin: 0
+        }
+
+        .eyebrow {
+            font-size: .92rem;
+            color: var(--muted)
+        }
+
+        nav {
+            display: flex;
+            gap: 18px;
+            padding: 10px 0 18px 0;
+            flex-wrap: wrap;
+            border-top: 1px solid var(--border);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--accent);
+            padding: 6px 10px;
+            border-radius: 10px;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            background: var(--accent-soft)
+        }
+
+        main {
+            padding: 24px 0 64px 0
+        }
+
+        section {
+            margin: 34px 0;
+            padding-top: 8px
+        }
+
+        section h2 {
+            font-size: 1.35rem;
+            margin: 0 0 12px 0;
+            letter-spacing: .2px;
+            border-left: 4px solid var(--accent);
+            padding-left: 10px;
+        }
+
+        .card {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px;
+            margin: 16px 0;
+            background: #fff;
+        }
+
+        .subtle {
+            color: var(--muted)
+        }
+
+        .grid {
+            display: grid;
+            gap: 16px
+        }
+
+        .kicker {
+            font-size: .95rem;
+            color: var(--muted);
+            margin: 0 0 6px 0
+        }
+
+        .item-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin: 0 0 4px 0
+        }
+
+        .bullets {
+            margin: 10px 0 0 18px
+        }
+
+        .bullets li {
+            margin: 6px 0
+        }
+
+        .meta {
+            font-size: .95rem;
+            color: var(--muted)
+        }
+
+        a {
+            color: var(--accent)
+        }
+
+        .link-btn {
+            display: inline-block;
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            text-decoration: none;
+            margin-right: 8px
+        }
+
+        .link-btn:hover {
+            border-color: var(--accent-soft);
+            background: var(--accent-soft)
+        }
+
+        .headerbox {
+            display: grid;
+            grid-template-columns: 96px 1fr;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .photo {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background: var(--accent-soft);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            font-size: .85rem;
+            background-image: url('assets/headshot.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .pill {
+            display: inline-block;
+            font-size: .86rem;
+            padding: 4px 8px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            margin-right: 6px;
+            color: var(--muted)
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 24px 0 48px 0;
+            color: var(--muted)
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px
+        }
+
+        @media (max-width:720px) {
+            .two-col {
+                grid-template-columns: 1fr
+            }
+        }
+
+        /* Print tweaks */
+        @media print {
+
+            header,
+            nav,
+            .link-btn {
+                display: none !important;
+            }
+
+            .card {
+                page-break-inside: avoid;
+            }
+
+            a::after {
+                content: " (" attr(href) ")";
+                font-size: .85em
+            }
+        }
+
+        /* Small screens */
+        @media (max-width:560px) {
+            .headerbox {
+                grid-template-columns: 1fr
+            }
+
+            .photo {
+                justify-self: start
+            }
+        }
+
+        /* Simple table style for concise lists */
+        table.min {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: .97rem
+        }
+
+        table.min th,
+        table.min td {
+            border-bottom: 1px solid var(--border);
+            padding: 6px 4px;
+            text-align: left;
+            vertical-align: top
+        }
+
+        table.min th {
+            font-weight: 600
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#main" class="pill"
+        style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+
+    <header>
+        <div class="wrap">
+            <div class="brand">
+                <div class="photo" role="img" aria-label="Professional headshot"></div>
+                <div>
+                    <h1 style="margin:0;">Aryan Gupta</h1>
+                    <div class="eyebrow">
+                        BSE Engineering Physics, University of Michigan (Cum Laude) &nbsp;•&nbsp;
+                        Current: Specialist Engineer – Instrumentation &amp; Controls, Technip Energies
+                        <br />
+                        Email: <a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a> &nbsp;•&nbsp;
+                        <a href="https://scholar.google.com/citations?hl=en&user=FsIchOAAAAAJ&view_op=list_works">Google
+                            Scholar</a> &nbsp;•&nbsp;
+                        <a href="https://github.com/guptaaryanr">GitHub</a> &nbsp;•&nbsp;
+                        <a href="https://www.linkedin.com/in/guptaaryanr/">LinkedIn</a> &nbsp;•&nbsp;
+                        <a
+                            href="https://zenodo.org/me/uploads?q=&f=shared_with_me%3Afalse&l=list&p=1&s=10&sort=newest">Zenodo</a>
+                    </div>
+                </div>
+            </div>
+            <nav aria-label="Primary">
+                <a href="#about" data-internal="true">Home</a>
+                <a href="#preprints" data-internal="true">Research Preprints</a>
+                <a href="#software" data-internal="true">Open Software</a>
+                <a href="#supplementary" data-internal="true">Supplementary Work</a>
+                <a href="#cv" data-internal="true">CV / Experience</a>
+                <a href="#contact" data-internal="true">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="wrap">
+        <!-- Home / About -->
+        <section id="about" aria-labelledby="about-h">
+            <h2 id="about-h">About</h2>
+            <div class="card">
+                <div class="headerbox">
+                    <div class="photo" role="img" aria-label="Professional headshot"></div>
+                    <div>
+                        <p id="about-bio" style="margin:0 0 8px 0;">
+                            I am an independent researcher and instrumentation engineer working at the intersection of
+                            modeling, applied physics, and automation.
+                            My interests include quantitative modeling of thermodynamic systems, robustness diagnostics
+                            for ML surrogates, and reproducible open research software.
+                        </p>
+                        <p class="subtle" id="about-themes" style="margin:0;">
+                            Themes: modeling &amp; simulation, applied thermodynamics, robotics/controls, software
+                            reproducibility.
+                        </p>
+                        <p class="subtle" id="about-facts" style="margin:8px 0 0 0;">
+                            <span id="about-current"></span>
+                            <span id="about-degree"></span>
+                            <span id="about-focus"></span>
+                        </p>
+                        <div style="margin-top:10px;">
+                            <a class="link-btn" href="assets/cv.pdf">Download CV (PDF)</a>
+                            <a class="link-btn" href="#cv" data-internal="true">Jump to CV / Experience</a>
+                            <a class="link-btn" href="#preprints" data-internal="true">View Preprints</a>
+                            <a class="link-btn" href="#software" data-internal="true">View Software</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Preprints -->
+        <section id="preprints" aria-labelledby="preprints-h">
+            <h2 id="preprints-h">Research Preprints</h2>
+
+            <article class="card" aria-labelledby="p1-title">
+                <div class="kicker">Preprint • 2025 • DOI:
+                    <a href="https://doi.org/10.48550/arXiv.2509.10565">10.48550/arXiv.2509.10565</a>
+                </div>
+                <h3 id="p1-title" class="item-title">Assessing the Limits of Graph Neural Networks for Vapor–Liquid
+                    Equilibrium</h3>
+                <p class="meta">Negative-results study on cryogenic mixtures; trained GNN surrogates fail in specific
+                    phase regimes.</p>
+                <p style="margin-top:10px;">
+                    <strong>Abstract:</strong>
+                    We evaluate graph neural network surrogates for vapor–liquid equilibrium across cryogenic mixture
+                    regimes and identify systematic failures near phase boundaries and critical regions.
+                    A diagnostic workflow exposes derivative pathologies and instability under extrapolation, motivating
+                    hybrid strategies with physics-grounded fallbacks.
+                </p>
+                <ul class="bullets">
+                    <li><strong>Derivative pathologies:</strong> gradients and Hessians exhibit nonphysical sign flips
+                        near two-phase envelopes.</li>
+                    <li><strong>Diagnostic workflow:</strong> perturbation tests, envelope tracing, and sensitivity
+                        sweeps to detect failure modes.</li>
+                    <li><strong>Hybrid fallback:</strong> switch to thermodynamic EOS or flash calculations when
+                        surrogate confidence degrades.</li>
+                    <li><strong>Practical guidance:</strong> guardrails for deployment in process modeling and cryogenic
+                        design studies.</li>
+                </ul>
+                <p style="margin-top:10px;">
+                    <a class="link-btn" href="https://arxiv.org/abs/2509.10565">Read full preprint on arXiv</a>
+                    <a class="link-btn" href="#software" data-internal="true">Related software</a>
+                </p>
+            </article>
+
+            <article class="card" aria-labelledby="p2-title">
+                <div class="kicker">Preprint • 2025 • DOI:
+                    <a href="https://doi.org/10.48550/arXiv.2508.12170">10.48550/arXiv.2508.12170</a>
+                </div>
+                <h3 id="p2-title" class="item-title">Energy-Efficient Robotics Software (2020–2024): Systematic
+                    Literature Review</h3>
+                <p class="meta">Synthesis of 79 studies on energy-aware robotics software.</p>
+                <p style="margin-top:10px;">
+                    <strong>Abstract:</strong>
+                    We conduct a systematic review of post-2020 research on energy-efficient robotics software, covering
+                    middleware, scheduling, perception, and control stacks.
+                    The review proposes a taxonomy, introduces a reporting checklist for power/impact studies, and
+                    releases a replication package for reuse.
+                </p>
+                <ul class="bullets">
+                    <li><strong>Taxonomy:</strong> layers (hardware drivers → middleware → algorithms) and targets
+                        (compute, communication, actuation).</li>
+                    <li><strong>Reporting checklist:</strong> standardized metrics, workloads, and logging protocols for
+                        comparability.</li>
+                    <li><strong>Gaps:</strong> limited cross-platform replication, sparse uncertainty quantification,
+                        few long-horizon workloads.</li>
+                    <li><strong>Replication package:</strong> scripts and data for reproducing the synthesis and
+                        figures.</li>
+                </ul>
+                <p style="margin-top:10px;">
+                    <a class="link-btn" href="https://arxiv.org/abs/2508.12170">Read full preprint on arXiv</a>
+                    <a class="link-btn" href="#software" data-internal="true">Related software</a>
+                </p>
+            </article>
+        </section>
+
+        <!-- Open Research Software -->
+        <section id="software" aria-labelledby="software-h">
+            <h2 id="software-h">Open Research Software</h2>
+
+            <article class="card" aria-labelledby="s1-title">
+                <div class="kicker">Software • v1.0 • Zenodo DOI:
+                    <a href="https://doi.org/10.5281/zenodo.17489426">10.5281/zenodo.17489426</a>
+                </div>
+                <h3 id="s1-title" class="item-title">ThermoBench-Consist (v1.0)</h3>
+                <p>
+                    Benchmark/diagnostic tool for validating ML equations-of-state (EOS) with physics-based consistency
+                    checks and guardrails for deployment.
+                    Reports are structured, reproducible, and machine-parsable via JSON scoring.
+                </p>
+                <ul class="bullets">
+                    <li><strong>Four physics checks (C1–C4):</strong> basic thermodynamic identities,
+                        convexity/positivity, Maxwell relations, and phase-consistency probes.</li>
+                    <li><strong>Report structure:</strong> per-test metrics, exception logs, derivative sanity panels,
+                        and envelope-trace summaries.</li>
+                    <li><strong>Design philosophy:</strong> reproducibility by default, explicit assumptions, and
+                        conservative scoring to flag edge cases.</li>
+                </ul>
+                <p style="margin-top:10px;">
+                    <a class="link-btn" href="https://doi.org/10.5281/zenodo.17489426">Zenodo Record</a>
+                    <a class="link-btn" href="https://github.com/guptaaryanr">GitHub (add repo link)</a>
+                    <a class="link-btn" href="#preprints" data-internal="true">See related preprint</a>
+                </p>
+            </article>
+
+            <article class="card" aria-labelledby="s2-title">
+                <div class="kicker">Software • v0.1 • Zenodo DOI:
+                    <a href="https://doi.org/10.5281/zenodo.17204853">10.5281/zenodo.17204853</a>
+                </div>
+                <h3 id="s2-title" class="item-title">REB-1: Robot Energy Benchmark (v0.1)</h3>
+                <p>
+                    Micro-benchmark for power and impact logging on robotics workloads; complements ROS tools and
+                    emphasizes reproducibility and comparability.
+                </p>
+                <ul class="bullets">
+                    <li><strong>CLI features:</strong> workload templates, sampling rate controls, synchronized
+                        power/telemetry logging, export to CSV/JSON.</li>
+                    <li><strong>Reproducibility:</strong> manifest-based runs, environment capture, and seed/config
+                        registries.</li>
+                    <li><strong>Complementarity:</strong> integrates alongside ROS/ros2 bags and power meters for
+                        end-to-end experiments.</li>
+                </ul>
+                <p style="margin-top:10px;">
+                    <a class="link-btn" href="https://doi.org/10.5281/zenodo.17204853">Zenodo Record</a>
+                    <a class="link-btn" href="https://github.com/guptaaryanr">GitHub (add repo link)</a>
+                    <a class="link-btn" href="#preprints" data-internal="true">See related preprint</a>
+                </p>
+            </article>
+        </section>
+
+        <!-- Supplementary Mathematical Work -->
+        <section id="supplementary" aria-labelledby="supplementary-h">
+            <h2 id="supplementary-h">Supplementary Mathematical Work</h2>
+            <div class="card">
+                <p>
+                    <strong>Abstract:</strong>
+                    This short technical note demonstrates quantitative modeling and stability analysis methods relevant
+                    to thermodynamic and robotic systems.
+                    We derive and analyze coupled ODE/PDE models for transport and phase behavior, examine equilibrium
+                    and local stability via Jacobian spectra, and
+                    discuss well-posedness and sensitivity to parameterization. Illustrative examples include linearized
+                    flash dynamics, energy-informed control
+                    cost functions, and nondimensionalization for scale separation.
+                </p>
+                <p style="margin-top:10px;">
+                    <a class="link-btn" href="assets/supplementary_note.pdf">Download PDF</a>
+                    <a class="link-btn" href="#cv" data-internal="true">See related skills</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- CV / Experience (auto-populates from CV data) -->
+        <section id="cv" aria-labelledby="cv-h">
+            <h2 id="cv-h">CV / Experience</h2>
+
+            <!-- Education -->
+            <article class="card">
+                <h3 class="item-title">Education</h3>
+                <ul id="edu-list" class="bullets" aria-live="polite"></ul>
+            </article>
+
+            <!-- Professional Experience -->
+            <article class="card">
+                <h3 class="item-title">Professional Experience</h3>
+                <div id="pro-list"></div>
+            </article>
+
+            <!-- Research Experience -->
+            <article class="card">
+                <h3 class="item-title">Research Experience</h3>
+                <div id="res-list"></div>
+            </article>
+
+            <!-- Awards, Publications, Skills -->
+            <article class="card">
+                <div class="two-col">
+                    <div>
+                        <h3 class="item-title">Awards</h3>
+                        <ul id="awards-list" class="bullets"></ul>
+                    </div>
+                    <div>
+                        <h3 class="item-title">Skills</h3>
+                        <table class="min" id="skills-table" aria-describedby="skills-note"></table>
+                        <div id="skills-note" class="subtle" style="font-size:.9rem;margin-top:4px;"></div>
+                    </div>
+                </div>
+                <div style="margin-top:14px;">
+                    <h3 class="item-title">Selected Publications</h3>
+                    <ul id="pubs-list" class="bullets"></ul>
+                </div>
+            </article>
+
+            <p class="subtle">
+                Full CV: <a href="assets/cv.pdf">Download PDF</a>
+                &nbsp;•&nbsp;
+                See <a href="#preprints" data-internal="true">Research Preprints</a> and <a href="#software"
+                    data-internal="true">Open Software</a> for details.
+            </p>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" aria-labelledby="contact-h">
+            <h2 id="contact-h">Contact</h2>
+            <div class="card">
+                <p>
+                    <a class="link-btn" href="assets/cv.pdf">Download CV (PDF)</a>
+                    <a class="link-btn" href="mailto:guptaaryanr@gmail.com">Email</a>
+                    <a class="link-btn"
+                        href="https://scholar.google.com/citations?hl=en&user=FsIchOAAAAAJ&view_op=list_works">Google
+                        Scholar</a>
+                    <a class="link-btn" href="https://github.com/guptaaryanr">GitHub</a>
+                    <a class="link-btn" href="https://www.linkedin.com/in/guptaaryanr/">LinkedIn</a>
+                    <a class="link-btn"
+                        href="https://zenodo.org/me/uploads?q=&f=shared_with_me%3Afalse&l=list&p=1&s=10&sort=newest">Zenodo</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <div style="font-size:.92rem;">
+                © <span id="year"></span> Aryan Gupta &nbsp;·&nbsp; Minimal research portfolio.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // -------- CV DATA (summarized from your CV) --------
+    // If you update the PDF, you can tweak these fields here without touching layout/styling.
+    const cvData = {
+      person: {
+        name: "Aryan Gupta",
+        email: "guptaaryanr@gmail.com",
+        current_role: "Specialist Engineer I – Instrumentation & Controls, Technip Energies (Jul 2025–Present)",
+        current_focus: "Modeling & applied thermodynamics; robotics/controls; reproducible research software; automation/AI in engineering",
+        degree_brief: "BSE Engineering Physics (Minors: Electrical Engineering, Computer Science, Entrepreneurship), University of Michigan — Cum Laude (2019–2023)"
+      },
+      education: [
+        { degree: "BSE Engineering Physics (Minors: EE, CS, Entrepreneurship)", institution: "University of Michigan", years: "2019–2023", honors: "Cum Laude" }
+      ],
+      experience: [
+        {
+          title: "Specialist Engineer I – Instrumentation & Controls",
+          employer: "Technip Energies",
+          location: "",
+          dates: "Jul 2025–Present",
+          bullets: [
+            "Instrumentation design/verification to ISA/IEC standards; cross-discipline support on energy projects.",
+            "Co-founded the Americas AI Solutions Initiative; invited AI panelist at Technology Day."
+          ]
+        },
+        {
+          title: "Technology Developer I (Applied Physics Lead, Novel Carbon Capture R&D)",
+          employer: "Technip Energies",
+          location: "",
+          dates: "Aug 2023–Jul 2025",
+          bullets: [
+            "Built first-principles MD/DFT modeling workflows (LAMMPS, NWChem) on HPC/cloud; reduced walltime and cost.",
+            "Linked atomistics→continuum models (diffusion/CFD with nucleation-delay); added verification tests for decisions."
+          ]
+        }
+      ],
+      research: [
+        {
+          role: "Research Assistant",
+          lab: "BIRDS Lab",
+          institution: "University of Michigan",
+          dates: "Jan 2021–Apr 2023",
+          highlights: [
+            "Developed quadcopter HW/SW stack, Wi-Fi↔UART bridges, and power board redesign.",
+            "Improved motor control reliability; contributed to real-time control/telemetry systems."
+          ]
+        },
+        {
+          role: "Plasma Team; Liaison to Structures",
+          lab: "MiTEE (Miniature Tether Electrodynamics Experiment)",
+          institution: "University of Michigan",
+          dates: "Jan 2020–Dec 2020",
+          highlights: [
+            "Analyzed electrodynamic tether propulsion for pico/nanosats; electronics and thermodynamics support.",
+            "Coordinated interfaces with the Structures team."
+          ]
+        }
+      ],
+      awards: [
+        "University Honors — 2019, 2020",
+        "Dean’s List — 2019, 2020"
+      ],
+      publications: [
+        "Gupta, A. “Assessing the Limits of Graph Neural Networks for Vapor–Liquid Equilibrium.” arXiv:2509.10565 (2025).",
+        "Gupta, A. “Energy-Efficient Robotics Software (2020–2024): Systematic Literature Review.” arXiv:2508.12170 (2025)."
+      ],
+      skills: {
+        "Programming & Numerics": "Python; C/C++; MATLAB/Simulink",
+        "Modeling & Control": "MD/DFT (LAMMPS, NWChem); basic CFD integration; control systems (PID)",
+        "HPC & Data": "SLURM; GPU computing; profiling; cloud/cluster workflows",
+        "Vision & Machine Learning": "scikit-learn; OpenCV; PyTorch (prototyping)",
+        "Embedded & Control Systems": "STM32/ARM MCUs; FreeRTOS; Linux/Unix",
+        "Reproducibility": "Git; Docker/Conda; CI; documentation; uncertainty quantification"
+      }
+    };
+
+    // -------- RENDERING LOGIC (no frameworks) --------
+    const byId = (id)=>document.getElementById(id);
+
+    function renderAbout(data){
+      const p = data.person || {};
+      byId("about-current").textContent = p.current_role ? `Current role: ${p.current_role}. ` : "";
+      byId("about-degree").textContent  = p.degree_brief ? `Education: ${p.degree_brief}. ` : "";
+      byId("about-focus").textContent   = p.current_focus ? `Focus: ${p.current_focus}.` : "";
+    }
+
+    function renderEducation(list){
+      const ul = byId("edu-list");
+      ul.innerHTML = "";
+      if(!list || list.length===0){ ul.innerHTML = `<li class="subtle">Add education entries from CV.</li>`; return; }
+      list.forEach(e=>{
+        const honors = e.honors ? ` — ${e.honors}` : "";
+        const years  = e.years ? ` (${e.years})` : "";
+        const li = document.createElement("li");
+        li.innerHTML = `<strong>${e.degree}</strong>, ${e.institution}${years}${honors}`;
+        ul.appendChild(li);
+      });
+    }
+
+    function renderExperience(list){
+      const c = byId("pro-list"); c.innerHTML = "";
+      if(!list || list.length===0){ c.innerHTML = `<p class="subtle">Add professional roles from CV (1–2 bullets each).</p>`; return; }
+      list.forEach(r=>{
+        const wrap = document.createElement("div");
+        wrap.className = "card";
+        const loc = r.location ? ` — ${r.location}` : "";
+        const dates = r.dates ? ` (${r.dates})` : "";
+        wrap.innerHTML = `
+          <div class="item-title">${r.title}</div>
+          <div class="meta">${r.employer}${loc}${dates}</div>
+          <ul class="bullets">${(r.bullets||[]).slice(0,2).map(b=>`<li>${b}</li>`).join("")}</ul>
+        `;
+        c.appendChild(wrap);
+      });
+    }
+
+    function renderResearch(list){
+      const c = byId("res-list"); c.innerHTML = "";
+      if(!list || list.length===0){ c.innerHTML = `<p class="subtle">Add research roles/labs with short highlights.</p>`; return; }
+      list.forEach(r=>{
+        const wrap = document.createElement("div");
+        wrap.className = "card";
+        const inst = r.institution ? ` — ${r.institution}` : "";
+        const dates = r.dates ? ` (${r.dates})` : "";
+        wrap.innerHTML = `
+          <div class="item-title">${r.role}</div>
+          <div class="meta">${r.lab}${inst}${dates}</div>
+          <ul class="bullets">${(r.highlights||[]).slice(0,2).map(h=>`<li>${h}</li>`).join("")}</ul>
+        `;
+        c.appendChild(wrap);
+      });
+    }
+
+    function renderAwards(list){
+      const ul = byId("awards-list"); ul.innerHTML = "";
+      if(!list || list.length===0){ ul.innerHTML = `<li class="subtle">Add awards from CV.</li>`; return; }
+      list.forEach(a=>{
+        const li = document.createElement("li"); li.textContent = a; ul.appendChild(li);
+      });
+    }
+
+    function renderPublications(list){
+      const ul = byId("pubs-list"); ul.innerHTML = "";
+      if(!list || list.length===0){ ul.innerHTML = `<li class="subtle">Add peer-reviewed publications (if any).</li>`; return; }
+      list.forEach(p=>{
+        const li = document.createElement("li"); li.innerHTML = p; ul.appendChild(li);
+      });
+    }
+
+    function renderSkills(sk){
+      const t = document.getElementById("skills-table"); t.innerHTML = "";
+      if(!sk || Object.keys(sk).length===0){
+        t.innerHTML = `<tr><td class="subtle">Add concise skills from CV (categories → items).</td></tr>`;
+        return;
+      }
+      Object.entries(sk).forEach(([k,v])=>{
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<th scope="row" style="width:32%">${k}</th><td>${v}</td>`;
+        t.appendChild(tr);
+      });
+      document.getElementById("skills-note").textContent = "";
+    }
+
+    function hydrate(){
+      renderAbout(cvData);
+      renderEducation(cvData.education);
+      renderExperience(cvData.experience);
+      renderResearch(cvData.research);
+      renderAwards(cvData.awards);
+      renderPublications(cvData.publications);
+      renderSkills(cvData.skills);
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Ensure external links open in new tabs; internal anchors (data-internal) stay in-page
+      for (const a of document.querySelectorAll('a[href]')) {
+        if (!a.dataset.internal) {
+          if (!a.getAttribute('target')) a.setAttribute('target','_blank');
+          if (!a.getAttribute('rel')) a.setAttribute('rel','noopener');
+        }
+      }
+    }
+    hydrate();
+    </script>
+</body>
+
+</html>
