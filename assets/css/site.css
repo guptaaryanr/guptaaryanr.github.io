@@ -6,8 +6,8 @@
     --meta: #888;
     --accent: #1C2A44;
     --border: #E6E8EE;
-    --max: 46rem;
-    /* ~736px, scales with font */
+    --max: 48rem;
+    /* ~768px, within 720-820px target */
 }
 
 * {
@@ -34,7 +34,7 @@ img {
 }
 
 .wrap {
-    max-width: min(52rem, 92vw);
+    max-width: min(50rem, 92vw);
     margin: 0 auto;
     padding: 0 1rem
 }
@@ -169,7 +169,7 @@ main {
     align-items: center;
     padding: 2rem 1rem;
     margin: 0 auto;
-    max-width: min(52rem, 92vw)
+    max-width: min(50rem, 92vw)
 }
 
 .headshot {
