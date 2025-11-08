@@ -1,0 +1,122 @@
+<!-- /research.html -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Research — Aryan Gupta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%231C2A44'/%3E%3Cpath d='M18 44h28v2H18zM20 20h8l6 11 6-11h7l-13 24h-7z' fill='white'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script defer src="assets/js/site.js"></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header" role="banner">
+        <div class="wrap">
+            <a class="brand" href="/" aria-label="Home">Aryan Gupta</a>
+            <button class="nav-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+                <span class="nav-toggle-box" aria-hidden="true"></span>
+                <span class="nav-toggle-label">Menu</span>
+            </button>
+            <nav id="primary-nav" class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="/">About</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="research.html" aria-current="page">Research</a></li>
+                    <li><a href="ongoing.html">Ongoing</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content" tabindex="-1">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li aria-current="page">Research</li>
+            </ol>
+        </nav>
+
+        <header class="section-head">
+            <h1>Independent Research</h1>
+            <p class="section-subtitle">Where physics meets code</p>
+        </header>
+
+        <p class="lead">
+            My independent work sits where physics meets code. I build open tools and experiments that expose how models
+            behave—and how we can trust them.
+        </p>
+
+        <section aria-labelledby="projects-title">
+            <h2 id="projects-title">Projects</h2>
+            <ul class="cards">
+                <li class="card">
+                    <h3>ThermoBench-Consist <span class="meta">(2025)</span></h3>
+                    <p>Benchmark/diagnostic for validating ML equations of state. Four physics checks (monotonicity,
+                        stability, Clapeyron slope, acoustic speed), JSON scoring, guardrails near critical regions.</p>
+                    <p><a class="ext" href="https://doi.org/10.5281/zenodo.17489426" target="_blank"
+                            rel="noopener">Zenodo DOI: 10.5281/zenodo.17489426</a></p>
+                </li>
+                <li class="card">
+                    <h3>Assessing the Limits of Graph Neural Networks for Vapor–Liquid Equilibrium <span
+                            class="meta">(2025)</span></h3>
+                    <p>Negative-results study showing why seemingly accurate GNNs fail global thermodynamic consistency
+                        tests; hybrid fallback with classical libraries.</p>
+                    <p><a class="ext" href="https://arxiv.org/abs/2509.10565" target="_blank" rel="noopener">arXiv:
+                            2509.10565</a></p>
+                </li>
+                <li class="card">
+                    <h3>REB-1: Robot Energy Benchmark <span class="meta">(2025)</span></h3>
+                    <p>Micro-benchmark for measuring power and carbon footprint of robotics workloads; standardized
+                        60-second traces and tidy logs.</p>
+                    <p><a class="ext" href="https://doi.org/10.5281/zenodo.17204853" target="_blank"
+                            rel="noopener">Zenodo DOI: 10.5281/zenodo.17204853</a></p>
+                </li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="themes-title">
+            <h2 id="themes-title">Research Themes</h2>
+            <div class="theme-grid">
+                <article class="card">
+                    <h3>Applied Intelligence &amp; Automation</h3>
+                    <p>learning + control + robotics; closing loops between sensing, simulation, and actuation.</p>
+                </article>
+                <article class="card">
+                    <h3>Physical Modeling &amp; Sustainable Systems</h3>
+                    <p>simulation and computation for efficient, lower-impact physical systems (molecular modeling,
+                        carbon capture, energy).</p>
+                </article>
+                <article class="card">
+                    <h3>Integrated Scientific Infrastructure</h3>
+                    <p>architectures where models, data, and hardware co-evolve; connecting simulation pipelines,
+                        experimental feedback, and automation into reproducible platforms.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="wrap">
+            <nav aria-label="Contact">
+                <ul class="contact">
+                    <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
+                    <li><a href="https://github.com/aryangupta" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://arxiv.org/a/gupta_a" target="_blank" rel="noopener">arXiv</a></li>
+                    <li><a href="https://zenodo.org/search?page=1&amp;size=20&amp;q=Gupta%20Aryan" target="_blank"
+                            rel="noopener">Zenodo</a></li>
+                    <li><span aria-label="Location">Houston, TX</span></li>
+                </ul>
+            </nav>
+            <small class="meta">© <span id="year"></span> Aryan Gupta</small>
+        </div>
+    </footer>
+</body>
+
+</html>

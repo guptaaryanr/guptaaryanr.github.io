@@ -1,0 +1,378 @@
+/* /assets/css/site.css */
+:root {
+    --bg: #FAFBFD;
+    --text: #111;
+    --text-2: #555;
+    --meta: #888;
+    --accent: #1C2A44;
+    --border: #E6E8EE;
+    --max: 46rem;
+    /* ~736px, scales with font */
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans";
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.65;
+    font-size: 17px;
+    -webkit-text-size-adjust: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto
+}
+
+.wrap {
+    max-width: min(52rem, 92vw);
+    margin: 0 auto;
+    padding: 0 1rem
+}
+
+/* Skip link */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    padding: .5rem .75rem;
+    background: #fff;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    z-index: 1000
+}
+
+/* Header / Nav */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+}
+
+.site-header .wrap {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .75rem 1rem
+}
+
+.brand {
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none
+}
+
+.site-nav ul {
+    display: flex;
+    gap: .75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.site-nav a {
+    display: inline-block;
+    padding: .35rem .5rem;
+    text-decoration: none;
+    color: var(--text-2);
+    border-radius: .4rem;
+}
+
+.site-nav a[aria-current="page"] {
+    color: var(--accent);
+    background: #EEF2F9
+}
+
+.site-nav a:focus,
+.site-nav a:hover {
+    outline: 2px solid transparent;
+    background: #F4F6FB;
+    color: var(--accent)
+}
+
+/* Mobile nav */
+.nav-toggle {
+    margin-left: auto;
+    display: none;
+    background: transparent;
+    border: 1px solid var(--border);
+    padding: .4rem .55rem;
+    border-radius: .5rem
+}
+
+.nav-toggle:focus {
+    outline: 2px solid var(--accent)
+}
+
+.nav-toggle-box {
+    display: block;
+    width: 1.25rem;
+    height: .125rem;
+    background: var(--text);
+    position: relative
+}
+
+.nav-toggle-box::before,
+.nav-toggle-box::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: .125rem;
+    background: var(--text)
+}
+
+.nav-toggle-box::before {
+    top: -.35rem
+}
+
+.nav-toggle-box::after {
+    top: .35rem
+}
+
+.nav-toggle-label {
+    position: absolute;
+    left: -9999px
+}
+
+/* Layout */
+main {
+    display: block
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 1rem;
+    align-items: center;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    max-width: min(52rem, 92vw)
+}
+
+.headshot {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px var(--border)
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.25;
+    margin: .2rem 0 .25rem
+}
+
+h1 {
+    font-size: 1.75rem
+}
+
+.tagline {
+    color: var(--text-2);
+    margin: .15rem 0
+}
+
+.oneliner {
+    margin: .5rem 0 0
+}
+
+.section-head {
+    margin: 2rem auto 1rem;
+    max-width: var(--max);
+    padding: 0 1rem
+}
+
+.section-subtitle {
+    color: var(--meta);
+    margin: .25rem 0 0
+}
+
+.lead {
+    max-width: var(--max);
+    margin: 0 auto 1rem;
+    padding: 0 1rem
+}
+
+/* Cards & lists */
+.cards {
+    list-style: none;
+    padding: 0;
+    margin: 1rem auto;
+    max-width: var(--max);
+}
+
+.card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: .75rem;
+    padding: 1rem;
+    margin: .75rem 1rem;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .02);
+}
+
+.tight {
+    margin: .5rem 0 0 1.25rem
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: .45rem .75rem;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    border-radius: .55rem;
+    font-weight: 600;
+    background: #fff;
+}
+
+.button:focus,
+.button:hover {
+    background: #EEF2F9
+}
+
+.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-top: .75rem
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    max-width: var(--max);
+    margin: 1rem auto 0;
+    padding: 0 1rem
+}
+
+.breadcrumbs ol {
+    list-style: none;
+    display: flex;
+    gap: .5rem;
+    padding: 0;
+    margin: 0;
+    color: var(--meta)
+}
+
+.breadcrumbs a {
+    color: var(--text-2);
+    text-decoration: none
+}
+
+.breadcrumbs a:hover {
+    color: var(--accent);
+    text-decoration: underline
+}
+
+/* Footer */
+.site-footer {
+    border-top: 1px solid var(--border);
+    margin-top: 2rem;
+    background: #fff
+}
+
+.site-footer .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem
+}
+
+.contact {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    padding: 0;
+    margin: 0
+}
+
+.meta {
+    color: var(--meta)
+}
+
+/* Links */
+a {
+    color: var(--accent)
+}
+
+a.ext::after {
+    content: " ↗";
+    font-variation-settings: "wght" 400
+}
+
+/* Focus */
+:where(a, button, [href], [tabindex]):focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto
+    }
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+    .site-nav {
+        display: none
+    }
+
+    .site-header .wrap {
+        align-items: center
+    }
+
+    .nav-toggle {
+        display: inline-flex
+    }
+
+    body[data-nav-open="true"] .site-nav {
+        display: block
+    }
+
+    body[data-nav-open="true"] .site-header .wrap {
+        flex-wrap: wrap
+    }
+
+    .site-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: .5rem
+    }
+
+    .hero {
+        grid-template-columns: 72px 1fr
+    }
+
+    .headshot {
+        width: 72px;
+        height: 72px
+    }
+}
