@@ -26,7 +26,6 @@
                     <li><a href="index.html">About</a></li>
                     <li><a href="research.html" aria-current="page">Research</a></li>
                     <li><a href="work.html">Work</a></li>
-                    <li><a href="ongoing.html">Ongoing</a></li>
                     <li><a href="notes.html">Notes</a></li>
                     <li><a href="cv.html">CV</a></li>
                 </ul>
@@ -52,41 +51,89 @@
             behave and how we can trust them.
         </p>
 
-        <section aria-labelledby="projects-title">
-            <h2 id="projects-title">Projects</h2>
-            <ul class="cards">
-                <li class="card">
-                    <h3>ThermoBench-Consist v1.0 <span class="meta">(2025)</span></h3>
-                    <p>Benchmark/diagnostic for validating ML equations of state. Four physics checks (monotonicity,
-                        stability, Clapeyron slope, acoustic speed), JSON scoring, guardrails near critical regions.</p>
-                    <p><a class="ext" href="https://doi.org/10.5281/zenodo.17489426" target="_blank"
-                            rel="noopener">Zenodo DOI: 10.5281/zenodo.17489426</a></p>
-                </li>
-                <li class="card">
-                    <h3>Assessing the Limits of Graph Neural Networks for Vapor-Liquid Equilibrium <span
-                            class="meta">(2025)</span></h3>
-                    <p>Negative-results study showing why seemingly accurate GNNs fail global thermodynamic consistency
-                        tests; hybrid fallback with classical libraries.</p>
-                    <p><a class="ext" href="https://arxiv.org/abs/2508.12170" target="_blank" rel="noopener">arXiv:
-                            2509.10565</a></p>
-                </li>
-                <li class="card">
-                    <h3>Energy Efficient Robotics Software (2020-2024): Systematic Literature Review <span
-                            class="meta">(2025)</span></h3>
-                    <p>79-study synthesis of post-2020 work on energy in autonomy stacks (planning,
-                        perception, middleware, hardware acceleration) across mobile and manipulator platforms; proposed
-                        taxonomy of energy-aware techniques; full replication package provided. </p>
-                    <p><a class="ext" href="https://arxiv.org/abs/2508.12170 " target="_blank" rel="noopener">arXiv:
-                            2509.10565</a></p>
-                </li>
-                <li class="card">
-                    <h3>REB-1: Robot Energy Benchmark v0.1 <span class="meta">(2025)</span></h3>
-                    <p>Micro-benchmark for measuring power and carbon footprint of robotics workloads; standardized
-                        60-second traces and tidy logs.</p>
-                    <p><a class="ext" href="https://doi.org/10.5281/zenodo.17204853" target="_blank"
-                            rel="noopener">Zenodo DOI: 10.5281/zenodo.17204853</a></p>
-                </li>
-            </ul>
+        <!-- PROJECTS -->
+        <section aria-labelledby="projects">
+            <h2 id="projects">Projects</h2>
+
+            <!-- ThermoBench -->
+            <article class="card">
+                <h3>ThermoBench-Consist v1.0 <span class="meta">(2025)</span></h3>
+                <p class="abstract">Benchmark/diagnostic for validating ML equations of state with four physics checks
+                    and JSON scoring; guardrails near critical regions.</p>
+                <ul class="tight">
+                    <li><strong>Why</strong> - Accuracy alone can mask violations of
+                        monotonicity/stability/Clapeyron/acoustic speed.</li>
+                    <li><strong>Approach</strong> - Minimal API; assertions emit structured failures that map to a
+                        violated identity.</li>
+                    <li><strong>Outcome</strong> - CI-ready tests that catch physically impossible predictions before
+                        deployment.</li>
+                    <li class="meta"><strong>Methods &amp; checks</strong> - finite-difference identities;
+                        envelope/phase-boundary sanity tests; critical-region clamping.</li>
+                    <li><strong>Artifacts</strong> - <a class="ext" href="https://doi.org/10.5281/zenodo.17489426"
+                            target="_blank" rel="noopener">Zenodo DOI</a></li>
+                </ul>
+            </article>
+
+            <!-- GNN VLE -->
+            <article class="card">
+                <h3>Assessing the Limits of GNNs for Vapor-Liquid Equilibrium <span class="meta">(2025)</span></h3>
+                <p class="abstract">Negative-results study: seemingly accurate GNNs fail global thermodynamic
+                    consistency; proposes a hybrid fallback with classical libraries.</p>
+                <ul class="tight">
+                    <li><strong>Why</strong> - Small pointwise error ≠ integrable/consistent fields.</li>
+                    <li><strong>Approach</strong> - Stress tests with identity checks; trigger a classical fallback when
+                        tests fail.</li>
+                    <li><strong>Outcome</strong> - Simple policy that preserves identities under shift; guidance for
+                        combining ML + physics libraries.</li>
+                    <li class="meta"><strong>Methods &amp; checks</strong> - global integrability tests,
+                        common-tangent/Maxwell constructions, cross-library comparisons.</li>
+                    <li><strong>Artifacts</strong> - <a class="ext" href="https://arxiv.org/abs/2509.10565"
+                            target="_blank" rel="noopener">arXiv</a></li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h3>Energy-Efficient Robotics Software (2020-2024): Systematic Literature Review <span
+                        class="meta">(2025)</span></h3>
+                <p class="abstract">A 79-study synthesis of post-2020 work on energy in autonomy stacks (planning,
+                    perception, middleware, HW acceleration) across mobile and manipulator platforms.</p>
+                <ul class="tight">
+                    <li><strong>Why</strong> - Robotics papers report speed/latency, but energy is inconsistently
+                        measured and hard to compare.</li>
+                    <li><strong>Approach</strong> - Systematic screening + taxonomy of energy-aware techniques
+                        (scheduling/DVFS, algorithmic refactoring, off-loading, task-level policies) and a reporting
+                        checklist.</li>
+                    <li><strong>Outcome</strong> - Quantified gaps (e.g., Wh/mission, energy-latency trade-offs,
+                        standard workloads) and under-measured components (sensing, comms, OS services); released a full
+                        replication package that regenerates all figures.</li>
+                    <li class="meta"><strong>Methods &amp; checks</strong> - Inclusion/exclusion rationale, screening
+                        spreadsheet, reproducible code and data; foundation for REB-1’s Wh→gCO₂ framing and quick-run
+                        workloads.</li>
+                    <li><strong>Artifacts</strong> - <a class="ext" href="https://arxiv.org/abs/2508.12170"
+                            target="_blank" rel="noopener">arXiv</a> · <a class="ext"
+                            href="https://doi.org/10.5281/zenodo.16907564" target="_blank" rel="noopener">Zenodo DOI</a>
+                    </li>
+                </ul>
+            </article>
+
+            <!-- REB-1 -->
+            <article class="card">
+                <h3>REB-1: Robot Energy Benchmark v0.1 <span class="meta">(2025)</span></h3>
+                <p class="abstract">Micro-benchmark for measuring power and carbon footprint of robotics workloads;
+                    standardized 60-second traces and tidy logs.</p>
+                <ul class="tight">
+                    <li><strong>Why</strong> - Robotics stacks vary widely in energy cost; teams lack a consistent
+                        yardstick.</li>
+                    <li><strong>Approach</strong> - Fixed trace window; normalized telemetry; ready-to-plot summaries.
+                    </li>
+                    <li><strong>Outcome</strong> - Repeatable numbers that enable energy-aware choices in
+                        perception/control pipelines.</li>
+                    <li class="meta"><strong>Methods &amp; checks</strong> - synchronized power + compute metrics;
+                        normalization across hardware.</li>
+                    <li><strong>Artifacts</strong> - <a class="ext" href="https://doi.org/10.5281/zenodo.17204853"
+                            target="_blank" rel="noopener">Zenodo DOI</a></li>
+                </ul>
+            </article>
         </section>
 
         <section aria-labelledby="themes-title">
@@ -94,19 +141,37 @@
             <div class="theme-grid">
                 <article class="card">
                     <h3>Applied Intelligence &amp; Automation</h3>
-                    <p>learning + control + robotics; closing loops between sensing, simulation, and actuation.</p>
+                    <p>Learning + control + robotics; closing loops between sensing, simulation, and actuation.</p>
                 </article>
                 <article class="card">
                     <h3>Physical Modeling &amp; Sustainable Systems</h3>
-                    <p>simulation and computation for efficient, lower-impact physical systems (molecular modeling,
+                    <p>Simulation and computation for efficient, lower-impact physical systems (molecular modeling,
                         carbon capture, energy).</p>
                 </article>
                 <article class="card">
                     <h3>Integrated Scientific Infrastructure</h3>
-                    <p>architectures where models, data, and hardware co-evolve; connecting simulation pipelines,
+                    <p>Architectures where models, data, and hardware co-evolve; connecting simulation pipelines,
                         experimental feedback, and automation into reproducible platforms.</p>
                 </article>
             </div>
+        </section>
+
+        <section aria-labelledby="ongoing-title">
+            <header class="section-head">
+                <h2 id="ongoing-title">Ongoing &amp; Upcoming</h2>
+                <p class="section-subtitle">Work-in-progress &amp; next steps</p>
+            </header>
+            <ul class="cards">
+                <li class="card">ThermoBench 2.0 - multi-component mixtures, uncertainty propagation, auto-comparison
+                    dashboards.</li>
+                <li class="card">REB Expansion - workload generators and real-robot integrations for energy-aware
+                    benchmarking.</li>
+                <li class="card">GNN Revisitation - hybrid symbolic-ML surrogates preserving thermodynamic identities.
+                </li>
+                <li class="card">Smart Carbon MRV System - forward modeling + sensors + UQ for MRV.</li>
+                <li class="card">Digital Twins of Micro-Ecosystems - AI-driven twins of terraria/algae bioreactors for
+                    closed-loop environmental control.</li>
+            </ul>
         </section>
     </main>
 
