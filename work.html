@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Work — Aryan Gupta</title>
+    <title>Work - Aryan Gupta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%231C2A44'/%3E%3Cpath d='M18 44h28v2H18zM20 20h8l6 11 6-11h7l-13 24h-7z' fill='white'/%3E%3C/svg%3E" />
@@ -17,16 +17,16 @@
 
     <header class="site-header" role="banner">
         <div class="wrap">
-            <a class="brand" href="/" aria-label="Home">Aryan Gupta</a>
+            <a class="brand" href="index.html" aria-label="Home">Aryan Gupta</a>
             <button class="nav-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
                 <span class="nav-toggle-box" aria-hidden="true"></span>
                 <span class="nav-toggle-label">Menu</span>
             </button>
             <nav id="primary-nav" class="site-nav" aria-label="Primary">
                 <ul>
-                    <li><a href="/">About</a></li>
-                    <li><a href="work.html" aria-current="page">Work</a></li>
+                    <li><a href="index.html">About</a></li>
                     <li><a href="research.html">Research</a></li>
+                    <li><a href="work.html" aria-current="page">Work</a></li>
                     <li><a href="ongoing.html">Ongoing</a></li>
                     <li><a href="notes.html">Notes</a></li>
                     <li><a href="cv.html">CV</a></li>
@@ -38,7 +38,7 @@
     <main id="content" tabindex="-1">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
             <ol>
-                <li><a href="/">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li aria-current="page">Work</li>
             </ol>
         </nav>
@@ -49,29 +49,150 @@
         </header>
 
         <p class="lead">
-            Professional work gives me a sandbox to test research ideas at industrial scale—bridging theory and
+            Professional work gives me a sandbox to test research ideas at industrial scale, bridging theory and
             practice, and building habits of rigor, iteration, and teamwork.
         </p>
 
-        <article class="card">
-            <h2>Technip Energies — Instrumentation &amp; Controls / Applied Physics / AI &amp; Automation <span
-                    class="meta">(Aug 2023–Present)</span></h2>
-            <ul class="tight">
-                <li><strong>Novel Carbon Capture R&amp;D</strong> — built MD/DFT pipelines that cut wall-time by ~70%
-                    and reduced cloud spend by ~3k USD/month; linked atomistic outputs to diffusion/CFD with documented
-                    uncertainty and validation against bench data.</li>
-                <li><strong>Automation &amp; AI Integration</strong> — founded a cross-office AI &amp; Automation Forum;
-                    led pilots across process, electrical, and controls engineering.</li>
-                <li><strong>Systems Thinking &amp; Leadership</strong> — authored internal notes and reproducibility
-                    guides that became standards; mentored engineers transitioning to data-driven design.</li>
-            </ul>
-        </article>
+        <!-- CURRENT ROLE -->
+        <section aria-labelledby="current-role-title">
+            <header class="section-head">
+                <h2 id="current-role-title">Current Role</h2>
+                <p class="section-subtitle">Technip Energies - Specialist Engineer I, Instrumentation &amp; Controls
+                    <span class="meta">(Jul 2025-Present)</span>
+                </p>
+            </header>
 
-        <article class="card">
-            <h2>Earlier <span class="meta">(University of Michigan, BSE Engineering Physics)</span></h2>
-            <p>Projects linking physical modeling, embedded systems, and control: vision-guided robot,
-                microcontroller-based controllers, small-scale energy experiments.</p>
-        </article>
+            <article class="card">
+                <ul class="tight">
+                    <li>Instrumentation design and verification on energy projects with standards compliance (ISA, IEC)
+                        and client specs integration.</li>
+                    <li>Cross-disciplinary AI/automation support for process, electrical, and digital engineering teams
+                        (data validation, equipment tagging, design checks).</li>
+                    <li>Co-founded the Americas AI Solutions Initiative (mission, ops, training); recognized as an
+                        emerging AI leader and invited panelist at Technology Day.
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- PREVIOUS ROLE -->
+        <section aria-labelledby="previous-role-title">
+            <header class="section-head">
+                <h2 id="previous-role-title">Previous Role</h2>
+                <p class="section-subtitle">Technip Energies - Technology Developer I (Applied Physics Lead, Novel
+                    Carbon Capture R&amp;D) <span class="meta">(Aug 2023-Jul 2025)</span></p>
+            </header>
+
+            <article class="card">
+                <ul class="tight">
+                    <li>Established first-principles molecular-modeling capability for carbon capture; reproducible
+                        MD/DFT pipelines across HPC + cloud cut walltime by ~⅔ and reduced spend.</li>
+                    <li>Bridged atomistic → continuum: injected MD/DFT outputs into diffusion/CFD with a
+                        nucleation-delay term; improved continuum accuracy with new verification tests.</li>
+                    <li>Evaluated force fields beyond LJ; benchmarked interfacial energies, diffusion rates,
+                        crystallization barriers vs bench + literature with documented error bounds.</li>
+                    <li>Automation at scale: parameter sweeps across composition-T-P grids; continuous ingest of
+                        experimental images/tables for auto-updating analyses.
+                    </li>
+                    <li>Image analytics pipelines (OpenCV, C++/Python) produced UQ-backed particle-size distributions,
+                        replacing multi-day manual work with multi-hour runs.</li>
+                    <li>ML integration for structure discovery and surrogate modeling; piloted active-learning loops for
+                        simulation design.</li>
+                    <li>Rigor &amp; reproducibility: multi-level UQ; 14 internal technical notes and a data-processing
+                        archive forming a reproducibility library.</li>
+                    <li>Impact: decision-ready decks for funding; a 70-page market analysis that informed roadmap and
+                        investment.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- INITIATIVES -->
+        <section aria-labelledby="initiatives-title">
+            <header class="section-head">
+                <h2 id="initiatives-title">Initiatives &amp; Leadership</h2>
+                <p class="section-subtitle">Scaling practices across teams</p>
+            </header>
+
+            <div class="card">
+                <ul class="tight">
+                    <li>Americas AI Solutions Initiative - co-founder; mission, operations, and training framework for
+                        practical AI adoption.</li>
+                    <li>Technical writing standards - authored internal notes, verification tests, and reproducibility
+                        guides adopted in team workflows.</li>
+                    <li>Mentorship - onboarded engineers to extend modeling/automation pipelines; ran knowledge-sharing
+                        sessions across disciplines.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SELECTED PROJECT HIGHLIGHTS -->
+        <section aria-labelledby="highlights-title">
+            <header class="section-head">
+                <h2 id="highlights-title">Selected Project Highlights</h2>
+                <p class="section-subtitle">Brief, decision-oriented summaries</p>
+            </header>
+
+            <ul class="cards" role="list">
+                <li class="card">
+                    <h3>Carbon Capture Modeling Stack</h3>
+                    <p>Reproducible MD/DFT pipelines (LAMMPS, NWChem) across HPC/cloud with parallel I/O; sustained
+                        ~2x-3x speed-ups in internal benchmarks and lower compute costs. Inputs fed directly into
+                        diffusion/CFD models with phase-aware terms and verification tests.</p>
+                    <p class="meta">Role: design, implementation, UQ, documentation.</p>
+                </li>
+                <li class="card">
+                    <h3>Image Analytics for Crystal Growth</h3>
+                    <p>Built OpenCV pipelines to segment terabyte-scale image sets; produced uncertainty-backed
+                        particle-size distributions (KS/AD). Replaced multi-day manual steps with a multi-hour automated
+                        pipeline.</p>
+                    <p class="meta">Role: architecture, QA, automation at scale.</p>
+                </li>
+                <li class="card">
+                    <h3>Model-Guided Experimentation</h3>
+                    <p>Feature engineering + classical ML (PCA/UMAP, k-means, RF/linear surrogates) to identify
+                        crystallization-rate drivers later confirmed experimentally; piloted active-learning loops for
+                        simulation design.</p>
+                    <p class="meta">Role: analysis, experiment linkage, reporting.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- PRACTICES -->
+        <section aria-labelledby="practice-title">
+            <header class="section-head">
+                <h2 id="practice-title">How I Work</h2>
+                <p class="section-subtitle">Habits that carry between research and production</p>
+            </header>
+
+            <article class="card">
+                <ul class="tight">
+                    <li><strong>Rigor &amp; Reproducibility:</strong> uncertainty quantification, seeded runs,
+                        CI-checked scripts, small datasets for quick iteration.</li>
+                    <li><strong>Bridging Scales:</strong> connect atomistic signals to continuum/control models with
+                        explicit assumptions and tests.</li>
+                    <li><strong>Automation:</strong> pipelines that keep analyses current as new images/tables arrive;
+                        dashboards that make decisions faster.</li>
+                    <li><strong>Communication:</strong> concise memos and decision-ready visuals for non-specialist
+                        stakeholders.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- EARLIER WORK -->
+        <section aria-labelledby="earlier-title">
+            <header class="section-head">
+                <h2 id="earlier-title">Earlier Work &amp; Projects</h2>
+                <p class="section-subtitle">University of Michigan (BSE Engineering Physics, Minors: Electrical
+                    Engineering, Computer Science, Entrepreneurship)</p>
+            </header>
+
+            <article class="card">
+                <p>Projects linking physical modeling, embedded systems, and control: vision-guided robot,
+                    microcontroller-based controllers, small-scale energy experiments. Teaching assistantship in circuit
+                    design; prior aerospace/robotics lab experience on quadcopter stacks and nanosatellite plasma work.
+                </p>
+            </article>
+        </section>
     </main>
 
     <footer class="site-footer" role="contentinfo">
@@ -79,14 +200,11 @@
             <nav aria-label="Contact">
                 <ul class="contact">
                     <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
-                    <li><a href="https://github.com/aryangupta" target="_blank" rel="noopener">GitHub</a></li>
-                    <li><a href="https://arxiv.org/a/gupta_a" target="_blank" rel="noopener">arXiv</a></li>
-                    <li><a href="https://zenodo.org/search?page=1&amp;size=20&amp;q=Gupta%20Aryan" target="_blank"
-                            rel="noopener">Zenodo</a></li>
+                    <li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li>
                     <li><span aria-label="Location">Houston, TX</span></li>
                 </ul>
             </nav>
-            <small class="meta">© <span id="year">2025</span> Aryan Gupta<noscript> — JS disabled</noscript></small>
+            <small class="meta">© <span id="year">2025</span> Aryan Gupta</small>
         </div>
     </footer>
 </body>
