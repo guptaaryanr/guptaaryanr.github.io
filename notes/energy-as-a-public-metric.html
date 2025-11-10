@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Energy as a Public Metric - Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header" role="banner">
+        <div class="wrap">
+            <a class="brand" href="/" aria-label="Home">Aryan Gupta</a>
+            <nav id="primary-nav" class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="/">About</a></li>
+                    <li><a href="../research.html">Research</a></li>
+                    <li><a href="../ongoing.html">Ongoing & Upcoming</a></li>
+                    <li><a href="../work.html">Work</a></li>
+                    <li><a href="../notes.html" aria-current="page">Notes</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content" tabindex="-1">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="../notes.html">Notes</a></li>
+                <li aria-current="page">Energy as a Public Metric</li>
+            </ol>
+        </nav>
+
+        <!-- Paste your generated section here -->
+        <section class="card notes-body">
+            <header class="section-head">
+                <h1>Energy as a Public Metric</h1>
+                <p class="meta">2024-05-26</p>
+            </header>
+            <section class="card notes-body">
+                <p>I used to treat energy like the room temperature: note it, complain about it, then ignore it.
+                    Accuracy and latency were the “real” numbers; watt-hours were logistics. The turn for me was
+                    realizing that energy isn’t just background, but the cost function we pretend not to optimize. If a
+                    system only shines when electricity is cheap and invisible, it isn’t robust; it’s subsidized by
+                    silence.</p>
+
+                <p>When I say “energy as a metric,” I don’t mean an after-the-fact footnote. I mean a number that stands
+                    next to accuracy and latency in the first line of a result. The simplest one I trust is a ratio:
+                    quality per kilowatt-hour. Pick the quality that actually governs the task (mAP, success rate,
+                    control stability) and divide by measured kWh for a fixed protocol. That single fraction forces
+                    honest trade-offs. Raise batch size, lower precision, change the planner: if the ratio goes up, we
+                    improved the system; if it goes down, we bought a headline.</p>
+
+                <p>The protocol matters more than the instrument. I like short, repeatable windows because repeatability
+                    beats grand measurement, for instance: sixty seconds of work with synchronized counters and a stable
+                    workload. Report Joules, not guesses: on-board power sensors where possible; otherwise an external
+                    meter and careful alignment with the log. Then keep the units legible to non-experts. Joules become
+                    Wh; Wh become grams of CO₂e using a grid-specific factor. It isn’t perfect, but it’s more honest
+                    than pretending “energy” is a property of the model rather than the world it runs in.</p>
+
+                <p>Energy also changes what we mean by “real-time.” The right question isn’t “Can it run at X Hz?” It’s
+                    “What cadence meets the task while staying inside the budget?” Some loops can tolerate bounded
+                    jitter if the planner knows its envelope. Some workloads should wait ten minutes for cleaner power
+                    and then finish with the same quality at a lower cost per answer. Treating time, accuracy, and
+                    energy as a Pareto surface; as a habit, not a paper figure; makes design less theatrical and more
+                    civil.</p>
+
+                <p>There are familiar companions to the ratio. Energy-Delay Product tells you when you traded too much
+                    latency for thrift. Rank stability checks whether your energy conclusions survive small protocol
+                    nudges. Selective reporting is a smell; abstain from comparisons you can’t instrument properly. And
+                    remember that energy is not a moral category, but a way to keep systems accountable to the
+                    infrastructure they depend on like hospitals, homes, and other people’s work.</p>
+
+                <p>What I want, ultimately, is cultural: plots where a rising accuracy curve without a corresponding
+                    energy trace looks unfinished; reviews where “quality per kWh” is a first question, not an appendix;
+                    code that makes the measurement boring. The realization I needed to say out loud, mostly to myself,
+                    is simple: energy is not a constraint you bolt on after you’ve “won.” It is a lens that changes what
+                    winning means. I’ll know this has stuck when my dashboards feel incomplete without that ratio, and
+                    when decisions start moving because the line did.</p>
+            </section>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="wrap">
+            <ul class="contact">
+                <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
+                <li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><span>Houston, TX</span></li>
+            </ul>
+            <small class="meta">© <span id="year">2025</span> Aryan Gupta</small>
+        </div>
+    </footer>
+
+    <script defer src="../assets/js/site.js"></script>
+</body>
+
+</html>

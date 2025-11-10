@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Scientific Compute as a Public Utility - Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header" role="banner">
+        <div class="wrap">
+            <a class="brand" href="/" aria-label="Home">Aryan Gupta</a>
+            <nav id="primary-nav" class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="/">About</a></li>
+                    <li><a href="../research.html">Research</a></li>
+                    <li><a href="../ongoing.html">Ongoing & Upcoming</a></li>
+                    <li><a href="../work.html">Work</a></li>
+                    <li><a href="../notes.html" aria-current="page">Notes</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content" tabindex="-1">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="../notes.html">Notes</a></li>
+                <li aria-current="page">Scientific Compute as a Public Utility</li>
+            </ol>
+        </nav>
+
+        <!-- Paste your generated section here -->
+        <section class="card notes-body">
+            <header class="section-head">
+                <h1>Scientific Compute as a Public Utility</h1>
+                <p class="meta">2025-08-07</p>
+            </header>
+            <section class="card notes-body">
+                <p>I want scientific computing to feel like turning on a tap. Reliable, not glamorous. You expect clean
+                    water at pressure, within a known range of temperature and impurities, with a meter you can read and
+                    a bill you can dispute. Our pipelines should work the same way: available, audited, boring to
+                    operate, and clear about what they can’t do. Right now too much of the work depends on personalities
+                    and folklore. If progress relies on whoever remembers which flag made the figure, that’s not a
+                    good system.</p>
+
+                <p>The utility mindset starts with provenance. Every step becomes a node in a DAG with content-addressed
+                    inputs and outputs: model@sha, data@sha, code@sha, env@sha. If any hash changes, the graph knows
+                    what to rebuild. That single fact gives you repeatability and trust. You can ask “what produced this
+                    number?” and get a path, not a story. Byte-identical reproduction is how collaborators disagree
+                    safely. If I can’t regenerate your result by pinning the same addresses, the argument will drift
+                    into taste.</p>
+
+                <p>Uptime and latency belong here too. Pipelines should publish an SLO the way services do: p95
+                    time-to-reproduce, p95 time-to-ingest, error budgets that burn visibly. When a workflow exceeds its
+                    SLO, it should degrade in a defined way (smaller sample, lower fidelity, cached artifact with a
+                    warning) rather than timing out and wasting the day. It’s about aligning expectations so decisions
+                    don’t stall on invisible friction. When compute behaves like a utility, planning becomes possible.
+                </p>
+
+                <p>Interfaces matter more than implementations. A pipeline that accepts typed, unit-annotated inputs and
+                    emits typed, unit-annotated outputs with a schema version is a public promise. Pre-conditions fail
+                    fast; post-conditions are checked in the same run. Logs are first-class artifacts, not console
+                    graffiti: timestamps, seeds, device info, and a minimal audit trail for which human touched what.
+                    None of this is heavy. Most of it fits in a dozen lines of YAML and a small wrapper. The point is to
+                    reduce the surface area where personality can hide.</p>
+
+                <p>Fairness is a utility question too: who gets water when demand spikes. Shared infrastructure that
+                    exposes price signals (dollars, queue time, grams CO₂ per run) allows teams to schedule work like
+                    adults. Concessions become policy, not favors: batch jobs shift to off-peak; heavy runs require a
+                    justification tied to impact; long-lived artifacts are archived with a retention plan. It’s easier
+                    to be generous when the meter is honest. It’s also easier to say no without drama.</p>
+
+                <p>I’ve learned to like boredom in this context. Boring means the same command works tomorrow. Boring
+                    means a new collaborator can rerun a figure on their machine without summoning a wizard. Boring
+                    frees the interesting parts; the ideas, the models, the measurements; from glue code and guesswork.
+                    The romance is in the question we can finally ask because the build no longer gets in the way, not
+                    in the build itself.</p>
+
+                <p>What I would like is two curves that climb together: time-to-reproduce trending down, and
+                    provenance coverage trending up. When those move in tandem across projects and institutions, we’ll
+                    have something close to a utility: scientific compute that you can trust with public work because it
+                    behaves like public infrastructure. Not a tap that gushes novelty, just one that runs clear.</p>
+            </section>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="wrap">
+            <ul class="contact">
+                <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
+                <li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><span>Houston, TX</span></li>
+            </ul>
+            <small class="meta">© <span id="year">2025</span> Aryan Gupta</small>
+        </div>
+    </footer>
+
+    <script defer src="../assets/js/site.js"></script>
+</body>
+
+</html>

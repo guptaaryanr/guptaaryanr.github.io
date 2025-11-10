@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>AI That Respects the Grid - Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header" role="banner">
+        <div class="wrap">
+            <a class="brand" href="/" aria-label="Home">Aryan Gupta</a>
+            <nav id="primary-nav" class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="/">About</a></li>
+                    <li><a href="../research.html">Research</a></li>
+                    <li><a href="../ongoing.html">Ongoing & Upcoming</a></li>
+                    <li><a href="../work.html">Work</a></li>
+                    <li><a href="../notes.html" aria-current="page">Notes</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content" tabindex="-1">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="../notes.html">Notes</a></li>
+                <li aria-current="page">AI That Respects the Grid</li>
+            </ol>
+        </nav>
+
+        <!-- Paste your generated section here -->
+        <section class="card notes-body">
+            <header class="section-head">
+                <h1>AI That Respects the Grid</h1>
+                <p class="meta">2025-05-15</p>
+            </header>
+            <section class="card notes-body">
+                <p>I don’t want models that behave as if power is infinite and anonymous. The grid is a living
+                    constraint with prices, carbon intensity, and neighbors. If the loop can only keep its
+                    promises when electricity is cheap and steady, the loop is fragile. Respecting the grid means
+                    writing intelligence that explicitly negotiates with time-varying costs and limits, the way a good
+                    controller negotiates with friction and delay.</p>
+
+                <p>The mechanics aren’t mystical. Give the system a budget and a view of the world beyond its GPU. Treat
+                    price and carbon signals as inputs, not trivia. Then make the planner account for them the way it
+                    accounts for dynamics: constrained optimization or a policy that understands trade-offs. I like the
+                    language of “right-time” over “real-time.” Right-time says: meet the task’s envelope while staying
+                    within the budget. Sometimes that means throttling; sometimes it means batching; sometimes it means
+                    waiting for a cleaner window and finishing with the same quality for fewer Joules. The point is to
+                    encode manners.</p>
+
+                <p>There’s a clean separation of concerns that helps me think. Accuracy is about truth relative to data.
+                    Service is about meeting a cadence and an SLA. Stewardship is about the grid. When you adjust one,
+                    the others move. That triangle is the work. I want the policy to make those movements visible:
+                    report quality, latency, and energy as a triplet, and optimize a scalar we can defend, for example,
+                    quality per kilowatt-hour under an SLA. If the score gets better while the grid is spiking, we
+                    actually improved, and if it only improves at 2 a.m., it’s a free lunch someone else pays for.</p>
+
+                <p>Scheduling is where respect gets real. A budget-aware scheduler can minimize regret against an oracle
+                    that knows tomorrow’s prices: run heavy jobs when intensity dips, hold when it climbs, degrade
+                    gracefully when an SLA bites. For online systems, this looks like a small MPC: horizon over price
+                    and load, action space that includes throttles and precision settings, constraints that guard safety
+                    and responsiveness. For batch, it’s simpler: a knapsack with nonstationary weights. Either way, the
+                    control question is the same: what action preserves value per Joule now?</p>
+
+                <p>Measurement keeps the posture honest. You need synchronized counters, windowed traces, and a rule for
+                    when the loop is allowed to pause. You also need to make the absence of action legible. An
+                    abstention because power is scarce is not failure if the SLA and policy agree. The log should say
+                    so. The worst outcome is to burn watts to uphold a ritual definition of “real-time” that the task
+                    doesn’t actually require.</p>
+
+                <p>The cultural part is small but decisive: permission to ship systems that talk about power the way
+                    they talk about accuracy. That means dashboards where a rising success curve without an energy trace
+                    looks unfinished; reviews where price- and carbon-aware choices are ordinary engineering, not moral
+                    theater. I’m not trying to make the grid a character in the story. I’m trying to find a way to keep
+                    us honest about the stage we’re standing on.</p>
+
+                <p>I simply want loops that look up. If tomorrow’s run holds quality while regret and grams of CO₂ per
+                    decision fall, we learned something that survives daylight. If not, the model worked; the system
+                    didn’t.</p>
+
+            </section>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="wrap">
+            <ul class="contact">
+                <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
+                <li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><span>Houston, TX</span></li>
+            </ul>
+            <small class="meta">© <span id="year">2025</span> Aryan Gupta</small>
+        </div>
+    </footer>
+
+    <script defer src="../assets/js/site.js"></script>
+</body>
+
+</html>

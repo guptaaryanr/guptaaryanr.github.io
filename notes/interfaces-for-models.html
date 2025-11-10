@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Interfaces for Models - Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header" role="banner">
+        <div class="wrap">
+            <a class="brand" href="/" aria-label="Home">Aryan Gupta</a>
+            <nav id="primary-nav" class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="/">About</a></li>
+                    <li><a href="../research.html">Research</a></li>
+                    <li><a href="../ongoing.html">Ongoing & Upcoming</a></li>
+                    <li><a href="../work.html">Work</a></li>
+                    <li><a href="../notes.html" aria-current="page">Notes</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content" tabindex="-1">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="../notes.html">Notes</a></li>
+                <li aria-current="page">[Title]</li>
+            </ol>
+        </nav>
+
+        <!-- Paste your generated section here -->
+        <section class="card notes-body">
+            <header class="section-head">
+                <h1>Interfaces for Models</h1>
+                <p class="meta">2025-02-16</p>
+            </header>
+            <section class="card notes-body">
+                <p>I don’t start with architecture anymore. I start with the contract. Before I name a layer, I write
+                    down what the model takes, what it gives, and what it must never do. Inputs with units and reference
+                    frames. Valid ranges and coordinate conventions. Latency budget and memory ceiling. Outputs with
+                    uncertainty attached and a statement about where they’re valid. A model without an interface is a
+                    story you have to keep retelling, while a model with one is a component you can trust.</p>
+
+                <p>The obvious part is typing. Floats vs. integers, shapes and dtypes, batch semantics. The non-obvious
+                    part is semantics: “temperature” means °C at the sensor, not simulated Kelvin at the boundary;
+                    “pose” is SE(3) with right-handed axes, not whatever the last team decided; “time” is monotonic, not
+                    wall clock, and every timestamp claims a timezone or none. These specifics seem fussy until the
+                    first integration failure costs a week. Most of the bugs I regret weren’t numerical, but unit,
+                    frame, or contract bugs that never had a chance to be caught because we never wrote them down.</p>
+
+                <p>Pre-conditions and post-conditions turn taste into tests. Pre: inputs are within the envelope;
+                    calibration hash matches; the trust band gate passed; no more than N% missing fields. Post:
+                    uncertainty covers at the stated rate over a rolling window; the output respects the invariants
+                    we’ve declared elsewhere; if the band is violated, we abstain or fallback, and the reason is logged.
+                    Property-based tests generate counterexamples against the contract until they stop finding them.
+                    When they still find them, the code is innocent and the spec needs work.</p>
+
+                <p>Interfaces also have to admit failure on purpose. “Allowed failures” is not an apology section; it’s
+                    how collaborators plan. This policy may return “unknown” when inputs drift; this planner may degrade
+                    to a safe control set if the compute budget tightens; this detector may output “maybe” when
+                    confidence is below a calibrated threshold. You can’t promise everything, so promise what you can
+                    defend, and make the rest predictable. Grace is part of the interface.</p>
+
+                <p>Versioning is where seriousness shows. A model that changes without an interface bump is an infection
+                    vector. Schema evolution needs a story: additive fields with defaults, deprecations with dates,
+                    migrations that can be simulated offline. Content-addressed artifacts make provenance boring. If I
+                    can’t reproduce an output by pinning model@sha, data@sha, and env@sha, we don’t have an interface;
+                    we have folklore. This is less about ceremony than about friction reduction: teammates move faster
+                    when the seams are explicit.</p>
+
+                <p>I’ve learned to include behavior over time. Is the interface stateless or does it promise hysteresis
+                    bounds? Are outputs idempotent across retries? What jitter is acceptable, and what is the policy
+                    when the budget is breached? The world is not batch-shaped; an interface that ignores time invites
+                    heroics elsewhere in the stack. If the SLA is part of the contract, the scheduler can reason; if
+                    not, it guesses.</p>
+
+                <p>Testable claim: an interface-first model will cut integration defects in half compared to code-first
+                    efforts of the same scope. Not because interfaces are fashionable, but because they let people
+                    disagree earlier and repair faster. When a failure happens, the question becomes “which clause did
+                    we violate?” not “what did you mean by pose?”</p>
+
+                <p>What I want from these contracts is less personality in the plumbing, more attention on the
+                    ideas. If tomorrow’s change ships with a bumped schema, a migration note, and a proof that our
+                    post-conditions still hold, we’re building systems that remember how to talk to each other.
+                    That’s when architecture stops being the main character and starts being a choice.</p>
+            </section>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="wrap">
+            <ul class="contact">
+                <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
+                <li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><span>Houston, TX</span></li>
+            </ul>
+            <small class="meta">© <span id="year">2025</span> Aryan Gupta</small>
+        </div>
+    </footer>
+
+    <script defer src="../assets/js/site.js"></script>
+</body>
+
+</html>

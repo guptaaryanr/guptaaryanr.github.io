@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Small Worlds, Big Stewardship - Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header" role="banner">
+        <div class="wrap">
+            <a class="brand" href="/" aria-label="Home">Aryan Gupta</a>
+            <nav id="primary-nav" class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="/">About</a></li>
+                    <li><a href="../research.html">Research</a></li>
+                    <li><a href="../ongoing.html">Ongoing & Upcoming</a></li>
+                    <li><a href="../work.html">Work</a></li>
+                    <li><a href="../notes.html" aria-current="page">Notes</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content" tabindex="-1">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="../notes.html">Notes</a></li>
+                <li aria-current="page">Small Worlds, Big Stewardship</li>
+            </ol>
+        </nav>
+
+        <!-- Paste your generated section here -->
+        <section class="card notes-body">
+            <header class="section-head">
+                <h1>Small Worlds, Big Stewardship</h1>
+                <p class="meta">2025-09-18</p>
+            </header>
+            <section class="card notes-body">
+                <p>I like small systems because they tell the truth quickly. A terrarium, a bench bioreactor, a sealed
+                    algae column; closed enough to model, alive enough to surprise you. They are not just very cute,
+                    they are also laboratories where uncertainty, control, and resource limits meet without the bluff of
+                    scale. If I can’t keep a tiny world stable under constraint, I shouldn’t trust the same ideas in a
+                    plant, a grid, or a city.</p>
+
+                <p>The appeal is mostly technical. In a small world I can write the state down, even if I only half
+                    observe it: temperature, moisture, light flux, dissolved oxygen, pH, maybe biomass as an inferred
+                    variable. I can choose the model class (stochastic state-space with slow and fast modes) and watch
+                    identification tighten as data accumulates. I can run a controller that earns its keep: predictive
+                    when the dynamics are honest, rule-based when they aren’t, abstaining when uncertainty swells.
+                    Stability stops being a slogan and becomes a margin I can measure: variance bands around a target,
+                    settling time after a nudge, control energy spent per hour of “healthy.”</p>
+
+                <p>Stewardship enters because the system is finite. Every action lands somewhere: heat escapes slowly;
+                    added light drives growth and also stress; water tops up pH and also leaches nutrients. Small worlds
+                    force you to account for side effects instead of burying them in buffers. I think of it as a
+                    discipline of budgets. Carbon in, carbon out; joules in, joules to entropy; sensor noise to decision
+                    noise; attention in, attention back. A good policy spends the budget like it belongs to someone
+                    else, while hitting the setpoints.</p>
+
+                <p>Measurement has to match the ethics. MRV (monitoring, reporting, verification) is a grand acronym
+                    that reduces to a simple demand: show your work. Sensors need calibration stories; models need
+                    residual plots that drift in public; interventions need provenance. The twin is not just a simulator
+                    with nice colors, but also mainly an argument you can rerun and a place to test restraint. When the
+                    model diverges, the system should say so before the plants do. When it converges, the controller
+                    should show that it used the smallest necessary action. I’ve learned to like logging “inaction” as a
+                    first-class event. Waiting is a control move if you can defend it.</p>
+
+                <p>The hard part is deciding what “good” means. I don’t believe in generic wellness scores. For a
+                    micro-ecosystem I care about resilience: repeated recovery to a target regime with bounded
+                    variance and bounded energy. I care about observability: the fraction of the state the sensors
+                    actually pin down. I care about burden: how much human effort the loop externalizes. Those numbers
+                    are dull on a slide and decisive in a lab notebook. They also travel. The same metrics, with
+                    different units, matter in climate MRV and energy operations.</p>
+
+                <p>I’m not pretending a terrarium is a proxy for a forest or a grid. I am saying it’s an honest
+                    rehearsal space. In a small world, every shortcut is visible, every externality comes home, every
+                    improvement has to pay rent. If a policy can’t earn a stability margin there, it doesn’t deserve a
+                    bigger stage. I want to build twins that make promises they keep, controllers that spend
+                    modestly, and logs that teach. When the variance bands tighten while the control energy falls, I’ll
+                    know I’m learning the right lesson in the right size of world.</p>
+            </section>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="wrap">
+            <ul class="contact">
+                <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
+                <li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><span>Houston, TX</span></li>
+            </ul>
+            <small class="meta">© <span id="year">2025</span> Aryan Gupta</small>
+        </div>
+    </footer>
+
+    <script defer src="../assets/js/site.js"></script>
+</body>
+
+</html>

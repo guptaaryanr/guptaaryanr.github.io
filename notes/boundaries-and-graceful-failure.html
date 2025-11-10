@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Boundaries & Graceful Failure - Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header" role="banner">
+        <div class="wrap">
+            <a class="brand" href="/" aria-label="Home">Aryan Gupta</a>
+            <nav id="primary-nav" class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="/">About</a></li>
+
+                    <li><a href="../research.html">Research</a></li>
+                    <li><a href="../ongoing.html">Ongoing & Upcoming</a></li>
+                    <li><a href="../work.html">Work</a></li>
+                    <li><a href="../notes.html" aria-current="page">Notes</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content" tabindex="-1">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="../notes.html">Notes</a></li>
+                <li aria-current="page">Boundaries & Graceful Failure</li>
+            </ol>
+        </nav>
+
+        <!-- Paste your generated section here -->
+        <section class="card notes-body">
+            <header class="section-head">
+                <h1>Boundaries & Graceful Failure</h1>
+                <p class="meta">2024-09-07</p>
+            </header>
+
+            <section class="card notes-body">
+                <p>For a long time I treated “out of distribution” like a rare weather event. You acknowledge it, you
+                    promise to be careful, then you extrapolate anyway. The shift for me was admitting that a system
+                    without a boundary is already failing; it just hasn’t told you yet. Reliability starts when a model
+                    can point to a map and say: here with confidence p, there with a different policy entirely.</p>
+
+                <p>I think in terms of envelopes and trust bands. The envelope is the set of conditions we intend to
+                    support like inputs, rates, ranges, and the topology of what “normal” means. The trust band sits
+                    inside that envelope and moves with the data: a calibrated region where coverage claims are honest
+                    and errors behave. That distinction matters. Envelopes reflect design; bands reflect reality. When
+                    the band shrinks, we restrict action. When it expands, we earn capability. Either way, the loop is
+                    not pretending.</p>
+
+                <p>“Graceful” is not a euphemism for polite failure. It is an engineered sequence of alternatives
+                    (abstain, fallback, or degrade) chosen quickly and logged like any other output. Abstain means we
+                    don’t act and we say so. Fallback means we switch to a policy with known guarantees: an MPC
+                    controller, a rule set, a lookup that’s boring on purpose. Degrade means we change the objective to
+                    preserve safety or budget. None of this is mystical. It’s a branch in code with metrics: selective
+                    risk vs. coverage, intervention rate, time to recovery after abstention, regret relative to an
+                    oracle that never leaves the band.</p>
+
+                <p>Calibration is what keeps this from being theater. I like selective prediction not because it sounds
+                    cautious, but because it’s measurable. You declare a coverage target, like, ninety-five percent over
+                    a rolling window, and you pay the abstention cost to keep it true. Conformal risk control, quantile
+                    bands, uncertainty gates: pick a tool and verify it where your workflow actually lives. If your
+                    ninety-five keeps landing at eighty-eight, you haven’t built a boundary; you’ve built a
+                    superstition.</p>
+
+                <p>There is also a cultural piece that never shows up in diagrams. Teams need permission to let a system
+                    bow out without embarrassment. A model that says “I don’t know” is doing its job if the response is
+                    coherent: freeze, hand over, slow down, ask a human, retry later. The worst disasters I’ve seen were
+                    not caused by noise at the edge, but by pride and code that would rather hallucinate
+                    than hand off. Grace is a product decision.</p>
+
+                <p>The nice part is that this posture makes improvement legible. When the abstention log thins over time
+                    while calibration holds, we are genuinely learning. When time-to-safe-state drops after a
+                    perturbation, robustness is no longer a slogan. And when a simple fallback policy dominates a
+                    baroque model outside the band, we stop arguing about taste and change the plan.</p>
+
+                <p>Ultimately, we want honest boundaries that move for the right reasons. Draw the envelope,
+                    calibrate the band, make failure a first-class path. I’ll know it’s working when “unknown” stops
+                    being an exception in the logs and becomes a routine signal that we route, respect, and use to get
+                    better.</p>
+            </section>
+
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="wrap">
+            <ul class="contact">
+                <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
+                <li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><span>Houston, TX</span></li>
+            </ul>
+            <small class="meta">© <span id="year">2025</span> Aryan Gupta</small>
+        </div>
+    </footer>
+
+    <script defer src="../assets/js/site.js"></script>
+</body>
+
+</html>

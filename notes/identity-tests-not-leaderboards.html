@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Identity Tests, Not Leaderboards - Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header" role="banner">
+        <div class="wrap">
+            <a class="brand" href="/" aria-label="Home">Aryan Gupta</a>
+            <nav id="primary-nav" class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="/">About</a></li>
+                    <li><a href="../research.html">Research</a></li>
+                    <li><a href="../ongoing.html">Ongoing & Upcoming</a></li>
+                    <li><a href="../work.html">Work</a></li>
+                    <li><a href="../notes.html" aria-current="page">Notes</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content" tabindex="-1">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="../notes.html">Notes</a></li>
+                <li aria-current="page">Identity Tests, Not Leaderboards</li>
+            </ol>
+        </nav>
+
+        <!-- Paste your generated section here -->
+        <section class="card notes-body">
+            <header class="section-head">
+                <h1>Identity Tests, Not Leaderboards</h1>
+                <p class="meta">2024-12-14</p>
+            </header>
+
+            <section class="card notes-body">
+                <p>I like numbers that make me change my mind. Most leaderboards don’t. They rank, they glitter, they
+                    move a decimal place, and then everyone gets better at climbing the same wall. Useful evaluation, at
+                    least for me, starts with a different question: if I nudge a sensible knob, do you stay yourself? If
+                    the answer is no, the score was costume jewelry.</p>
+
+                <p>By “identity test” I mean a check tied to the structure of the problem, not the sample of the week.
+                    Monotonicity when the variable should only go one way. Conservation when the books must balance.
+                    Continuity when small changes shouldn’t flip a verdict. Commutation when the order of operations
+                    shouldn’t matter. Integrability when gradients should come from a potential. None of this is fancy;
+                    all of it is specific. An identity test is a sentence you can write before you see a dataset.</p>
+
+                <p>The reason they matter is that they localize failure. A leaderboard delta tells you who is “better.”
+                    An identity violation tells you what to fix. If increasing temperature lowers entropy in your model,
+                    that’s not a vibe, but a bug with a name. If two equivalent paths produce different results, you
+                    don’t need a bigger dataset; you need a commutation check. These tests aren’t moral. They’re
+                    diagnostic and they turn opinion into repair tickets.</p>
+
+                <p>I also like them because they scale to reality. You can embed them in CI as property-based tests that
+                    generate counterexamples until the invariant holds. You can use differential testing across solvers
+                    to find who breaks first and why. You can track violation rate over time and watch it fall as a real
+                    signal of progress. The point isn’t to police elegance, but to keep models compatible with the
+                    world they claim to describe.</p>
+
+                <p>There’s a common worry that identity tests will strangle exploration. In practice they do the
+                    opposite. Constraints prune dead branches early, which frees up attention for ideas that survive
+                    contact. If a candidate architecture can’t pass a conservation check at toy scale, it doesn’t
+                    deserve the weekend on the cluster. If it does, you learn faster because every result means the same
+                    thing on Monday that it meant on Friday.</p>
+
+                <p>This style of thinking changes the shape of a benchmark. I’ve become suspicious of wide tables and
+                    friendlier with small suites that fit on one screen: a fixed protocol, one task metric, three
+                    identity checks, and one minimal counterexample we keep around as a living reminder. When the suite
+                    turns red, we’re fixing the law that got broken, not arguing about taste. When it’s green,
+                    rank-ordering starts to mean something because the contenders share a spine.</p>
+
+                <p>The piece I keep for myself is simple: don’t celebrate an accuracy bump until the identities pass in
+                    the same run. If the bump survives, it’s a result. If it doesn’t, it was noise masquerading as news.
+                    What I’m watching next is mundane on purpose: violation rate trending to zero under perturbations I
+                    can explain, and time-to-recovery shrinking when I kick the system. When those curves move the right
+                    way, I trust the leaderboard. Until then, it’s a scoreboard without a rulebook.</p>
+            </section>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="wrap">
+            <ul class="contact">
+                <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
+                <li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><span>Houston, TX</span></li>
+            </ul>
+            <small class="meta">© <span id="year">2025</span> Aryan Gupta</small>
+        </div>
+    </footer>
+
+    <script defer src="../assets/js/site.js"></script>
+</body>
+
+</html>
