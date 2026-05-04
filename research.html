@@ -48,13 +48,48 @@
         </header>
 
         <p class="lead">
-            My independent work sits where physics meets code. I build open tools and experiments that expose how models
-            behave and how we can trust them.
+            My independent work sits where physics meets code. I build open tools and studies that expose how models,
+            trajectories, and engineering systems behave, and how we can trust them.
         </p>
 
         <!-- PROJECTS -->
         <section aria-labelledby="projects">
             <h2 id="projects">Projects</h2>
+
+            <!-- Trajectory-Only Regime Detection -->
+            <article class="card" aria-labelledby="traj-title">
+                <header>
+                    <h3 id="traj-title">Trajectory-Only Structural Regime Detection <span class="meta">(2026)</span>
+                    </h3>
+                    <p class="meta">Status: manuscript / code archived · <span class="chip">Nonlinear Dynamics</span>
+                        <span class="chip">Scientific Computing</span> <span class="chip">Trajectory Analysis</span>
+                    </p>
+                </header>
+                <p class="abstract">
+                    A minimal, non-ML framework for detecting regime-relevant structure directly from trajectories in
+                    deterministic dynamical systems.
+                </p>
+                <ul class="tight">
+                    <li><strong>Why</strong> — Classical dynamical-systems tools are powerful when governing equations
+                        are available, but data-centered workflows often expose trajectories before clean models,
+                        Jacobians, or continuation structure.</li>
+                    <li><strong>Approach</strong> — Computes a trajectory-derived indicator atlas, aggregates selected
+                        indicators into a structural score, and extracts a boundary along an ordered parameter sweep;
+                        oracle validation is kept separate so the detector cannot borrow the signal it is evaluated
+                        against.</li>
+                    <li><strong>Outcome</strong> — On FitzHugh-Nagumo and autonomous forced van der Pol benchmarks, the
+                        trajectory-only structural boundary appeared before the independently defined qualitative
+                        boundary: epsilon = 0.1158 vs 0.49719, and A = 1.025 vs 1.25.</li>
+                    <li class="meta"><strong>Methods &amp; checks</strong> — Participation-ratio metrics; occupancy-gap
+                        metric; change-point boundary extraction; separated oracle validation; lead-distance analysis;
+                        nuisance specificity sweeps; robustness to seed, solver, sampling, window length, and
+                        observation noise; scalar-delay checks; ablation and manifest/integrity validation.</li>
+                    <li><strong>Artifacts</strong> — Manuscript, reproducible Python study suite, frozen benchmark
+                        configurations, robustness and specificity reports, generated figures, supplementary notes, and
+                        <a class="ext" href="https://doi.org/10.5281/zenodo.19465797" target="_blank"
+                            rel="noopener">Zenodo DOI: 10.5281/zenodo.19465797</a></li>
+                </ul>
+            </article>
 
             <!-- ThermoBench -->
             <article class="card" aria-labelledby="tb-title">
