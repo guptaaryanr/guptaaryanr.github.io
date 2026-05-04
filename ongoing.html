@@ -44,44 +44,39 @@
 
         <header class="section-head">
             <h1>Ongoing &amp; Upcoming</h1>
-            <p class="section-subtitle">Work in progress and potential future research directions</p>
+            <p class="section-subtitle">Ideas I may build next</p>
         </header>
 
         <ul class="cards">
             <li class="card"><strong>ThermoBench 2.0</strong> - multi-component mixtures, uncertainty propagation,
                 auto-comparison dashboards.</li>
-            <li class="card"><strong>REB Expansion</strong> - workload generators and real-robot integrations for
-                energy-aware benchmarking.</li>
-            <li class="card"><strong>GNN Revisitation</strong> - hybrid symbolic-ML surrogates preserving thermodynamic
-                identities.</li>
-            <li class="card"><strong>Smart Carbon MRV System</strong> - forward modeling + sensors + UQ for monitoring,
-                reporting, verification.</li>
-            <li class="card"><strong>EcoBench: Closed-Loop Microhabitat Control Testbed</strong> - an instrumented
-                tabletop terrarium, algae vessel, or hydroponic chamber with environmental sensors, camera monitoring,
-                power telemetry, and simple actuators for light, airflow, misting, and water/nutrient control; a
-                physical benchmark for testing lightweight predictive models, uncertainty-aware control, and
-                energy-efficient automation in a living system.</li>
+            <li class="card"><strong>REB Expansion</strong> - add workload generators, cleaner comparison plots, and
+                hooks for real robot logs.</li>
+            <li class="card"><strong>GNN Revisitation</strong> - a second pass at VLE models that tests identity
+                failures upfront and keeps the classical-property fallback honest.</li>
+            <li class="card"><strong>Smart Carbon MRV System</strong> - combine simple forward models, sensor streams,
+                and uncertainty estimates for monitoring and verification work.</li>
+            <li class="card"><strong>EcoBench: Closed-Loop Microhabitat Control Testbed</strong> - a tabletop terrarium,
+                algae vessel, or hydroponic chamber with sensors, camera logs, power telemetry, and simple light, air,
+                misting, and water controls. First build: log what happened, then test a simple predictor and
+                controller.</li>
             <li class="card"><strong>REB-H: Energy-Aware Mobile Robot Testbed</strong> - a low-cost ROS 2
                 differential-drive robot with onboard power telemetry and repeatable physical missions; extends REB from
                 software traces into real-robot experiments measuring task success, latency, Wh/mission, compute/sensor
                 draw, and carbon-intensity-aware autonomy trade-offs.</li>
-            <li class="card"><strong>Uncertainty-Aware Scientific Surrogates</strong> - a focused ML study comparing
-                graph, ensemble, and operator-style surrogate models on thermodynamic and dynamical-system datasets,
-                with active-learning loops, calibrated uncertainty, and physics-consistency checks as first-class
-                evaluation targets.</li>
+            <li class="card"><strong>Scientific Surrogates With Error Bars</strong> - a focused ML study on when small
+                learned models are honest about being wrong. I would start with thermodynamic and dynamical-system
+                datasets, compare a few surrogate families, and score them by calibration and physics checks rather than
+                point error alone.</li>
 
             <!--
             Archived concept seeds, hidden from the live page for now:
 
-            <li class="card"><strong>Unified Context Graph</strong> - a cross-device, journal-native personal knowledge
-                and asset layer that merges interaction signals (pointer/motion/notes), digital legacy artifacts, and
-                federated SLM reasoning into a portable semantic protocol for autonomous assistance and long-horizon
-                memory.</li>
+            Unified Context Graph - parked idea for a personal context layer across notes, files, and device activity.
+            Not active enough yet to describe publicly.
 
-            <li class="card"><strong>Embodied Context Beacon</strong> - a pocket-scale hardware agent blending
-                inertial/vision sensors with on-device SLMs to capture micro-interactions, map user intent, and provide
-                cross-device control; acts as a secure, federated memory node that synchronizes contextual cues,
-                gestures, and digital assets into an ambient adaptive interface.</li>
+            Embodied Context Beacon - parked idea for a small sensing device tied to local context capture.
+            Too early and too overlapping with the graph idea to keep on the live page.
             -->
 
         </ul>

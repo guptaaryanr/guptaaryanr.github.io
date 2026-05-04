@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Research Aryan Gupta</title>
+    <title>Research - Aryan Gupta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="assets/css/site.css" />
@@ -44,12 +44,12 @@
 
         <header class="section-head">
             <h1>Independent Research</h1>
-            <p class="section-subtitle">Where physics meets code</p>
+            <p class="section-subtitle">Benchmarks, failure cases, and physical models</p>
         </header>
 
         <p class="lead">
-            My independent work sits where physics meets code. I build open tools and studies that expose how models,
-            trajectories, and engineering systems behave, and how we can trust them.
+            I use independent projects to test ideas that need room outside day-to-day work: small benchmarks, failure
+            cases, reproducible studies, and code that makes a technical claim easier to check.
         </p>
 
         <!-- PROJECTS -->
@@ -66,26 +66,24 @@
                     </p>
                 </header>
                 <p class="abstract">
-                    A minimal, non-ML framework for detecting regime-relevant structure directly from trajectories in
-                    deterministic dynamical systems.
+                    A study of whether regime changes can be found from trajectories alone, with the governing
+                    equations kept out of the detector.
                 </p>
                 <ul class="tight">
-                    <li><strong>Why</strong> — Classical dynamical-systems tools are powerful when governing equations
-                        are available, but data-centered workflows often expose trajectories before clean models,
-                        Jacobians, or continuation structure.</li>
-                    <li><strong>Approach</strong> — Computes a trajectory-derived indicator atlas, aggregates selected
-                        indicators into a structural score, and extracts a boundary along an ordered parameter sweep;
-                        oracle validation is kept separate so the detector cannot borrow the signal it is evaluated
-                        against.</li>
-                    <li><strong>Outcome</strong> — On FitzHugh-Nagumo and autonomous forced van der Pol benchmarks, the
-                        trajectory-only structural boundary appeared before the independently defined qualitative
-                        boundary: epsilon = 0.1158 vs 0.49719, and A = 1.025 vs 1.25.</li>
-                    <li class="meta"><strong>Methods &amp; checks</strong> — Participation-ratio metrics; occupancy-gap
-                        metric; change-point boundary extraction; separated oracle validation; lead-distance analysis;
-                        nuisance specificity sweeps; robustness to seed, solver, sampling, window length, and
-                        observation noise; scalar-delay checks; ablation and manifest/integrity validation.</li>
-                    <li><strong>Artifacts</strong> — Manuscript, reproducible Python study suite, frozen benchmark
-                        configurations, robustness and specificity reports, generated figures, supplementary notes, and
+                    <li><strong>Why</strong> — A lot of data work starts with recorded trajectories, not clean equations
+                        or Jacobians. I wanted to see how far a detector could get before being allowed to look at the
+                        model.</li>
+                    <li><strong>Approach</strong> — Built trajectory-derived indicators, combined them into a structural
+                        score, and pulled out a boundary along a parameter sweep. The model-aware checks live in a
+                        separate validation layer so the detector cannot grade itself with borrowed information.</li>
+                    <li><strong>Outcome</strong> — In FitzHugh-Nagumo and autonomous forced van der Pol tests, the
+                        structural boundary showed up earlier than the qualitative boundary: epsilon = 0.1158 vs
+                        0.49719, and A = 1.025 vs 1.25.</li>
+                    <li class="meta"><strong>Methods &amp; checks</strong> — Participation-ratio metrics, occupancy-gap
+                        metric, change-point extraction, lead-distance analysis, nuisance sweeps, seed/solver/sampling
+                        robustness, noise checks, scalar-delay checks, ablations, and manifest validation.</li>
+                    <li><strong>Artifacts</strong> — Manuscript draft, Python study suite, frozen benchmark configs,
+                        robustness reports, generated figures, supplementary notes, and
                         <a class="ext" href="https://doi.org/10.5281/zenodo.19465797" target="_blank"
                             rel="noopener">Zenodo DOI: 10.5281/zenodo.19465797</a></li>
                 </ul>
@@ -132,8 +130,9 @@
                     <li><strong>Why</strong> — Small pointwise error ≠ integrable or identity-preserving fields.</li>
                     <li><strong>Approach</strong> — Stress tests with identity checks; trigger a classical fallback
                         policy when tests fail.</li>
-                    <li><strong>Outcome</strong> — Preserves identities under distribution shift; guidance for mixing ML
-                        with physics libraries.</li>
+                    <li><strong>Outcome</strong> — The useful result was not a better GNN; it was a set of failure cases
+                        and a fallback rule for when a learned property model should hand off to a classical library.
+                    </li>
                     <li class="meta"><strong>Methods &amp; checks</strong> — Integrability tests, common-tangent/Maxwell
                         constructions, cross-library comparisons.</li>
                     <li><strong>Artifacts</strong> — <a class="ext" href="https://arxiv.org/abs/2509.10565"
@@ -201,18 +200,19 @@
             <h2 id="themes-title">Research Themes</h2>
             <div class="theme-grid">
                 <article class="card">
-                    <h3>Applied Intelligence &amp; Automation</h3>
-                    <p>Learning + control + robotics; closing loops between sensing, simulation, and actuation.</p>
+                    <h3>Applied ML, Control, and Robotics</h3>
+                    <p>Models are most interesting to me when they have to touch a sensor, a controller, or a physical
+                        budget.</p>
                 </article>
                 <article class="card">
                     <h3>Physical Modeling &amp; Sustainable Systems</h3>
-                    <p>Simulation and computation for efficient, lower-impact physical systems (molecular modeling,
-                        carbon capture, energy).</p>
+                    <p>Molecular modeling, carbon capture, and energy measurement work where the units matter as much
+                        as the code.</p>
                 </article>
                 <article class="card">
-                    <h3>Integrated Scientific Infrastructure</h3>
-                    <p>Architectures where models, data, and hardware co-evolve; connecting simulation pipelines,
-                        experimental feedback, and automation into reproducible platforms.</p>
+                    <h3>Reproducible Scientific Plumbing</h3>
+                    <p>The unglamorous parts I keep coming back to: adapters, logs, manifests, tests, and small
+                        datasets that make a result easier to rerun.</p>
                 </article>
             </div>
         </section>

@@ -59,9 +59,11 @@
 
                 <p>Pre-conditions and post-conditions turn taste into tests. Pre: inputs are within the envelope;
                     calibration hash matches; the trust band gate passed; no more than N% missing fields. Post:
-                    uncertainty covers at the stated rate over a rolling window; the output respects the invariants
-                    we’ve declared elsewhere; if the band is violated, we abstain or fallback, and the reason is logged.
-                    Property-based tests generate counterexamples against the contract until they stop finding them.
+                    uncertainty covers at the stated rate over a rolling window, the output respects the invariants
+                    we’ve declared elsewhere, and if the band is violated, we abstain or fallback with a logged reason.
+                </p>
+
+                <p>Property-based tests generate counterexamples against the contract until they stop finding them.
                     When they still find them, the code is innocent and the spec needs work.</p>
 
                 <p>Interfaces also have to admit failure on purpose. “Allowed failures” is not an apology section; it’s
@@ -89,8 +91,8 @@
                     we violate?” not “what did you mean by pose?”</p>
 
                 <p>What I want from these contracts is less personality in the plumbing, more attention on the
-                    ideas. If tomorrow’s change ships with a bumped schema, a migration note, and a proof that our
-                    post-conditions still hold, we’re building systems that remember how to talk to each other.
+                    ideas. If tomorrow’s change ships with a bumped schema, a migration note, and proof that the
+                    post-conditions still hold, the next person can keep working without guessing what I meant.
                     That’s when architecture stops being the main character and starts being a choice.</p>
             </section>
         </section>
