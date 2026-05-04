@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Research That Does Not Become a Repository - Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header" role="banner">
+        <div class="wrap">
+            <a class="brand" href="/" aria-label="Home">Aryan Gupta</a>
+            <button class="nav-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+                <span class="nav-toggle-box" aria-hidden="true"></span>
+                <span class="nav-toggle-label">Menu</span>
+            </button>
+            <nav id="primary-nav" class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="/">About</a></li>
+                    <li><a href="../research.html">Research</a></li>
+                    <li><a href="../ongoing.html">Ongoing & Upcoming</a></li>
+                    <li><a href="../work.html">Work</a></li>
+                    <li><a href="../notes.html" aria-current="page">Notes</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content" tabindex="-1">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="../notes.html">Notes</a></li>
+                <li aria-current="page">Research That Does Not Become a Repository</li>
+            </ol>
+        </nav>
+        <section class="card notes-body">
+            <header class="section-head">
+                <h1>Research That Does Not Become a Repository</h1>
+                <p class="meta">2024-10-13</p>
+            </header>
+
+            <p>I used to think serious research had to leave behind a public object. A repository, a preprint, a clean
+                dataset, a figure someone could rerun from their laptop. That instinct is mostly good. Public artifacts
+                discipline the work. They punish hand-waving. They force enough structure that someone else can disagree
+                with you without needing to inherit your entire life.</p>
+
+            <p>Industrial R&amp;D complicates that story. Some of the most serious work I’ve done cannot be made public
+                in the form I wish it could. The model is tied to proprietary chemistry. The dataset is entangled with
+                plant assumptions, vendor information, or internal design choices. The useful script only makes sense
+                inside a workflow that belongs to a company. That does not make the result fake. It just answers to a
+                different chain of custody.</p>
+
+            <p>Molecular simulation taught me this early. A trajectory is atoms moving in a box, and also a stack of
+                choices: force field, charge assignment, equilibration protocol, boundary conditions, sampling
+                window, thermostat, barostat, convergence check, post-processing rule. A diffusion coefficient or
+                adsorption trend looks like one number when it leaves the workflow, but inside the work it is a record
+                of every assumption that survived enough scrutiny to be trusted downstream.</p>
+
+            <p>That was the useful lesson. The research object was not the plot. It was the capability.</p>
+
+            <p>A capability is harder to show and easier to underrate. It is the difference between “I ran a simulation”
+                and “this team now has a repeatable way to ask molecular questions and pass the answers into larger
+                engineering models.” The same question can be asked again when the material changes, when the temperature
+                changes, when the downstream CFD boundary condition needs a number that is not decorative. Uncertainty
+                has somewhere to go instead of being hidden in a slide note.</p>
+
+            <p>The repository version of this work would have been cleaner. A small example system, a few scripts, a
+                notebook with pretty trajectories. Useful, maybe. Honest, only partly. The real work was uglier:
+                environment setup, HPC friction, file formats, failed assumptions, internal validation, and the repeated
+                act of turning atomistic information into something an engineering workflow could actually use. That
+                kind of work does not always become a public package. Sometimes it becomes institutional memory with
+                tests attached.</p>
+
+            <p>I don’t like using confidentiality as a shield for sloppy work. Private research still owes itself the
+                same standards: pinned environments, documented parameters, provenance, versioned inputs, logs that
+                survive the person who wrote them. If anything, private work needs more discipline because it does not
+                get the corrective pressure of strangers. A public repo can be embarrassed into clarity. A private
+                workflow has to choose it.</p>
+
+            <p>There is also a strange emotional adjustment. Public work gives you a visible receipt. Industrial
+                research often gives you a quieter one: a team that stops guessing, a design decision that becomes less
+                vague, a tool that lets the next question start one level higher. That can feel less satisfying because
+                it is harder to see from the outside. But usefulness is not always photogenic.</p>
+
+            <p>The question I trust is simple: did the work reduce uncertainty in a way someone else can reuse? If yes, it
+                was research. If the reusable thing is a method, a protocol, a calibrated workflow, or a set of
+                constraints that prevented a bad decision, it still counts. Not every serious artifact becomes a
+                repository. Some become machinery inside the walls. The obligation is to make that machinery traceable,
+                boring, and honest enough that it can outlive the person who built it.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="wrap">
+            <nav aria-label="Contact">
+                <ul class="contact">
+                    <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
+                    <li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://scholar.google.com/citations?hl=en&amp;user=FsIchOAAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+                    <li><span aria-label="Location">Houston, TX</span></li>
+                </ul>
+            </nav>
+            <small class="meta">© <span id="year">2025</span> Aryan Gupta</small>
+        </div>
+    </footer>
+
+    <script defer src="../assets/js/site.js"></script>
+</body>
+
+</html>

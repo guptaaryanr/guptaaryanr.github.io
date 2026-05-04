@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>The Detector Should Not Know the Answer - Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header" role="banner">
+        <div class="wrap">
+            <a class="brand" href="/" aria-label="Home">Aryan Gupta</a>
+            <button class="nav-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+                <span class="nav-toggle-box" aria-hidden="true"></span>
+                <span class="nav-toggle-label">Menu</span>
+            </button>
+            <nav id="primary-nav" class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="/">About</a></li>
+                    <li><a href="../research.html">Research</a></li>
+                    <li><a href="../ongoing.html">Ongoing & Upcoming</a></li>
+                    <li><a href="../work.html">Work</a></li>
+                    <li><a href="../notes.html" aria-current="page">Notes</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content" tabindex="-1">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="../notes.html">Notes</a></li>
+                <li aria-current="page">The Detector Should Not Know the Answer</li>
+            </ol>
+        </nav>
+        <section class="card notes-body">
+            <header class="section-head">
+                <h1>The Detector Should Not Know the Answer</h1>
+                <p class="meta">2026-01-28</p>
+            </header>
+
+            <p>The rule that made the regime-detection work feel real was simple: the detector should not know the
+                answer.</p>
+
+            <p>It sounds obvious until you build the first version. When a system has known equations, known parameters,
+                and known qualitative behavior, the answer is always trying to leak into the method. You know where the
+                boundary should be. You know which parameter matters. You know which trajectories look interesting
+                because you have already seen the phase portrait. The danger is not fraud. The danger is convenience. A
+                little model-aware feature here, a little oracle-guided threshold there, and suddenly the detector is no
+                longer discovering structure. It is reenacting a conclusion.</p>
+
+            <p>I wanted the separation to be cleaner than that. The detector sees trajectories. Not the governing
+                equations. Not the bifurcation condition. Not the hand-labeled regime boundary. It gets the thing a real
+                experimental workflow might get: state histories, possibly noisy, possibly partial, with structure
+                hidden in motion rather than announced by the model. Then, after the detector commits, the oracle can
+                enter as a judge.</p>
+
+            <p>The split matters because validation and detection are different jobs. Detection asks what can be inferred
+                from the observed trajectory geometry alone. Validation asks whether that inference corresponds to
+                something real in the underlying system. Mixing them makes the result easier to obtain and harder to
+                trust. It turns a method into a magic trick where the answer was palmed before the audience arrived.</p>
+
+            <p>I think of the oracle as a sealed envelope. Useful, necessary, but opened late.</p>
+
+            <p>Keeping that separation made me be more careful. Features had to be justified from observables.
+                Boundaries had to be extracted before being compared. Lead-distance measurements had to say when the
+                trajectory-only signal appeared, not merely decorate agreement with a known curve. Robustness checks had
+                to ask whether the structure survived nuisance variation, scalar observation, or delay embedding without
+                smuggling in the full model through the back door.</p>
+
+            <p>I am not chasing purity for its own sake. I care because a detector that needs the answer is really a
+                benchmark-specific instrument. It might perform beautifully on FitzHugh-Nagumo and then become useless
+                the moment the equations disappear. The whole point of trajectory-only structure is that it should still
+                have something to say when the system is partially observed, poorly documented, or too expensive to
+                interrogate with perfect knowledge.</p>
+
+            <p>There is useful humility built into this. The detector can be wrong. It can mark a boundary that the
+                oracle later rejects. It can miss a transition that a model-aware method sees cleanly. I can live with
+                that. A wrong blind detector teaches more than a right detector with hidden access to the key. One exposes a
+                limit. The other hides it.</p>
+
+            <p>I also like what this does to evaluation. Agreement only means something if independence was protected
+                first. If the detector and oracle were separated, overlap is evidence. If they were entangled, overlap is
+                choreography. The clean result is not “the method found the known boundary.” The clean result is “the
+                method, without being told what boundary means for this system, produced a structure that later aligned
+                with independent validation.”</p>
+
+            <p>I want to keep that line. Let the detector look only where a real measurement would let it look. Let the
+                oracle judge only after the detector has made its claim. When those two lines stay apart,
+                the experiment has a spine. When they blur, the result may still be pretty, but I stop trusting what it
+                says.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="wrap">
+            <nav aria-label="Contact">
+                <ul class="contact">
+                    <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
+                    <li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://scholar.google.com/citations?hl=en&amp;user=FsIchOAAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+                    <li><span aria-label="Location">Houston, TX</span></li>
+                </ul>
+            </nav>
+            <small class="meta">© <span id="year">2025</span> Aryan Gupta</small>
+        </div>
+    </footer>
+
+    <script defer src="../assets/js/site.js"></script>
+</body>
+
+</html>

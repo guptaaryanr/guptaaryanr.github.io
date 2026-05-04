@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Error Bars Before Confidence - Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header" role="banner">
+        <div class="wrap">
+            <a class="brand" href="/" aria-label="Home">Aryan Gupta</a>
+            <button class="nav-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+                <span class="nav-toggle-box" aria-hidden="true"></span>
+                <span class="nav-toggle-label">Menu</span>
+            </button>
+            <nav id="primary-nav" class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="/">About</a></li>
+                    <li><a href="../research.html">Research</a></li>
+                    <li><a href="../ongoing.html">Ongoing & Upcoming</a></li>
+                    <li><a href="../work.html">Work</a></li>
+                    <li><a href="../notes.html" aria-current="page">Notes</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content" tabindex="-1">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="../notes.html">Notes</a></li>
+                <li aria-current="page">Error Bars Before Confidence</li>
+            </ol>
+        </nav>
+        <section class="card notes-body">
+            <header class="section-head">
+                <h1>Error Bars Before Confidence</h1>
+                <p class="meta">2026-04-24</p>
+            </header>
+
+            <p>I get nervous when a model sounds certain before it has earned the right.</p>
+
+            <p>Scientific surrogates make this temptation easy. A slow simulator produces expensive data. A fast model
+                learns the map. Suddenly the room wants recommendations: which parameter set, which design, which next
+                run, which minimum. Because the surrogate speaks quickly and draws smooth surfaces, it starts to feel
+                like a cheaper oracle. Right there, I want the error bars in the room first.</p>
+
+            <p>A low error number does one job. It says the prediction was close on a particular test. It does not tell
+                me whether the model knows where it is, whether it has wandered outside its map, or whether the decision
+                I am about to make sits in the one ugly corner the average hides. A parity plot can look respectable
+                while the recommended point is being held up by extrapolation and optimism.</p>
+
+            <p>Mean predictions are cheap confidence. Calibrated uncertainty is more expensive and more useful.</p>
+
+            <p>In calibration work, the hard part is rarely noticing error. Of course there is error. The hard part is
+                deciding what the error lets me do. If uncertainty is small near a measured basin, propose a refinement.
+                If it grows outside the explored envelope, abstain or ask for coverage first. If two candidates have
+                similar means but different uncertainty, “pick the lower one” is too thin an answer. The decision is a
+                trade between exploitation, information, and the cost of being wrong.</p>
+
+            <p>At that point, the error bar stops being decoration around the plot. It becomes part of the controller.</p>
+
+            <p>The reports I trust put the boring context next to the prediction: interval, nearest observed point, local
+                data density, leave-one-out residual behavior, and whether the candidate is interpolation or a polite
+                form of extrapolation. “Lowest predicted error” is not enough. Lowest according to what model class,
+                under what coverage, inside which envelope, with what fallback if the next run disagrees?</p>
+
+            <p>Scientific ML needs this because the data are usually small, structured, and expensive. You do not get to
+                average your way out of bad judgment with a million examples. The model has to admit when the design
+                space is under-sampled. It has to distinguish a valley it has seen from a valley it has imagined. If
+                uncertainty is not printed next to performance, the user will remember the number and forget the doubt.
+            </p>
+
+            <p>Calibration gives the interval a job. A ninety-five percent interval should cover about ninety-five
+                percent of the time where it claims to. If it covers eighty, the interval is theater. If it covers
+                ninety-nine by becoming uselessly wide, the model is hiding. The useful state is narrower and harder:
+                intervals sharp enough to guide action, honest enough to survive contact with new runs.</p>
+
+            <p>This changes how I read success. Lower error matters, but only with coverage intact. A useful
+                recommendation should improve the objective while shrinking uncertainty for the next round. A useful
+                surrogate should be able to say “not yet” without embarrassment because the cost of a bad confident
+                answer is higher than the cost of another measured point.</p>
+
+            <p>The question I come back to is this: would I make the same decision if the error bars were printed as
+                large as the prediction? If not, I was not using the model. I was using the model’s confidence costume.
+                Error bars before confidence is less glamorous, but it is the difference between a fast guess and a
+                scientific instrument.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="wrap">
+            <nav aria-label="Contact">
+                <ul class="contact">
+                    <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
+                    <li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://scholar.google.com/citations?hl=en&amp;user=FsIchOAAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+                    <li><span aria-label="Location">Houston, TX</span></li>
+                </ul>
+            </nav>
+            <small class="meta">© <span id="year">2025</span> Aryan Gupta</small>
+        </div>
+    </footer>
+
+    <script defer src="../assets/js/site.js"></script>
+</body>
+
+</html>

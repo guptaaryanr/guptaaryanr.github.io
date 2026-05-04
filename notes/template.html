@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>[Title] — Notes</title>
+    <title>Note Template - Aryan Gupta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
     <link rel="icon" href="../favicon.ico" />
     <link rel="stylesheet" href="../assets/css/site.css" />
 </head>
@@ -15,6 +16,10 @@
     <header class="site-header" role="banner">
         <div class="wrap">
             <a class="brand" href="/" aria-label="Home">Aryan Gupta</a>
+            <button class="nav-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+                <span class="nav-toggle-box" aria-hidden="true"></span>
+                <span class="nav-toggle-label">Menu</span>
+            </button>
             <nav id="primary-nav" class="site-nav" aria-label="Primary">
                 <ul>
                     <li><a href="/">About</a></li>
@@ -33,31 +38,29 @@
             <ol>
                 <li><a href="/">Home</a></li>
                 <li><a href="../notes.html">Notes</a></li>
-                <li aria-current="page">[Title]</li>
+                <li aria-current="page">Note Template</li>
             </ol>
         </nav>
-
-        <!-- Paste your generated section here -->
         <section class="card notes-body">
             <header class="section-head">
-                <h1>[Title]</h1>
-                <p class="meta">[YYYY-MM-DD]</p>
+                <h1>Note Template</h1>
+                <p class="meta">Draft scaffold</p>
             </header>
-            <section class="card notes-body">
-                <!-- Generated content goes here, e.g.,
-      <h2>Why this matters</h2> ... -->
-            </section>
+            <p>Draft note content goes here.</p>
         </section>
     </main>
 
     <footer class="site-footer" role="contentinfo">
         <div class="wrap">
-            <ul class="contact">
-                <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
-                <li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li>
-                <li><span>Houston, TX</span></li>
-            </ul>
+            <nav aria-label="Contact">
+                <ul class="contact">
+                    <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
+                    <li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://scholar.google.com/citations?hl=en&amp;user=FsIchOAAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+                    <li><span aria-label="Location">Houston, TX</span></li>
+                </ul>
+            </nav>
             <small class="meta">© <span id="year">2025</span> Aryan Gupta</small>
         </div>
     </footer>
