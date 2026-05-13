@@ -47,47 +47,47 @@
                 <p class="meta">2024-09-07</p>
             </header>
 
-                <p>For a long time I treated “out of distribution” like a rare weather event. You acknowledge it, you
-                    promise to be careful, then you extrapolate anyway. The shift for me was admitting that a system
-                    without a boundary is already failing. It just hasn’t told you yet. Reliability starts when a model
-                    can point to a map and say: here with confidence p, there with a different policy entirely.</p>
+            <p>For a long time I treated “out of distribution” like a rare weather event. You acknowledge it, you
+                promise to be careful, then you extrapolate anyway. The shift for me was admitting that a system
+                without a boundary is already failing. It just hasn’t told you yet. Reliability starts when a model
+                can point to a map and say: here with confidence p, there with a different policy entirely.</p>
 
-                <p>I think in terms of envelopes and trust bands. The envelope is the set of conditions we intend to
-                    support like inputs, rates, ranges, and the topology of what “normal” means. The trust band sits
-                    inside that envelope and moves with the data: a calibrated region where coverage claims are honest
-                    and errors behave. That distinction matters. Envelopes reflect design. Bands reflect reality. When
-                    the band shrinks, we restrict action. When it expands, we earn more room. Either way, the loop is
-                    not pretending.</p>
+            <p>I think in terms of envelopes and trust bands. The envelope is the set of conditions we intend to
+                support like inputs, rates, ranges, and the topology of what “normal” means. The trust band sits
+                inside that envelope and moves with the data: a calibrated region where coverage claims are honest
+                and errors behave. That distinction matters. Envelopes reflect design. Bands reflect reality. When
+                the band shrinks, we restrict action. When it expands, we earn more room. Either way, the loop is
+                not pretending.</p>
 
-                <p>“Graceful” is not a euphemism for polite failure. It is an engineered sequence of alternatives
-                    (abstain, fallback, or degrade) chosen quickly and logged like any other output. Abstain means we
-                    don’t act and we say so. Fallback means we switch to a policy with known guarantees: an MPC
-                    controller, a rule set, a lookup that’s boring on purpose. Degrade means we change the objective to
-                    preserve safety or budget. None of this is mystical. It’s a branch in code with metrics: selective
-                    risk vs. coverage, intervention rate, time to recovery after abstention, regret relative to an
-                    oracle that never leaves the band.</p>
+            <p>“Graceful” is not a euphemism for polite failure. It is an engineered sequence of alternatives
+                (abstain, fallback, or degrade) chosen quickly and logged like any other output. Abstain means we
+                don’t act and we say so. Fallback means we switch to a policy with known guarantees: an MPC
+                controller, a rule set, a lookup that’s boring on purpose. Degrade means we change the objective to
+                preserve safety or budget. None of this is mystical. It’s a branch in code with metrics: selective
+                risk vs. coverage, intervention rate, time to recovery after abstention, regret relative to an
+                oracle that never leaves the band.</p>
 
-                <p>Calibration is what keeps this from being theater. I like selective prediction not because it sounds
-                    cautious, but because it’s measurable. You declare a coverage target, like, ninety-five percent over
-                    a rolling window, and you pay the abstention cost to keep it true. Conformal risk control, quantile
-                    bands, uncertainty gates: pick a tool and verify it where your workflow actually lives. If your
-                    ninety-five keeps landing at eighty-eight, you haven’t built a boundary. You’ve built a
-                    superstition.</p>
+            <p>Calibration is what keeps this from being theater. I like selective prediction not because it sounds
+                cautious, but because it’s measurable. You declare a coverage target, like, ninety-five percent over
+                a rolling window, and you pay the abstention cost to keep it true. Conformal risk control, quantile
+                bands, uncertainty gates: pick a tool and verify it where your workflow actually lives. If your
+                ninety-five keeps landing at eighty-eight, you haven’t built a boundary. You’ve built a
+                superstition.</p>
 
-                <p>There is also a cultural piece that never shows up in diagrams. Teams need permission to let a system
-                    bow out without embarrassment. A model that says “I don’t know” is doing its job if the response is
-                    coherent: freeze, hand over, slow down, ask a human, retry later. The worst disasters I’ve seen were
-                    not caused by noise at the edge, but by pride and code that would rather hallucinate
-                    than hand off. Grace is a product decision.</p>
+            <p>There is also a cultural piece that never shows up in diagrams. Teams need permission to let a system
+                bow out without embarrassment. A model that says “I don’t know” is doing its job if the response is
+                coherent: freeze, hand over, slow down, ask a human, retry later. The worst disasters I’ve seen were
+                not caused by noise at the edge, but by pride and code that would rather hallucinate
+                than hand off. Grace is a product decision.</p>
 
-                <p>The nice part is that improvement starts to show up in the logs. When the abstention log thins over
-                    time while calibration holds, we are genuinely learning. When time-to-safe-state drops after a
-                    perturbation, robustness is no longer a slogan. And when a simple fallback policy dominates a
-                    baroque model outside the band, we stop arguing about taste and change the plan.</p>
+            <p>The nice part is that improvement starts to show up in the logs. When the abstention log thins over
+                time while calibration holds, we are genuinely learning. When time-to-safe-state drops after a
+                perturbation, robustness is no longer a slogan. And when a simple fallback policy dominates a
+                baroque model outside the band, we stop arguing about taste and change the plan.</p>
 
-                <p>What I want are honest boundaries that move for the right reasons. Draw the envelope, calibrate the
-                    band, and give failure an ordinary route through the system. I’ll know it’s working when “unknown”
-                    stops being an exception in the logs and becomes a signal we know how to handle.</p>
+            <p>What I want are honest boundaries that move for the right reasons. Draw the envelope, calibrate the
+                band, and give failure an ordinary route through the system. I’ll know it’s working when “unknown”
+                stops being an exception in the logs and becomes a signal we know how to handle.</p>
         </section>
     </main>
 
@@ -98,11 +98,12 @@
                     <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
                     <li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li>
                     <li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li>
-                    <li><a href="https://scholar.google.com/citations?hl=en&amp;user=FsIchOAAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+                    <li><a href="https://scholar.google.com/citations?hl=en&amp;user=FsIchOAAAAAJ" target="_blank"
+                            rel="noopener">Google Scholar</a></li>
                     <li><span aria-label="Location">Houston, TX</span></li>
                 </ul>
             </nav>
-            <small class="meta">© <span id="year">2025</span> Aryan Gupta</small>
+            <small class="meta">© <span id="year">2026</span> Aryan Gupta</small>
         </div>
     </footer>
 

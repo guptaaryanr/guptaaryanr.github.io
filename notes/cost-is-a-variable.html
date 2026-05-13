@@ -45,50 +45,50 @@
                 <h1>Cost Is a Variable</h1>
                 <p class="meta">2025-03-23</p>
             </header>
-                <p>I design my research the way I design my controllers: with a budget in view. Time, compute, and
-                    carbon are the knobs that shape what I’m allowed to learn, not afterthoughts to clean up in a
-                    footnote. When I forget that, the work gets theatrical with bigger sweeps, fancier charts, and
-                    little to show for it. When I remember, the problem gets sharper. A budget is a coordinate system,
-                    not a scold.</p>
+            <p>I design my research the way I design my controllers: with a budget in view. Time, compute, and
+                carbon are the knobs that shape what I’m allowed to learn, not afterthoughts to clean up in a
+                footnote. When I forget that, the work gets theatrical with bigger sweeps, fancier charts, and
+                little to show for it. When I remember, the problem gets sharper. A budget is a coordinate system,
+                not a scold.</p>
 
-                <p>The first decision is to name the currencies. Wall-clock hours, joules or kilowatt-hours, dollars if
-                    they clarify, and opportunity cost. Then I make the trade-off explicit: we optimize a scalar we can
-                    defend, often “quality per unit budget” under an SLA. That pushes me toward designs that degrade
-                    gracefully. Anytime algorithms that improve with time instead of demanding a lump sum.
-                    Multi-fidelity search where cheap signals prune dead branches before I pay for the high-fidelity
-                    run. Early stopping rules that end a configuration as soon as its best case can’t beat the current
-                    Pareto front. None of this is ascetic. It’s how you reserve energy for the parts that change your
-                    mind.</p>
+            <p>The first decision is to name the currencies. Wall-clock hours, joules or kilowatt-hours, dollars if
+                they clarify, and opportunity cost. Then I make the trade-off explicit: we optimize a scalar we can
+                defend, often “quality per unit budget” under an SLA. That pushes me toward designs that degrade
+                gracefully. Anytime algorithms that improve with time instead of demanding a lump sum.
+                Multi-fidelity search where cheap signals prune dead branches before I pay for the high-fidelity
+                run. Early stopping rules that end a configuration as soon as its best case can’t beat the current
+                Pareto front. None of this is ascetic. It’s how you reserve energy for the parts that change your
+                mind.</p>
 
-                <p>I’ve stopped trusting unconstrained hyperparameter search. It looks scientific and feels productive,
-                    but it treats compute as ambient and the real objective as a secret. Budgeted search is plainer and
-                    more honest. You set the envelope and ask which configurations are Pareto-superior inside it. That
-                    question admits real answers. You can compare methods by quality, latency, and energy and treat the
-                    frontier with respect. You can also decide to live just off the frontier if that saves half the cost
-                    for a sliver of performance. Taste returns once the math is on the table.</p>
+            <p>I’ve stopped trusting unconstrained hyperparameter search. It looks scientific and feels productive,
+                but it treats compute as ambient and the real objective as a secret. Budgeted search is plainer and
+                more honest. You set the envelope and ask which configurations are Pareto-superior inside it. That
+                question admits real answers. You can compare methods by quality, latency, and energy and treat the
+                frontier with respect. You can also decide to live just off the frontier if that saves half the cost
+                for a sliver of performance. Taste returns once the math is on the table.</p>
 
-                <p>Measurement keeps this from turning into slogans. I keep a ledger of dollars per percentage point of
-                    improvement, grams of CO₂ per correct decision, minutes per one standard deviation reduction in
-                    error. Energy-Delay Product tells me when I paid too much latency for thrift. “Regret” against an
-                    oracle that knows tomorrow’s prices tells me whether the scheduler is learning. If a configuration
-                    looks great but its quality-per-kWh collapses under a different workload window, it’s not robust. It
-                    got lucky.</p>
+            <p>Measurement keeps this from turning into slogans. I keep a ledger of dollars per percentage point of
+                improvement, grams of CO₂ per correct decision, minutes per one standard deviation reduction in
+                error. Energy-Delay Product tells me when I paid too much latency for thrift. “Regret” against an
+                oracle that knows tomorrow’s prices tells me whether the scheduler is learning. If a configuration
+                looks great but its quality-per-kWh collapses under a different workload window, it’s not robust. It
+                got lucky.</p>
 
-                <p>The culture has to move with the math. Teams need permission to publish smaller experiments with
-                    tighter inference instead of sprawling grids that impress nobody. Review should ask for budget
-                    adherence and the stop rule, rather than whether the last line is bold. I care less about the maximum
-                    obtained and more about the slope: how fast did we learn per unit spent, and could we have
-                    learned the same lesson with less? If the answer is “yes,” the design was indulgent.</p>
+            <p>The culture has to move with the math. Teams need permission to publish smaller experiments with
+                tighter inference instead of sprawling grids that impress nobody. Review should ask for budget
+                adherence and the stop rule, rather than whether the last line is bold. I care less about the maximum
+                obtained and more about the slope: how fast did we learn per unit spent, and could we have
+                learned the same lesson with less? If the answer is “yes,” the design was indulgent.</p>
 
-                <p>All of this reads as constraint, but it’s actually a way to keep ambition intact. Budgets stop me
-                    from burning cycles on noise. They also make room for designs I can actually defend: anytime
-                    control with exit rules, hybrid runs that switch fidelity on the fly, and nightly evaluation that
-                    does not feel like a guilty secret. The work feels calmer, and the results travel.</p>
+            <p>All of this reads as constraint, but it’s actually a way to keep ambition intact. Budgets stop me
+                from burning cycles on noise. They also make room for designs I can actually defend: anytime
+                control with exit rules, hybrid runs that switch fidelity on the fly, and nightly evaluation that
+                does not feel like a guilty secret. The work feels calmer, and the results travel.</p>
 
-                <p>The budget question I ask myself is this: if I halve the budget, can I still make a defensible
-                    decision? If I can’t, I haven’t built a method, only dependence. What I want are studies that reveal
-                    the frontier quickly, then let me decide where to stand on it with my eyes open to price, compute,
-                    and carbon. Not because I’m timid, but because I want what I build to survive outside the lab.</p>
+            <p>The budget question I ask myself is this: if I halve the budget, can I still make a defensible
+                decision? If I can’t, I haven’t built a method, only dependence. What I want are studies that reveal
+                the frontier quickly, then let me decide where to stand on it with my eyes open to price, compute,
+                and carbon. Not because I’m timid, but because I want what I build to survive outside the lab.</p>
         </section>
     </main>
 
@@ -99,11 +99,12 @@
                     <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
                     <li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li>
                     <li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li>
-                    <li><a href="https://scholar.google.com/citations?hl=en&amp;user=FsIchOAAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+                    <li><a href="https://scholar.google.com/citations?hl=en&amp;user=FsIchOAAAAAJ" target="_blank"
+                            rel="noopener">Google Scholar</a></li>
                     <li><span aria-label="Location">Houston, TX</span></li>
                 </ul>
             </nav>
-            <small class="meta">© <span id="year">2025</span> Aryan Gupta</small>
+            <small class="meta">© <span id="year">2026</span> Aryan Gupta</small>
         </div>
     </footer>
 

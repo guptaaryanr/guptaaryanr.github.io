@@ -25,7 +25,7 @@
                 <ul>
                     <li><a href="index.html">About</a></li>
                     <li><a href="research.html">Research</a></li>
-                    <li><a href="ongoing.html">Ongoing & Upcoming</a></li>
+                    <li><a href="ongoing.html">Ongoing &amp; Upcoming</a></li>
                     <li><a href="work.html" aria-current="page">Work</a></li>
                     <li><a href="notes.html">Notes</a></li>
                     <li><a href="cv.html">CV</a></li>
@@ -44,37 +44,46 @@
 
         <header class="section-head">
             <h1>Professional Work</h1>
-            <p class="section-subtitle">R&amp;D tools, EPC workflows, and project handoffs</p>
+            <p class="section-subtitle">R&amp;D tools, EPC workflows, and AI workflow development</p>
         </header>
 
         <p class="lead">
-            Industry has made my research instincts more practical. I have had to turn simulations, scripts, and AI
-            prototypes into work that survives reviews, handoffs, vendor documents, and real project deadlines.
+            Industry has made my research instincts more practical. My work has moved across carbon-capture R&amp;D,
+            instrumentation and controls engineering, and AI-enabled EPC workflows, with a focus on turning models,
+            scripts, and prototypes into tools that survive reviews, handoffs, vendor documents, and real project
+            deadlines.
         </p>
 
         <!-- AI SOLUTIONS INITIATIVE -->
         <section aria-labelledby="ai-initiative-title">
             <header class="section-head">
                 <h2 id="ai-initiative-title">AI Solutions Initiative</h2>
-                <p class="section-subtitle">Technip Energies - Co-Founder &amp; Co-Lead, Americas Region
-                    <span class="meta">(Dec 2025-Present, part-time)</span>
+                <p class="section-subtitle">Technip Energies - Co-Founder, Co-Lead &amp; Technical Lead, Americas AI
+                    Solutions Initiative <span class="meta">(Dec 2025-Present, part-time)</span>
                 </p>
             </header>
 
             <article class="card">
                 <ul class="tight">
-                    <li>Co-founded the Americas-wide AI initiative and now co-lead work across 4 operating centers and
-                        8 engineering functions, scoping and piloting 5 AI workflows for document-heavy and data-heavy
-                        EPC tasks.</li>
-                    <li>Lead development of a Python LLM-assisted natural-language-to-SQL pipeline across 3 engineering
-                        datasets, turning engineering questions into executable queries for structured retrieval.
+                    <li>Co-founded the Americas-wide AI initiative and now co-lead work across 4 operating centers and 8
+                        engineering functions, scoping and piloting AI workflows for document-heavy and data-heavy EPC
+                        tasks.
                     </li>
-                    <li>Coordinated technical development of an LLM-assisted bid tabulation workflow that parses large
+                    <li>Lead the initiative’s use-case pipeline, including idea intake, feasibility review, MVP scoping,
+                        project prioritization, stakeholder alignment, and coordination with engineering and digital
+                        teams.
+                    </li>
+                    <li>Help translate engineering pain points into practical AI workflow pilots, with emphasis on
+                        structured retrieval, vendor-document review, bid tabulation, engineering document intelligence,
+                        and review-intensive EPC workflows.</li>
+                    <li>Lead development of a Python LLM-assisted natural-language-to-SQL pipeline across 3 engineering
+                        datasets, turning engineering questions into executable queries for structured retrieval.</li>
+                    <li>Coordinate technical development of an LLM-assisted bid tabulation workflow that parses large
                         specification packages and normalizes requirement-level information, reducing manual review
                         effort by ~80%.</li>
-                    <li>Build and coordinate a P&amp;ID tool for extracting instruments, lines, loops, and cross-page
-                        connections, combining object detection, OCR, and discipline rules; current detection accuracy
-                        is near 90%.</li>
+                    <li>Guide technical direction, internal presentations, documentation, pilot framing, and general
+                        initiative operations so promising AI ideas can move from scattered concepts into reviewable
+                        project workstreams.</li>
                 </ul>
             </article>
         </section>
@@ -82,7 +91,7 @@
         <!-- CURRENT ROLE -->
         <section aria-labelledby="current-role-title">
             <header class="section-head">
-                <h2 id="current-role-title">Current Role</h2>
+                <h2 id="current-role-title">Current Engineering Role</h2>
                 <p class="section-subtitle">Technip Energies - Specialist Engineer I, Instrumentation &amp; Controls
                     <span class="meta">(Jul 2025-Present)</span>
                 </p>
@@ -122,7 +131,8 @@
                         and crystallization barriers against experiments and literature; also designed and supervised
                         crystal-growth experiments.</li>
                     <li>Built physics-informed data and ML workflows for automated parameter sweeps, experimental data
-                        ingest, terabyte-scale image QA, and surrogate-assisted calibration.</li>
+                        ingest, terabyte-scale image QA, surrogate-assisted calibration, and surrogate-guided
+                        optimization of simulation and experimental design choices.</li>
                     <li>Led uncertainty quantification and reproducibility work, authored 15 internal technical notes,
                         mentored teammates, and turned results into funding decks and a 70-page market analysis.</li>
                 </ul>
@@ -138,6 +148,8 @@
 
             <div class="card">
                 <ul class="tight">
+                    <li>AI initiative building - helped turn scattered AI workflow ideas into a regional initiative with
+                        intake, prioritization, pilot scoping, stakeholder review, and handoff paths.</li>
                     <li>Technical writing standards - authored internal notes, verification tests, and reproducibility
                         guides adopted in team workflows.</li>
                     <li>Mentorship - onboarded engineers to extend modeling/automation pipelines; ran knowledge-sharing
@@ -158,6 +170,15 @@
 
             <ul class="cards" role="list">
                 <li class="card">
+                    <h3>EPC AI Workflow Pilots</h3>
+                    <p>Scoped and coordinated AI pilots for document-heavy and data-heavy EPC workflows, including bid
+                        tabulation, natural-language-to-SQL retrieval, and P&amp;ID intelligence. The work focused on
+                        practical deployment constraints: data structure, traceability, reviewability, and handoff to
+                        engineering users.</p>
+                    <p class="meta">Role: co-founder, co-lead, use-case intake, pilot scoping, technical architecture
+                        &amp; review, stakeholder coordination, initiative operations.</p>
+                </li>
+                <li class="card">
                     <h3>Carbon Capture Modeling Stack</h3>
                     <p>Set up MD/DFT runs with LAMMPS and NWChem across HPC and cloud machines. Parallel I/O and
                         workflow cleanup gave ~2x-3x speed-ups in internal tests, and the outputs fed directly into
@@ -172,11 +193,12 @@
                     <p class="meta">Role: architecture, QA, batch processing.</p>
                 </li>
                 <li class="card">
-                    <h3>Model-Guided Experimentation</h3>
-                    <p>Feature engineering + classical ML (PCA/UMAP, k-means, RF/linear surrogates) to identify
-                        crystallization-rate drivers later confirmed experimentally; piloted active-learning loops for
-                        simulation design.</p>
-                    <p class="meta">Role: analysis, experiment linkage, reporting.</p>
+                    <h3>Surrogate-Assisted Optimization &amp; Model-Guided Experimentation</h3>
+                    <p>Built classical ML and surrogate-modeling workflows to identify crystallization-rate drivers,
+                        prioritize simulation grids, and support experimental planning. Later returned to help extend
+                        the workflow toward surrogate-guided optimization for carbon-capture R&amp;D decisions.</p>
+                    <p class="meta">Role: analysis, surrogate modeling, optimization support, experiment linkage,
+                        reporting.</p>
                 </li>
             </ul>
         </section>
@@ -191,11 +213,13 @@
             <article class="card">
                 <ul class="tight">
                     <li><strong>Rigor &amp; Reproducibility:</strong> uncertainty quantification, seeded runs,
-                        CI-checked scripts, small datasets for quick iteration.</li>
-                    <li><strong>Bridging Scales:</strong> connect atomistic signals to continuum/control models with
-                        explicit assumptions and tests.</li>
-                    <li><strong>Automation:</strong> pipelines that keep analyses current as new images/tables arrive;
-                        dashboards that make decisions faster.</li>
+                        CI-checked scripts, baselines, and small test cases for fast iteration.</li>
+                    <li><strong>Reviewability:</strong> tools should produce outputs that engineers can inspect,
+                        challenge, trace, and hand off.</li>
+                    <li><strong>Bridging Domains:</strong> connect atomistic modeling, continuum assumptions,
+                        instrumentation logic, EPC documents, and AI workflows without hiding the assumptions.</li>
+                    <li><strong>Automation:</strong> pipelines that keep analyses current as new images, tables, vendor
+                        documents, or project data arrive.</li>
                     <li><strong>Communication:</strong> concise memos, plots with units, and enough context for
                         non-specialists to disagree productively.</li>
                 </ul>
@@ -226,11 +250,12 @@
                     <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
                     <li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li>
                     <li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li>
-                    <li><a href="https://scholar.google.com/citations?hl=en&amp;user=FsIchOAAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+                    <li><a href="https://scholar.google.com/citations?hl=en&amp;user=FsIchOAAAAAJ" target="_blank"
+                            rel="noopener">Google Scholar</a></li>
                     <li><span aria-label="Location">Houston, TX</span></li>
                 </ul>
             </nav>
-            <small class="meta">© <span id="year">2025</span> Aryan Gupta</small>
+            <small class="meta">© <span id="year">2026</span> Aryan Gupta</small>
         </div>
     </footer>
 </body>

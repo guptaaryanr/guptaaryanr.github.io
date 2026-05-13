@@ -56,36 +56,62 @@
         <section aria-labelledby="projects">
             <h2 id="projects">Projects</h2>
 
+            <!-- Costgate -->
+            <article class="card" aria-labelledby="traj-title">
+                <header>
+                    <h3 id="traj-title">Costgate: CI Cost Regression Gate for LLM Inference <span
+                            class="meta">(2026)</span>
+                    </h3>
+                    <p class="meta">Status: manuscript in preparation / released code · <span class="chip">LLM
+                            Evaluation Tooling</span>
+                    </p>
+                </header>
+                <p class="abstract">
+                    A CI-native tool for catching LLM inference cost regressions before they reach production.
+                </p>
+                <ul class="tight">
+                    <li><strong>Why</strong> - LLM changes can pass quality checks while becoming slower, longer, or
+                        more expensive.</li>
+                    <li><strong>Approach</strong> - Runs fixed prompt suites, records token/cost/latency metrics, and
+                        compares pull-request runs against a saved baseline.</li>
+                    <li><strong>Outcome</strong> - Produces pass/fail gates and reviewable Markdown/JSON reports for
+                        cost-per-success, token drift, and latency regressions.</li>
+                    <li class="meta"><strong>Methods &amp; checks</strong> - Provider adapters, rate cards,
+                        deterministic harness settings, repeated trials, practical thresholds, and statistical
+                        comparison tests.</li>
+                    <li><strong>Artifacts</strong> - Manuscript under preparation ·
+                        <a class="ext" href="https://doi.org/10.5281/zenodo.20148498" target="_blank" rel="noopener">
+                            &nbsp;Zenodo DOI: 10.5281/zenodo.20148498</a>
+                    </li>
+                </ul>
+            </article>
+
             <!-- Trajectory-Only Regime Detection -->
             <article class="card" aria-labelledby="traj-title">
                 <header>
                     <h3 id="traj-title">Trajectory-Only Structural Regime Detection <span class="meta">(2026)</span>
                     </h3>
-                    <p class="meta">Status: manuscript / code archived · <span class="chip">Nonlinear Dynamics</span>
+                    <p class="meta">Status: manuscript / released code · <span class="chip">Nonlinear Dynamics</span>
                         <span class="chip">Scientific Computing</span> <span class="chip">Trajectory Analysis</span>
                     </p>
                 </header>
                 <p class="abstract">
-                    A study of whether regime changes can be found from trajectories alone, with the governing
-                    equations kept out of the detector.
+                    Trajectory-based study of whether structural regime changes can be detected without giving the
+                    detector access to the governing equations.
                 </p>
                 <ul class="tight">
-                    <li><strong>Why</strong> — A lot of data work starts with recorded trajectories, not clean equations
-                        or Jacobians. I wanted to see how far a detector could get before being allowed to look at the
-                        model.</li>
-                    <li><strong>Approach</strong> — Built trajectory-derived indicators, combined them into a structural
-                        score, and pulled out a boundary along a parameter sweep. The model-aware checks live in a
-                        separate validation layer so the detector cannot grade itself with borrowed information.</li>
-                    <li><strong>Outcome</strong> — In FitzHugh-Nagumo and autonomous forced van der Pol tests, the
-                        structural boundary showed up earlier than the qualitative boundary: epsilon = 0.1158 vs
-                        0.49719, and A = 1.025 vs 1.25.</li>
-                    <li class="meta"><strong>Methods &amp; checks</strong> — Participation-ratio metrics, occupancy-gap
-                        metric, change-point extraction, lead-distance analysis, nuisance sweeps, seed/solver/sampling
-                        robustness, noise checks, scalar-delay checks, ablations, and manifest validation.</li>
-                    <li><strong>Artifacts</strong> — Manuscript draft, Python study suite, frozen benchmark configs,
-                        robustness reports, generated figures, supplementary notes, and
-                        <a class="ext" href="https://doi.org/10.5281/zenodo.19465797" target="_blank"
-                            rel="noopener">Zenodo DOI: 10.5281/zenodo.19465797</a></li>
+                    <li><strong>Why</strong> - Recorded trajectories are often available before clean equations,
+                        Jacobians, or model internals.</li>
+                    <li><strong>Approach</strong> - Built trajectory-derived indicators, combined them into a structural
+                        score, and extracted boundaries across parameter sweeps.</li>
+                    <li><strong>Outcome</strong> - On FitzHugh-Nagumo and autonomous forced van der Pol tests, the
+                        structural boundary appeared before the qualitative transition.</li>
+                    <li class="meta"><strong>Methods &amp; checks</strong> - Change-point extraction, lead-distance
+                        analysis, nuisance sweeps, robustness tests, ablations, and manifest validation.</li>
+                    <li><strong>Artifacts</strong> - Manuscript under submission review ·
+                        <a class="ext" href="https://doi.org/10.5281/zenodo.19465797" target="_blank" rel="noopener">
+                            Zenodo DOI: 10.5281/zenodo.19465797</a>
+                    </li>
                 </ul>
             </article>
 
@@ -93,7 +119,7 @@
             <article class="card" aria-labelledby="tb-title">
                 <header>
                     <h3 id="tb-title">ThermoBench-Consist v1.0 <span class="meta">(2025)</span></h3>
-                    <p class="meta">Status: pre-release · <span class="chip">Benchmark</span> <span
+                    <p class="meta">Status: released code · <span class="chip">Benchmark</span> <span
                             class="chip">Thermodynamics</span></p>
                 </header>
                 <p class="abstract">
@@ -101,14 +127,14 @@
                     Clapeyron slope, acoustic speed), JSON scoring, and guardrails near critical regions.
                 </p>
                 <ul class="tight">
-                    <li><strong>Why</strong> — Accuracy metrics can hide violations of basic physical identities.</li>
-                    <li><strong>Approach</strong> — Minimal API; per-check assertions emit structured failures that map
+                    <li><strong>Why</strong> - Accuracy metrics can hide violations of basic physical identities.</li>
+                    <li><strong>Approach</strong> - Minimal API; per-check assertions emit structured failures that map
                         directly to the violated identity.</li>
-                    <li><strong>Outcome</strong> — CI-ready tests that block physically impossible predictions before
+                    <li><strong>Outcome</strong> - CI-ready tests that block physically impossible predictions before
                         deployment.</li>
-                    <li class="meta"><strong>Methods &amp; checks</strong> — Finite-difference identities;
+                    <li class="meta"><strong>Methods &amp; checks</strong> - Finite-difference identities;
                         envelope/phase-boundary sanity tests; critical-region clamping.</li>
-                    <li><strong>Artifacts</strong> — <a class="ext" href="https://doi.org/10.5281/zenodo.17489426"
+                    <li><strong>Artifacts</strong> - <a class="ext" href="https://doi.org/10.5281/zenodo.17489426"
                             target="_blank" rel="noopener">Zenodo DOI: 10.5281/zenodo.17489426</a></li>
                 </ul>
             </article>
@@ -119,7 +145,7 @@
                 <header>
                     <h3 id="gnn-title">Assessing the Limits of Graph Neural Networks for Vapor-Liquid Equilibrium <span
                             class="meta">(2025)</span></h3>
-                    <p class="meta">Status: manuscript · <span class="chip">Negative Results</span> <span
+                    <p class="meta">Status: preprint · <span class="chip">Negative Results</span> <span
                             class="chip">VLE</span></p>
                 </header>
                 <p class="abstract">
@@ -127,15 +153,15 @@
                     proposes a hybrid fallback with classical libraries.
                 </p>
                 <ul class="tight">
-                    <li><strong>Why</strong> — Small pointwise error ≠ integrable or identity-preserving fields.</li>
-                    <li><strong>Approach</strong> — Stress tests with identity checks; trigger a classical fallback
+                    <li><strong>Why</strong> - Small pointwise error ≠ integrable or identity-preserving fields.</li>
+                    <li><strong>Approach</strong> - Stress tests with identity checks; trigger a classical fallback
                         policy when tests fail.</li>
-                    <li><strong>Outcome</strong> — The useful result was not a better GNN; it was a set of failure cases
+                    <li><strong>Outcome</strong> - The useful result was not a better GNN; it was a set of failure cases
                         and a fallback rule for when a learned property model should hand off to a classical library.
                     </li>
-                    <li class="meta"><strong>Methods &amp; checks</strong> — Integrability tests, common-tangent/Maxwell
+                    <li class="meta"><strong>Methods &amp; checks</strong> - Integrability tests, common-tangent/Maxwell
                         constructions, cross-library comparisons.</li>
-                    <li><strong>Artifacts</strong> — <a class="ext" href="https://arxiv.org/abs/2509.10565"
+                    <li><strong>Artifacts</strong> - <a class="ext" href="https://arxiv.org/abs/2509.10565"
                             target="_blank" rel="noopener">arXiv: 2509.10565</a></li>
                 </ul>
             </article>
@@ -146,7 +172,8 @@
                     <h3 id="slr-title">Energy-Efficient Robotics Software (2020-2024): Systematic Literature Review
                         <span class="meta">(2025)</span>
                     </h3>
-                    <p class="meta">Status: preprint · <span class="chip">Survey</span> <span class="chip">Energy</span>
+                    <p class="meta">Status: preprint / released code · <span class="chip">Survey</span> <span
+                            class="chip">Energy</span>
                     </p>
                 </header>
                 <p class="abstract">
@@ -154,15 +181,15 @@
                     acceleration) across mobile and manipulator platforms.
                 </p>
                 <ul class="tight">
-                    <li><strong>Why</strong> — Robotics papers report speed/latency but rarely in comparable energy
+                    <li><strong>Why</strong> - Robotics papers report speed/latency but rarely in comparable energy
                         terms.</li>
-                    <li><strong>Approach</strong> — Systematic screening; taxonomy of techniques (scheduling/DVFS,
+                    <li><strong>Approach</strong> - Systematic screening; taxonomy of techniques (scheduling/DVFS,
                         refactoring, off-loading, task-level policies); reporting checklist.</li>
-                    <li><strong>Outcome</strong> — Quantified gaps (Wh/mission, energy-latency trade-offs, standard
+                    <li><strong>Outcome</strong> - Quantified gaps (Wh/mission, energy-latency trade-offs, standard
                         workloads) and under-measured components (sensing, comms, OS); full replication package.</li>
-                    <li class="meta"><strong>Methods &amp; checks</strong> — Inclusion/exclusion rationale; code + data
+                    <li class="meta"><strong>Methods &amp; checks</strong> - Inclusion/exclusion rationale; code + data
                         to regenerate figures; foundation for REB-1’s Wh→gCO₂ framing.</li>
-                    <li><strong>Artifacts</strong> — <a class="ext" href="https://arxiv.org/abs/2508.12170"
+                    <li><strong>Artifacts</strong> - <a class="ext" href="https://arxiv.org/abs/2508.12170"
                             target="_blank" rel="noopener">arXiv</a> · <a class="ext"
                             href="https://doi.org/10.5281/zenodo.16907564" target="_blank" rel="noopener">Zenodo DOI</a>
                     </li>
@@ -181,15 +208,15 @@
                     60-second traces and tidy logs for repeatable comparison.
                 </p>
                 <ul class="tight">
-                    <li><strong>Why</strong> — Teams lack a consistent yardstick for energy across perception/control
+                    <li><strong>Why</strong> - Teams lack a consistent yardstick for energy across perception/control
                         stacks.</li>
-                    <li><strong>Approach</strong> — Fixed-duration runs; synchronized power + CPU/GPU counters;
+                    <li><strong>Approach</strong> - Fixed-duration runs; synchronized power + CPU/GPU counters;
                         ready-to-plot summaries.</li>
-                    <li><strong>Outcome</strong> — Repeatable numbers that enable energy-aware choices and rank
+                    <li><strong>Outcome</strong> - Repeatable numbers that enable energy-aware choices and rank
                         stability across hardware.</li>
-                    <li class="meta"><strong>Methods &amp; checks</strong> — Normalized telemetry; per-board calibration
+                    <li class="meta"><strong>Methods &amp; checks</strong> - Normalized telemetry; per-board calibration
                         notes; Wh → gCO₂ conversion.</li>
-                    <li><strong>Artifacts</strong> — <a class="ext" href="https://doi.org/10.5281/zenodo.17204853"
+                    <li><strong>Artifacts</strong> - <a class="ext" href="https://doi.org/10.5281/zenodo.17204853"
                             target="_blank" rel="noopener">Zenodo DOI: 10.5281/zenodo.17204853</a></li>
                 </ul>
             </article>
@@ -225,11 +252,12 @@
                     <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
                     <li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li>
                     <li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li>
-                    <li><a href="https://scholar.google.com/citations?hl=en&amp;user=FsIchOAAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+                    <li><a href="https://scholar.google.com/citations?hl=en&amp;user=FsIchOAAAAAJ" target="_blank"
+                            rel="noopener">Google Scholar</a></li>
                     <li><span aria-label="Location">Houston, TX</span></li>
                 </ul>
             </nav>
-            <small class="meta">© <span id="year">2025</span> Aryan Gupta<noscript> - JS disabled</noscript></small>
+            <small class="meta">© <span id="year">2026</span> Aryan Gupta<noscript> - JS disabled</noscript></small>
         </div>
     </footer>
 </body>
