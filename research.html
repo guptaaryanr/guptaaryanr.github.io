@@ -1,279 +1,147 @@
 <!-- /research.html -->
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
-    <title>Research - Aryan Gupta</title>
+    <title>Research &amp; Software · Aryan Gupta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Research, software, publications, and technical projects by Aryan Gupta across scientific computing, inverse problems, nonlinear dynamics, thermodynamics, robotics, embedded systems, and AI evaluation." />
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="assets/css/site.css" />
     <script defer src="assets/js/site.js"></script>
 </head>
-
 <body>
     <a class="skip-link" href="#content">Skip to content</a>
-
     <header class="site-header" role="banner">
-        <div class="wrap">
-            <a class="brand" href="/" aria-label="Home">Aryan Gupta</a>
-            <button class="nav-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
-                <span class="nav-toggle-box" aria-hidden="true"></span>
-                <span class="nav-toggle-label">Menu</span>
-            </button>
-            <nav id="primary-nav" class="site-nav" aria-label="Primary">
-                <ul>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="research.html" aria-current="page">Research</a></li>
-                    <li><a href="ongoing.html">Ongoing & Upcoming</a></li>
-                    <li><a href="work.html">Work</a></li>
-                    <li><a href="notes.html">Notes</a></li>
-                    <li><a href="cv.html">CV</a></li>
-                </ul>
-            </nav>
+        <div class="shell nav-shell">
+            <a class="brand" href="index.html" aria-label="Aryan Gupta home"><span class="brand-name">Aryan Gupta</span><span class="brand-mark" aria-hidden="true">AG</span></a>
+            <button class="nav-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false"><span class="nav-toggle-box" aria-hidden="true"></span><span class="nav-toggle-label">Menu</span></button>
+            <nav id="primary-nav" class="site-nav" aria-label="Primary"><ul><li><a href="index.html">About</a></li><li><a href="research.html" aria-current="page">Research &amp; Software</a></li><li><a href="work.html">Experience</a></li><li><a href="cv.html">CV</a></li></ul></nav>
         </div>
     </header>
 
     <main id="content" tabindex="-1">
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <ol>
-                <li><a href="/">Home</a></li>
-                <li aria-current="page">Research</li>
-            </ol>
-        </nav>
-
-        <header class="section-head">
-            <h1>Independent Research</h1>
-            <p class="section-subtitle">Benchmarks, failure cases, and physical models</p>
+        <header class="page-hero shell">
+            <div><p class="kicker">Research · software · older engineering projects</p><h1>Things I actually finished.</h1></div>
+            <div class="page-hero-copy"><p>I have a large pile of ideas. This page is not that pile. Everything here became a paper, a release, a benchmark, or something I physically built.</p><p>Recent work comes first. The older stuff stays because I want the site to keep a real record instead of pretending I only started existing this year.</p></div>
         </header>
 
-        <p class="lead">
-            I use independent projects to test ideas that need room outside day-to-day work: small benchmarks, failure
-            cases, reproducible studies, and code that makes a technical claim easier to check.
-        </p>
+        <div class="page-layout shell">
+            <aside class="section-rail" aria-label="Research sections">
+                <p class="section-number">On this page</p>
+                <ul><li><a href="#featured-work">01 Featured work</a></li><li><a href="#research-publications">02 Research &amp; publications</a></li><li><a href="#engineering-projects">03 Engineering projects</a></li></ul>
+            </aside>
 
-        <!-- PROJECTS -->
-        <section aria-labelledby="projects">
-            <h2 id="projects">Projects</h2>
+            <div class="content-column">
+                <section id="featured-work" class="content-section" aria-labelledby="featured-title">
+                    <header class="section-heading-row"><p class="section-number">01</p><div><h2 id="featured-title">Featured work</h2><p class="section-note">These are the four I would start with.</p></div></header>
 
-            <!-- Costgate -->
-            <article class="card" aria-labelledby="costgate-title">
-                <header>
-                    <h3 id="costgate-title">Costgate: CI Cost Regression Gate for LLM Inference <span
-                            class="meta">(2026)</span>
-                    </h3>
-                    <p class="meta">Status: manuscript in preparation / released code · <span class="chip">LLM
-                            Evaluation Tooling</span>
-                    </p>
-                </header>
-                <p class="abstract">
-                    A CI-native tool for catching LLM inference cost regressions before they reach production.
-                </p>
-                <ul class="tight">
-                    <li><strong>Why</strong> - LLM changes can pass quality checks while becoming slower, longer, or
-                        more expensive.</li>
-                    <li><strong>Approach</strong> - Runs fixed prompt suites, records token/cost/latency metrics, and
-                        compares pull-request runs against a saved baseline.</li>
-                    <li><strong>Outcome</strong> - Produces pass/fail gates and reviewable Markdown/JSON reports for
-                        cost-per-success, token drift, and latency regressions.</li>
-                    <li class="meta"><strong>Methods &amp; checks</strong> - Provider adapters, rate cards,
-                        deterministic harness settings, repeated trials, practical thresholds, and statistical
-                        comparison tests.</li>
-                    <li><strong>Artifacts</strong> - Manuscript under preparation ·
-                        <a class="ext" href="https://doi.org/10.5281/zenodo.20148498" target="_blank" rel="noopener">
-                            &nbsp;Zenodo Code DOI</a>
-                    </li>
-                </ul>
-            </article>
+                    <article class="project-dossier" aria-labelledby="wavesleuth-title">
+                        <div class="project-number">01</div>
+                        <div>
+                            <header class="project-head"><div><p class="eyebrow">Inverse problems · PDE simulation · Devito</p><h3 id="wavesleuth-title">WaveSleuth-Devito</h3><p class="project-subtitle">Inverse Wave Playground v1.0</p></div><span class="project-year">2026</span></header>
+                            <p class="project-abstract">I built this while learning Devito because I usually understand a framework only after I have tried to make something end to end with it. The setup is small on purpose. Hide a structure in a 2D acoustic medium, collect sparse traces, and see what you can recover.</p>
+                            <dl class="project-facts"><div><dt>Inside it</dt><dd>Several acquisition geometries, a real Devito forward model, simple inversion baselines, blind challenges, active sensing, uncertainty summaries, scoring, and release checks.</dd></div><div><dt>Scope</dt><dd>Not a seismic package and not a claim about field scale imaging. It is a small inverse problem sandbox that I can break without waiting three days for a run.</dd></div></dl>
 
-            <!-- Trajectory-Only Regime Detection -->
-            <article class="card" aria-labelledby="traj-title">
-                <header>
-                    <h3 id="traj-title">Trajectory-Only Structural Regime Detection <span class="meta">(2026)</span>
-                    </h3>
-                    <p class="meta">Status: preprint / released code · <span class="chip">Nonlinear Dynamics</span>
-                        <span class="chip">Scientific Computing</span> <span class="chip">Trajectory Analysis</span>
-                    </p>
-                </header>
-                <p class="abstract">
-                    Trajectory-based study of whether structural regime changes can be detected without giving the
-                    detector access to the governing equations.
-                </p>
-                <ul class="tight">
-                    <li><strong>Why</strong> - Recorded trajectories are often available before clean equations,
-                        Jacobians, or model internals.</li>
-                    <li><strong>Approach</strong> - Built trajectory-derived indicators, combined them into a structural
-                        score, and extracted boundaries across parameter sweeps.</li>
-                    <li><strong>Outcome</strong> - On FitzHugh-Nagumo and autonomous forced van der Pol tests, the
-                        structural boundary appeared before the qualitative transition.</li>
-                    <li class="meta"><strong>Methods &amp; checks</strong> - Change-point extraction, lead-distance
-                        analysis, nuisance sweeps, robustness tests, ablations, and manifest validation.</li>
-                    <li><strong>Artifacts</strong> - <a
-                            href="assets/research/trajectory-only-structural-regime-detection.pdf" target="_blank"
-                            rel="noopener">Preprint PDF</a> · <a
-                            href="assets/research/trajectory-only-structural-regime-detection-supplement.pdf"
-                            target="_blank" rel="noopener">Supplement</a> · <a class="ext"
-                            href="https://doi.org/10.5281/zenodo.20278240" target="_blank" rel="noopener">Zenodo
-                            Preprint DOI</a> · <a class="ext" href="https://doi.org/10.5281/zenodo.19465797"
-                            target="_blank" rel="noopener">
-                            Zenodo Code DOI</a>
-                    </li>
-                </ul>
-            </article>
+                            <div class="project-visual wave-visual" role="img" aria-label="WaveSleuth workflow from hidden medium through sparse acoustic observations and inversion to a reconstructed medium">
+                                <div class="wave-scene" aria-hidden="true"><span class="wave-anomaly"></span><span class="wave-source s1"></span><span class="wave-source s2"></span><span class="wave-source s3"></span><span class="wave-receiver r1"></span><span class="wave-receiver r2"></span><span class="wave-receiver r3"></span><span class="wave-receiver r4"></span><span class="wave-receiver r5"></span><span class="wave-receiver r6"></span></div>
+                                <div class="visual-flow"><span><small>1</small> hidden medium</span><b>→</b><span><small>2</small> sparse traces</span><b>→</b><span><small>3</small> invert</span><b>→</b><span><small>4</small> reconstruct + score</span></div>
+                                <p>The actual v1.0 loop. Sources and receivers are sparse on purpose. Ambiguity is part of the game.</p>
+                            </div>
 
-            <!-- ThermoBench -->
-            <article class="card" aria-labelledby="tb-title">
-                <header>
-                    <h3 id="tb-title">ThermoBench-Consist v1.0 <span class="meta">(2025)</span></h3>
-                    <p class="meta">Status: released code · <span class="chip">Benchmark</span> <span
-                            class="chip">Thermodynamics</span></p>
-                </header>
-                <p class="abstract">
-                    Benchmark/diagnostic for learned equations of state. Four identity checks (monotonicity, stability,
-                    Clapeyron slope, acoustic speed), JSON scoring, and guardrails near critical regions.
-                </p>
-                <ul class="tight">
-                    <li><strong>Why</strong> - Accuracy metrics can hide violations of basic physical identities.</li>
-                    <li><strong>Approach</strong> - Minimal API; per-check assertions emit structured failures that map
-                        directly to the violated identity.</li>
-                    <li><strong>Outcome</strong> - CI-ready tests that block physically impossible predictions before
-                        deployment.</li>
-                    <li class="meta"><strong>Methods &amp; checks</strong> - Finite-difference identities;
-                        envelope/phase-boundary sanity tests; critical-region clamping.</li>
-                    <li><strong>Artifacts</strong> - <a href="assets/research/thermobench-consist-v1.pdf"
-                            target="_blank" rel="noopener">Preprint PDF</a> · <a class="ext"
-                            href="https://doi.org/10.5281/zenodo.17489426" target="_blank" rel="noopener">Zenodo
-                            Documentation DOI</a> · <a class="ext" href="https://doi.org/10.5281/zenodo.17330441"
-                            target="_blank" rel="noopener">Zenodo Code
-                            DOI</a></li>
-                </ul>
-            </article>
+                            <div class="metric-strip" aria-label="WaveSleuth v1.0 canonical challenge scores"><span><small>mask-cell-easy</small><strong>1.000 IoU</strong></span><span><small>circle + radius/velocity</small><strong>0.895</strong></span><span><small>circle-easy</small><strong>0.800</strong></span><span><small>ellipse-easy</small><strong>0.787</strong></span></div>
+                            <p class="project-links"><a href="https://github.com/guptaaryanr/wavesleuth-devito" target="_blank" rel="noopener">GitHub ↗</a><a href="https://github.com/guptaaryanr/wavesleuth-devito/releases/tag/v1.0.0" target="_blank" rel="noopener">v1.0.0 release ↗</a></p>
+                        </div>
+                    </article>
 
+                    <article class="project-dossier" aria-labelledby="traj-title">
+                        <div class="project-number">02</div>
+                        <div>
+                            <header class="project-head"><div><p class="eyebrow">Nonlinear dynamics · Scientific computing · Trajectory analysis</p><h3 id="traj-title">Trajectory-Only Structural Regime Detection</h3></div><span class="project-year">2026</span></header>
+                            <p class="project-abstract">I wanted to know whether a detector could pick up structural change without being told what kind of change it should expect. I kept the governing equations, regime labels, and transition definitions away from it and only gave it trajectories across an ordered parameter sweep.</p>
+                            <dl class="project-facts"><div><dt>What it gets</dt><dd>Trajectories and the order of the parameter sweep. From those it builds a fixed set of indicators, a structural score, and an extracted boundary.</dd></div><div><dt>How I checked it</dt><dd>The qualitative boundary is computed separately with model specific information and only brought back at evaluation. On the two systems in the paper, the structural boundary appears earlier. The claim stops there.</dd></div></dl>
 
-            <!-- GNN VLE -->
-            <article class="card" aria-labelledby="gnn-title">
-                <header>
-                    <h3 id="gnn-title">Assessing the Limits of Graph Neural Networks for Vapor-Liquid Equilibrium <span
-                            class="meta">(2025)</span></h3>
-                    <p class="meta">Status: preprint · <span class="chip">Negative Results</span> <span
-                            class="chip">VLE</span></p>
-                </header>
-                <p class="abstract">
-                    Negative-results study showing that seemingly accurate GNNs fail global thermodynamic consistency;
-                    proposes a hybrid fallback with classical libraries.
-                </p>
-                <ul class="tight">
-                    <li><strong>Why</strong> - Small pointwise error ≠ integrable or identity-preserving fields.</li>
-                    <li><strong>Approach</strong> - Stress tests with identity checks; trigger a classical fallback
-                        policy when tests fail.</li>
-                    <li><strong>Outcome</strong> - The useful result was not a better GNN; it was a set of failure cases
-                        and a fallback rule for when a learned property model should hand off to a classical library.
-                    </li>
-                    <li class="meta"><strong>Methods &amp; checks</strong> - Integrability tests, common-tangent/Maxwell
-                        constructions, cross-library comparisons.</li>
-                    <li><strong>Artifacts</strong> - <a href="assets/research/gnn-vle-limits.pdf" target="_blank"
-                            rel="noopener">Preprint PDF</a> · <a class="ext" href="https://arxiv.org/abs/2509.10565"
-                            target="_blank" rel="noopener">arXiv</a></li>
-                </ul>
-            </article>
+                            <div class="project-visual barrier-visual" aria-label="Information separation used in the trajectory-only regime detector">
+                                <div class="barrier-column allowed"><p class="visual-kicker">Detector gets</p><strong>state trajectories</strong><strong>parameter ordering</strong><span>nothing about the expected transition</span></div>
+                                <div class="barrier-wall" aria-hidden="true"><span>no peeking</span></div>
+                                <div class="barrier-column withheld"><p class="visual-kicker">Held back</p><strong>governing equations</strong><strong>oracle regime labels</strong><strong>qualitative boundary definition</strong></div>
+                                <div class="barrier-eval"><span>After detection</span><b>compare extracted structural boundary ↔ independent qualitative boundary</b></div>
+                            </div>
 
+                            <details class="project-evidence"><summary>See the FitzHugh-Nagumo result</summary><figure><img src="assets/img/projects/trajectory-flagship.webp" alt="Complete FitzHugh-Nagumo flagship result showing trajectory-derived metrics, structural score, and structural versus qualitative boundaries" loading="lazy" /><figcaption>The dashed structural boundary is extracted from the trajectory-only score. The dotted qualitative boundary is defined separately and used afterward.</figcaption></figure></details>
+                            <p class="project-links"><a href="assets/research/trajectory-only-structural-regime-detection.pdf" target="_blank" rel="noopener">Preprint PDF</a><a href="assets/research/trajectory-only-structural-regime-detection-supplement.pdf" target="_blank" rel="noopener">Supplement</a><a href="https://doi.org/10.5281/zenodo.20278240" target="_blank" rel="noopener">Preprint DOI ↗</a><a href="https://doi.org/10.5281/zenodo.19465797" target="_blank" rel="noopener">Code DOI ↗</a><a href="https://github.com/guptaaryanr/RegimeAtlas" target="_blank" rel="noopener">GitHub ↗</a></p>
+                        </div>
+                    </article>
 
-            <article class="card" aria-labelledby="slr-title">
-                <header>
-                    <h3 id="slr-title">Energy-Efficient Robotics Software (2020-2024): Systematic Literature Review
-                        <span class="meta">(2025)</span>
-                    </h3>
-                    <p class="meta">Status: preprint / released code · <span class="chip">Survey</span> <span
-                            class="chip">Energy</span>
-                    </p>
-                </header>
-                <p class="abstract">
-                    A 79-study synthesis on energy in autonomy stacks (planning, perception, middleware, HW
-                    acceleration) across mobile and manipulator platforms.
-                </p>
-                <ul class="tight">
-                    <li><strong>Why</strong> - Robotics papers report speed/latency but rarely in comparable energy
-                        terms.</li>
-                    <li><strong>Approach</strong> - Systematic screening; taxonomy of techniques (scheduling/DVFS,
-                        refactoring, off-loading, task-level policies); reporting checklist.</li>
-                    <li><strong>Outcome</strong> - Quantified gaps (Wh/mission, energy-latency trade-offs, standard
-                        workloads) and under-measured components (sensing, comms, OS); full replication package.</li>
-                    <li class="meta"><strong>Methods &amp; checks</strong> - Inclusion/exclusion rationale; code + data
-                        to regenerate figures; foundation for REB-1’s Wh→gCO₂ framing.</li>
-                    <li><strong>Artifacts</strong> - <a
-                            href="assets/research/energy-efficient-robotics-software-review.pdf" target="_blank"
-                            rel="noopener">Preprint PDF</a> · <a class="ext" href="https://arxiv.org/abs/2508.12170"
-                            target="_blank" rel="noopener">arXiv</a> · <a class="ext"
-                            href="https://doi.org/10.5281/zenodo.16907564" target="_blank" rel="noopener">Zenodo Code
-                            DOI</a>
-                    </li>
-                </ul>
-            </article>
+                    <article class="project-dossier" aria-labelledby="tb-title">
+                        <div class="project-number">03</div>
+                        <div>
+                            <header class="project-head"><div><p class="eyebrow">Scientific ML evaluation · Thermodynamics</p><h3 id="tb-title">ThermoBench-Consist v1.0</h3></div><span class="project-year">2025</span></header>
+                            <p class="project-abstract">I built ThermoBench after a GNN surrogate for vapor liquid equilibrium fooled me in a fairly instructive way. Ordinary prediction error looked acceptable. Inside the thermodynamic calculation, it fell apart. The useful question was not whether the average error was low. It was whether the learned surface still behaved like thermodynamics.</p>
+                            <dl class="project-facts"><div><dt>Basic test</dt><dd>Before a learned equation of state goes anywhere near a CFD or VLE solver, make it pass a few cheap physical consistency checks.</dd></div><div><dt>The catch</dt><dd>Critical and spinodal regions need guardrails. Without them, the diagnostic starts flagging perfectly reasonable behavior as a failure.</dd></div></dl>
 
-            <!-- REB-1 -->
-            <article class="card" aria-labelledby="reb-title">
-                <header>
-                    <h3 id="reb-title">REB-1: Robot Energy Benchmark v0.1 <span class="meta">(2025)</span></h3>
-                    <p class="meta">Status: alpha · <span class="chip">Energy</span> <span class="chip">Robotics</span>
-                    </p>
-                </header>
-                <p class="abstract">
-                    Micro-benchmark for measuring power and carbon footprint of robotics workloads; standardized
-                    60-second traces and tidy logs for repeatable comparison.
-                </p>
-                <ul class="tight">
-                    <li><strong>Why</strong> - Teams lack a consistent yardstick for energy across perception/control
-                        stacks.</li>
-                    <li><strong>Approach</strong> - Fixed-duration runs; synchronized power + CPU/GPU counters;
-                        ready-to-plot summaries.</li>
-                    <li><strong>Outcome</strong> - Repeatable numbers that enable energy-aware choices and rank
-                        stability across hardware.</li>
-                    <li class="meta"><strong>Methods &amp; checks</strong> - Normalized telemetry; per-board calibration
-                        notes; Wh → gCO₂ conversion.</li>
-                    <li><strong>Artifacts</strong> - <a class="ext" href="https://doi.org/10.5281/zenodo.17204853"
-                            target="_blank" rel="noopener">Zenodo Code DOI</a></li>
-                </ul>
-            </article>
+                            <div class="project-visual thermo-visual" aria-label="Four physical consistency checks used by ThermoBench">
+                                <div class="thermo-check"><span>C1</span><strong>ρ should rise with p</strong><small>monotonicity</small></div>
+                                <div class="thermo-check"><span>C2</span><strong>κ<sub>T</sub> &gt; 0</strong><small>mechanical stability</small></div>
+                                <div class="thermo-check"><span>C3</span><strong>Clapeyron slope</strong><small>phase consistency</small></div>
+                                <div class="thermo-check"><span>C4</span><strong>a² &gt; 0</strong><small>speed of sound</small></div>
+                                <div class="thermo-result good"><small>reference adapter</small><b>PASS · PASS · PASS · PASS</b></div>
+                                <div class="thermo-result bad"><small>deliberately inconsistent surrogate</small><b>FAIL · PASS · FAIL · FAIL</b></div>
+                            </div>
 
-        </section>
+                            <p class="project-links"><a href="assets/research/thermobench-consist-v1.pdf" target="_blank" rel="noopener">Preprint PDF</a><a href="https://doi.org/10.5281/zenodo.17489426" target="_blank" rel="noopener">Documentation DOI ↗</a><a href="https://doi.org/10.5281/zenodo.17330441" target="_blank" rel="noopener">Code DOI ↗</a><a href="https://github.com/guptaaryanr/ThermoBench-Consist" target="_blank" rel="noopener">GitHub ↗</a></p>
+                        </div>
+                    </article>
 
-        <section aria-labelledby="themes-title">
-            <h2 id="themes-title">Research Themes</h2>
-            <div class="theme-grid">
-                <article class="card">
-                    <h3>Applied ML, Control, and Robotics</h3>
-                    <p>Models are most interesting to me when they have to touch a sensor, a controller, or a physical
-                        budget.</p>
-                </article>
-                <article class="card">
-                    <h3>Physical Modeling &amp; Sustainable Systems</h3>
-                    <p>Molecular modeling, carbon capture, and energy measurement work where the units matter as much
-                        as the code.</p>
-                </article>
-                <article class="card">
-                    <h3>Reproducible Scientific Plumbing</h3>
-                    <p>The unglamorous parts I keep coming back to: adapters, logs, manifests, tests, and small
-                        datasets that make a result easier to rerun.</p>
-                </article>
+                    <article class="project-dossier" aria-labelledby="costgate-title">
+                        <div class="project-number">04</div>
+                        <div>
+                            <header class="project-head"><div><p class="eyebrow">LLM evaluation tooling · CI</p><h3 id="costgate-title">Costgate</h3><p class="project-subtitle">CI cost regression gate for LLM inference</p></div><span class="project-year">2026</span></header>
+                            <p class="project-abstract">An LLM change can get more expensive while all the normal tests still pass. The API returns, the output looks fine, and the bill quietly moves in the wrong direction. Costgate gives that kind of regression a place in CI.</p>
+                            <dl class="project-facts"><div><dt>Compared</dt><dd>Baseline and candidate runs over the same suite. It looks at cost per valid success, token use, task success, latency, repeat variability, and explicit thresholds.</dd></div><div><dt>Kept deliberately small</dt><dd>A giant eval platform. The policy is a file, the artifacts are inspectable, and the useful output at the end is still just pass, warn, or fail.</dd></div></dl>
+
+                            <div class="project-visual costgate-visual" aria-label="Costgate compares baseline and candidate LLM runs, evaluates an explicit policy, and returns pass warn or fail">
+                                <div class="cost-run"><small>baseline</small><strong>fixed suite</strong><span>cost · success · tokens · latency</span></div>
+                                <div class="cost-vs">vs</div>
+                                <div class="cost-run"><small>candidate</small><strong>same suite</strong><span>cost · success · tokens · latency</span></div>
+                                <div class="cost-arrow" aria-hidden="true">↓</div>
+                                <div class="cost-policy"><small>versioned policy</small><strong>+10% relative cost?</strong><ul class="policy-tags"><li>minimum delta</li><li>significance</li><li>severity</li></ul></div>
+                                <div class="cost-verdicts"><b>PASS</b><b>WARN</b><b>FAIL</b></div>
+                            </div>
+
+                            <details class="project-evidence code-evidence"><summary>See one policy gate</summary><pre><code>cost_per_valid_success_usd:
+  direction: higher_is_worse
+  max_relative_increase: 0.10
+  min_absolute_delta_usd: 0.00005
+  statistical_test: mann_whitney
+  severity: fail</code></pre></details>
+                            <p class="project-links"><a href="https://github.com/guptaaryanr/costgate-v1" target="_blank" rel="noopener">GitHub ↗</a><a href="https://doi.org/10.5281/zenodo.20148498" target="_blank" rel="noopener">Code DOI ↗</a></p>
+                        </div>
+                    </article>
+                </section>
+
+                <section id="research-publications" class="content-section" aria-labelledby="research-title">
+                    <header class="section-heading-row"><p class="section-number">02</p><div><h2 id="research-title">Research &amp; publications</h2><p class="section-note">Trajectory appears again here because this section is the publication record too.</p></div></header>
+                    <div class="archive-list">
+                        <article class="archive-row"><div class="archive-year">2026</div><div class="archive-title"><p class="archive-type">Preprint + software</p><h3>Trajectory-Only Structural Regime Detection in Deterministic Dynamical Systems</h3><p class="project-links"><a href="assets/research/trajectory-only-structural-regime-detection.pdf" target="_blank" rel="noopener">PDF</a><a href="https://doi.org/10.5281/zenodo.20278240" target="_blank" rel="noopener">DOI ↗</a><a href="https://github.com/guptaaryanr/RegimeAtlas" target="_blank" rel="noopener">GitHub ↗</a></p></div><p class="archive-summary">The paper behind the project above. It covers indicators built only from trajectories, structural scoring, extracted boundaries, nuisance tests, specificity tests, and ablations on FitzHugh-Nagumo and forced van der Pol.</p></article>
+                        <article class="archive-row"><div class="archive-year">2025</div><div class="archive-title"><p class="archive-type">Preprint</p><h3>Assessing the Limits of GNNs for Vapor-Liquid Equilibrium</h3><p class="project-links"><a href="assets/research/gnn-vle-limits.pdf" target="_blank" rel="noopener">PDF</a><a href="https://arxiv.org/abs/2509.10565" target="_blank" rel="noopener">arXiv ↗</a></p></div><p class="archive-summary">This was supposed to be a surrogate model paper. It turned into a negative result when the learned pressure surface and its derivatives failed in the regions the VLE solver actually needed. That failure became the useful part.</p></article>
+                        <article class="archive-row"><div class="archive-year">2025</div><div class="archive-title"><p class="archive-type">Research software</p><h3>REB-1</h3><p class="archive-subtitle">Robot Energy Benchmark v0.1</p><p class="project-links"><a href="https://github.com/guptaaryanr/REB-1" target="_blank" rel="noopener">GitHub ↗</a><a href="https://doi.org/10.5281/zenodo.17204853" target="_blank" rel="noopener">Code DOI ↗</a></p></div><p class="archive-summary">A small command line benchmark for logging power, integrating it to Wh, and converting that to estimated gCO₂ so robotics workloads can be compared on something more meaningful than runtime alone.</p></article>
+                        <article class="archive-row"><div class="archive-year">2025</div><div class="archive-title"><p class="archive-type">Systematic review</p><h3>Energy Efficient Robotics Software</h3><p class="archive-subtitle">Systematic literature review</p><p class="project-links"><a href="assets/research/energy-efficient-robotics-software-review.pdf" target="_blank" rel="noopener">PDF</a><a href="https://arxiv.org/abs/2508.12170" target="_blank" rel="noopener">arXiv ↗</a><a href="https://doi.org/10.5281/zenodo.16907564" target="_blank" rel="noopener">Code DOI ↗</a><a href="https://github.com/guptaaryanr/slr_robotics_replication_package" target="_blank" rel="noopener">GitHub ↗</a></p></div><p class="archive-summary">A review of 79 studies published since 2020 on energy efficiency in robotics software, plus the screening data and code needed to reproduce the figures and inclusion decisions.</p></article>
+                    </div>
+                </section>
+
+                <section id="engineering-projects" class="content-section" aria-labelledby="engineering-title">
+                    <header class="section-heading-row"><p class="section-number">03</p><div><h2 id="engineering-title">Engineering &amp; systems projects</h2><p class="section-note">Mostly Michigan. Not what I work on now, but still things I built and want to keep on the record.</p></div></header>
+                    <div class="archive-list">
+                        <article class="archive-row"><div class="archive-year">2022</div><div class="archive-title"><p class="archive-type">Embedded systems</p><h3>Electric Longboard Remote Controller</h3></div><p class="archive-summary">A longboard remote built around an STM32 with smartphone communication, VESC control, battery telemetry, display and media functions, firmware changes, and a 3D printed enclosure.</p></article>
+                        <article class="archive-row"><div class="archive-year">2022</div><div class="archive-title"><p class="archive-type">Computer architecture</p><h3>Out of Order Processor Architecture Design</h3></div><p class="archive-summary">A MIPS R10K style, two way superscalar, out of order core in SystemVerilog with I/D caches, a load-store queue, branch recovery, precise exceptions, baseline SMT, and a visual debugger for bring up.</p></article>
+                        <article class="archive-row"><div class="archive-year">2022</div><div class="archive-title"><p class="archive-type">Robotics &amp; controls</p><h3>Low Autonomy Follower Robot</h3><p class="project-links"><a href="https://github.com/guptaaryanr/follower-bot-373-project" target="_blank" rel="noopener">GitHub ↗</a></p></div><p class="archive-summary">Two Zumo robots with Nucleo boards. A manually driven leader flashed LED command patterns, while the follower used a PixyCam, ultrasonic sensing, and PID control to read them and keep its distance.</p></article>
+                    </div>
+                </section>
             </div>
-        </section>
+        </div>
     </main>
 
-    <footer class="site-footer" role="contentinfo">
-        <div class="wrap">
-            <nav aria-label="Contact">
-                <ul class="contact">
-                    <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
-                    <li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li>
-                    <li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li>
-                    <li><a href="https://scholar.google.com/citations?hl=en&amp;user=FsIchOAAAAAJ" target="_blank"
-                            rel="noopener">Google Scholar</a></li>
-                    <li><span aria-label="Location">Houston, TX</span></li>
-                </ul>
-            </nav>
-            <small class="meta">© <span id="year">2026</span> Aryan Gupta<noscript> - JS disabled</noscript></small>
-        </div>
-    </footer>
+    <footer class="site-footer" role="contentinfo"><div class="shell footer-grid"><div><p class="footer-name">Aryan Gupta</p><p class="footer-note">Abu Dhabi → Ann Arbor → Houston → London</p></div><nav aria-label="Contact"><ul class="contact"><li><a href="mailto:guptaaryanr@gmail.com">Email</a></li><li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li><li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://scholar.google.com/citations?hl=en&amp;user=FsIchOAAAAAJ" target="_blank" rel="noopener">Scholar</a></li><li><a href="https://orcid.org/0009-0001-8179-5145" target="_blank" rel="noopener">ORCID</a></li></ul></nav><small class="footer-meta">© <span id="year">2026</span> Aryan Gupta</small></div></footer>
 </body>
-
 </html>

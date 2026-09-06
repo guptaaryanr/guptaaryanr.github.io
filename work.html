@@ -1,263 +1,73 @@
 <!-- /work.html -->
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
-    <title>Work - Aryan Gupta</title>
+    <title>Experience · Aryan Gupta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Professional, research, teaching, entrepreneurial, and service experience of Aryan Gupta." />
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="assets/css/site.css" />
     <script defer src="assets/js/site.js"></script>
 </head>
-
 <body>
     <a class="skip-link" href="#content">Skip to content</a>
-
-    <header class="site-header" role="banner">
-        <div class="wrap">
-            <a class="brand" href="index.html" aria-label="Home">Aryan Gupta</a>
-            <button class="nav-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
-                <span class="nav-toggle-box" aria-hidden="true"></span>
-                <span class="nav-toggle-label">Menu</span>
-            </button>
-            <nav id="primary-nav" class="site-nav" aria-label="Primary">
-                <ul>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="ongoing.html">Ongoing &amp; Upcoming</a></li>
-                    <li><a href="work.html" aria-current="page">Work</a></li>
-                    <li><a href="notes.html">Notes</a></li>
-                    <li><a href="cv.html">CV</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <header class="site-header" role="banner"><div class="shell nav-shell"><a class="brand" href="index.html" aria-label="Aryan Gupta home"><span class="brand-name">Aryan Gupta</span><span class="brand-mark" aria-hidden="true">AG</span></a><button class="nav-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false"><span class="nav-toggle-box" aria-hidden="true"></span><span class="nav-toggle-label">Menu</span></button><nav id="primary-nav" class="site-nav" aria-label="Primary"><ul><li><a href="index.html">About</a></li><li><a href="research.html">Research &amp; Software</a></li><li><a href="work.html" aria-current="page">Experience</a></li><li><a href="cv.html">CV</a></li></ul></nav></div></header>
 
     <main id="content" tabindex="-1">
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <ol>
-                <li><a href="index.html">Home</a></li>
-                <li aria-current="page">Work</li>
-            </ol>
-        </nav>
-
-        <header class="section-head">
-            <h1>Professional Work</h1>
-            <p class="section-subtitle">R&amp;D, EPC engineering, and AI workflow development</p>
+        <header class="page-hero shell">
+            <div><p class="kicker">Industry · research · teaching · other things I did</p><h1>On paper this looks more scattered than it felt.</h1></div>
+            <div class="page-hero-copy"><p>I joined Technip to do applied physics R&amp;D, later spent time in instrumentation and controls, and helped start an internal AI initiative alongside the day job. Before that was Michigan. Quadcopters, circuits, satellite work, teaching, and whatever project I had talked myself into that semester.</p><p>There is a throughline in there, but I’d be lying if I said I planned it that neatly at the time.</p></div>
         </header>
 
-        <p class="lead">
-            Industry has made my research instincts more practical. My work has moved across carbon-capture R&amp;D,
-            instrumentation and controls engineering, and AI-enabled EPC workflows, with a focus on turning models,
-            scripts, and prototypes into tools that survive reviews, handoffs, vendor documents, and real project
-            deadlines.
-        </p>
+        <div class="page-layout shell">
+            <aside class="section-rail" aria-label="Experience sections"><p class="section-number">On this page</p><ul><li><a href="#industry">01 Industry</a></li><li><a href="#research-teaching">02 Research &amp; teaching</a></li><li><a href="#entrepreneurship-service">03 Building &amp; service</a></li><li><a href="#education">04 Education</a></li><li><a href="#credentials">05 Credentials</a></li></ul></aside>
 
-        <!-- AI SOLUTIONS INITIATIVE -->
-        <section aria-labelledby="ai-initiative-title">
-            <header class="section-head">
-                <h2 id="ai-initiative-title">AI Solutions Initiative</h2>
-                <p class="section-subtitle">Technip Energies - Co-Founder, Co-Lead &amp; Technical Lead, Americas AI
-                    Solutions Initiative <span class="meta">(Dec 2025-Present, part-time)</span>
-                </p>
-            </header>
+            <div class="content-column">
+                <section id="industry" class="content-section" aria-labelledby="industry-title">
+                    <header class="section-heading-row"><p class="section-number">01</p><div><h2 id="industry-title">Technip Energies</h2><p class="section-note">The dates overlap because the roles did.</p></div></header>
+                    <div class="timeline">
+                        <article class="timeline-entry"><div class="timeline-date">2023 to 2025<br />and 2026</div><div class="timeline-dot" aria-hidden="true"></div><div class="timeline-role"><h3>Technology Developer I · Applied Physics and Carbon Capture R&amp;D</h3><p class="timeline-company">Technip Energies</p><ul><li>This was most of my time at Technip. I built out the team’s MD/DFT capability across HPC and cloud systems, cut simulation wall time by roughly two thirds, and started carrying atomistic results into diffusion and CFD models instead of stopping at the molecular scale.</li><li>A lot of the work around that was less glamorous and just as necessary. I ran parameter sweeps, worked through terabytes of image data, did the uncertainty work, built surrogate models, and spent a fair amount of time deciding which simulation or experiment was actually worth running next.</li><li>I wrote 15 internal technical notes, maintained the code and data well enough for other people to reuse, mentored teammates, and increasingly ended up in the meetings where the technical result had to turn into a funding or engineering decision.</li></ul></div></article>
+                        <article class="timeline-entry"><div class="timeline-date">2025 to 2026</div><div class="timeline-dot" aria-hidden="true"></div><div class="timeline-role"><h3>Americas AI Solutions Initiative · Cofounder and Technical Lead</h3><p class="timeline-company">Technip Energies · alongside engineering role</p><ul><li>This started with a few of us trying to make internal AI work a little less random. It grew across 4 operating centers and 8 engineering functions. I handled much of the technical scoping, deciding what was worth building, what the first version actually needed to do, and which pieces could be reused instead of rebuilt for every demo.</li><li>The projects were very specific to engineering work. Natural language to SQL, P&amp;ID intelligence, vendor document review, bid tabulation, and similar document heavy workflows. One bid tabulation pipeline cut manual review effort by about 80%.</li></ul></div></article>
+                        <article class="timeline-entry"><div class="timeline-date">2025 to 2026</div><div class="timeline-dot" aria-hidden="true"></div><div class="timeline-role"><h3>Specialist Engineer I · Instrumentation &amp; Controls</h3><p class="timeline-company">Technip Energies</p><ul><li>I spent my final year much closer to conventional EPC engineering. The work ran through P&amp;IDs, PFDs, Cause &amp; Effect diagrams, control narratives, vendor documents, and project specifications on hydrogen, carbon capture, and brownfield scopes.</li><li>It was useful for a reason that has nothing to do with fancy models. Real engineering systems are full of standards, traceability, document control, QA, and change management. If the software ignores that, it is not very useful software.</li></ul></div></article>
+                    </div>
+                </section>
 
-            <article class="card">
-                <ul class="tight">
-                    <li>Co-founded the Americas-wide AI initiative and now co-lead work across 4 operating centers and 8
-                        engineering functions, scoping and piloting AI workflows for document-heavy and data-heavy EPC
-                        tasks.
-                    </li>
-                    <li>Lead the initiative’s use-case pipeline, including idea intake, feasibility review, MVP scoping,
-                        project prioritization, stakeholder alignment, and coordination with engineering and digital
-                        teams.
-                    </li>
-                    <li>Help translate engineering pain points into practical AI workflow pilots, with emphasis on
-                        structured retrieval, vendor-document review, bid tabulation, engineering document intelligence,
-                        and review-intensive EPC workflows.</li>
-                    <li>Lead development of a Python LLM-assisted natural-language-to-SQL pipeline across 3 engineering
-                        datasets, turning engineering questions into executable queries for structured retrieval.</li>
-                    <li>Coordinate technical development of an LLM-assisted bid tabulation workflow that parses large
-                        specification packages and normalizes requirement-level information, reducing manual review
-                        effort by ~80%.</li>
-                    <li>Guide technical direction, internal presentations, documentation, pilot framing, and general
-                        initiative operations so promising AI ideas can move from scattered concepts into reviewable
-                        project workstreams.</li>
-                </ul>
-            </article>
-        </section>
+                <section id="research-teaching" class="content-section" aria-labelledby="rt-title">
+                    <header class="section-heading-row"><p class="section-number">02</p><div><h2 id="rt-title">Research &amp; teaching</h2></div></header>
+                    <div class="record-grid">
+                        <article class="record-item"><p class="eyebrow">2021 to 2023</p><h3>BIRDS Lab · Research Assistant</h3><p>Worked on an adaptable quadcopter platform. Depending on the week that meant WiFi/UART telemetry, power boards, embedded electronics, flight control software, or figuring out which subsystem was currently making the rest of the robot miserable.</p></article>
+                        <article class="record-item"><p class="eyebrow">2022 to 2023</p><h3>EECS 314 · Circuit Design &amp; Analysis · Instructional Aide</h3><p>Led discussion groups for roughly 80 students and a 20 student lab on circuits, RLC transients, op amps, and bench instrumentation. I also helped with the course structure for 160+ students.</p></article>
+                        <article class="record-item"><p class="eyebrow">2020</p><h3>MiTEE · Plasma Team, Liaison to Structures</h3><p>My first proper research project. We were looking at electrodynamic tether propulsion for pico/nanosatellites, and I worked across the thermodynamic analysis, electronics prototyping, and the interface between the plasma and structures teams.</p></article>
+                    </div>
+                </section>
 
-        <!-- CURRENT ROLE -->
-        <section aria-labelledby="current-role-title">
-            <header class="section-head">
-                <h2 id="current-role-title">Current Engineering Role</h2>
-                <p class="section-subtitle">Technip Energies - Specialist Engineer I, Instrumentation &amp; Controls
-                    <span class="meta">(Jul 2025-Present)</span>
-                </p>
-            </header>
+                <section id="entrepreneurship-service" class="content-section" aria-labelledby="es-title">
+                    <header class="section-heading-row"><p class="section-number">03</p><div><h2 id="es-title">Building, leadership &amp; service</h2><p class="section-note">Not central to what I work on now, but still part of the record.</p></div></header>
+                    <div class="record-grid">
+                        <article class="record-item"><p class="eyebrow">2022</p><h3>HelixCases · Cofounder and Software Developer</h3><p>Built a technical recruiting competition platform that reached 550+ students at 20 universities. I did some of everything. Software, product scoping, customer discovery, and the less exciting work of actually running the competitions.</p></article>
+                        <article class="record-item"><p class="eyebrow">2021 to 2022</p><h3>StartUM · Member &amp; Mentor</h3><p>Mentored an early stage startup for medical volunteering through ideation and validation, including the point where the original market stopped making sense and the team had to change direction.</p></article>
+                        <article class="record-item"><p class="eyebrow">2020 to 2021</p><h3>Project RISHI · Fundraising cochair</h3><p>Worked on grant applications and campus fundraising. We secured $16k toward a $35k budget through grants and student events.</p></article>
+                        <article class="record-item"><p class="eyebrow">2023 to 2024</p><h3>Citizens for Animal Protection · Volunteer</h3><p>Walked dogs, cleaned kennels, and helped with the normal day to day work of a Houston animal shelter.</p></article>
+                    </div>
+                </section>
 
-            <article class="card">
-                <ul class="tight">
-                    <li>Review vendor instrumentation documentation against P&amp;IDs, PFDs, and Cause &amp; Effect
-                        diagrams for blue hydrogen project deliverables, identifying discrepancies and supporting issue
-                        resolution.</li>
-                    <li>Support brownfield and carbon-capture I&amp;C updates by reconciling legacy logic, control
-                        narratives, P&amp;IDs, and Cause &amp; Effect documentation within traceability and
-                        management-of-change workflows.</li>
-                    <li>Apply ISA/IEC instrumentation standards, internal specifications, document version control, and
-                        QA practices while onboarding across EPC deliverable workflows.</li>
-                </ul>
-            </article>
-        </section>
+                <section id="education" class="content-section" aria-labelledby="education-title">
+                    <header class="section-heading-row"><p class="section-number">04</p><div><h2 id="education-title">Education</h2></div></header>
+                    <div>
+                        <article class="education-row"><div class="archive-year">2026 to 2027</div><h3>Imperial College London</h3><p><strong>MSc Applied Computational Science &amp; Engineering · Incoming.</strong><br />I have spent the last few years learning scientific computing because individual problems forced me to. This is the year I get to study the subject itself.</p></article>
+                        <article class="education-row"><div class="archive-year">2019 to 2023</div><h3>University of Michigan</h3><p><strong>BSE Engineering Physics, cum laude.</strong><br />Minors in Electrical Engineering, Computer Science, and Entrepreneurship.</p></article>
+                    </div>
+                </section>
 
-        <!-- PREVIOUS ROLE -->
-        <section aria-labelledby="previous-role-title">
-            <header class="section-head">
-                <h2 id="previous-role-title">Previous Role</h2>
-                <p class="section-subtitle">Technip Energies - Technology Developer I (Applied Physics Lead, Novel
-                    Carbon Capture R&amp;D) <span class="meta">(Aug 2023-Jul 2025; Feb-Mar 2026, part-time)</span></p>
-            </header>
-
-            <article class="card">
-                <ul class="tight">
-                    <li>Established a first-principles molecular modeling capability for carbon-capture R&amp;D,
-                        developing reproducible MD/DFT pipelines across HPC and cloud that reduced simulation wall time
-                        by ~2/3 and lowered cloud spend.</li>
-                    <li>Integrated atomistic outputs into diffusion and CFD models through a nucleation-delay
-                        reformulation, improving continuum-model accuracy and helping verify the diffusion-scale
-                        codebase.</li>
-                    <li>Evaluated multiple force-field families and benchmarked interfacial energies, diffusion rates,
-                        and crystallization barriers against experiments and literature; also designed and supervised
-                        crystal-growth experiments.</li>
-                    <li>Built physics-informed data and ML workflows for automated parameter sweeps, experimental data
-                        ingest, terabyte-scale image QA, surrogate-assisted calibration, and surrogate-guided
-                        optimization of simulation and experimental design choices.</li>
-                    <li>Led uncertainty quantification and reproducibility work, authored 15 internal technical notes,
-                        mentored teammates, and turned results into funding decks and a 70-page market analysis.</li>
-                </ul>
-            </article>
-        </section>
-
-        <!-- INITIATIVES -->
-        <section aria-labelledby="initiatives-title">
-            <header class="section-head">
-                <h2 id="initiatives-title">Initiatives &amp; Leadership</h2>
-                <p class="section-subtitle">Making technical work easier for other people to adopt and extend</p>
-            </header>
-
-            <div class="card">
-                <ul class="tight">
-                    <li>AI initiative building - helped turn scattered AI workflow ideas into a regional initiative with
-                        intake, prioritization, pilot scoping, stakeholder review, and handoff paths.</li>
-                    <li>Technical writing standards - authored internal notes, verification tests, and reproducibility
-                        guides adopted in team workflows.</li>
-                    <li>Mentorship - onboarded engineers to extend modeling/automation pipelines; ran knowledge-sharing
-                        sessions across disciplines.</li>
-                    <li>Cross-discipline handoff - worked between process, instrumentation, controls, modeling, and
-                        software groups so prototypes had owners, assumptions, and a path into normal engineering work.
-                    </li>
-                </ul>
+                <section id="credentials" class="content-section" aria-labelledby="credentials-title">
+                    <header class="section-heading-row"><p class="section-number">05</p><div><h2 id="credentials-title">Credentials &amp; honors</h2></div></header>
+                    <ul class="credentials-list"><li><span>2026</span><div><strong>Six Sigma Green Belt (CSSGB)</strong> · Technip Energies</div></li><li><span>2020</span><div><strong>Foundational Finance for Strategic Decision Making</strong> · University of Michigan</div></li><li><span>2023</span><div><strong>Cum Laude</strong> · University of Michigan</div></li><li><span>2019 to 2020</span><div><strong>University Honors</strong> · 2019, 2020 · <strong>Dean's List</strong> · 2019, 2020</div></li></ul>
+                </section>
             </div>
-        </section>
-
-        <!-- SELECTED PROJECT HIGHLIGHTS -->
-        <section aria-labelledby="highlights-title">
-            <header class="section-head">
-                <h2 id="highlights-title">Selected Project Highlights</h2>
-                <p class="section-subtitle">Selected implementation highlights</p>
-            </header>
-
-            <ul class="cards" role="list">
-                <li class="card">
-                    <h3>EPC AI Workflow Pilots</h3>
-                    <p>Scoped and coordinated AI pilots for document-heavy and data-heavy EPC workflows, including bid
-                        tabulation, natural-language-to-SQL retrieval, and P&amp;ID intelligence. The work focused on
-                        practical deployment constraints: data structure, traceability, reviewability, and handoff to
-                        engineering users.</p>
-                    <p class="meta">Role: co-founder, co-lead, use-case intake, pilot scoping, technical architecture
-                        &amp; review, stakeholder coordination, initiative operations.</p>
-                </li>
-                <li class="card">
-                    <h3>Carbon Capture Modeling Stack</h3>
-                    <p>Set up MD/DFT runs with LAMMPS and NWChem across HPC and cloud machines. Parallel I/O and
-                        workflow cleanup gave ~2x-3x speed-ups in internal tests, and the outputs fed directly into
-                        diffusion/CFD models.</p>
-                    <p class="meta">Role: design, implementation, UQ, documentation.</p>
-                </li>
-                <li class="card">
-                    <h3>Image Analytics for Crystal Growth</h3>
-                    <p>Built OpenCV scripts for terabyte-scale crystal-growth image sets, with QA around particle-size
-                        distributions and KS/AD checks. A manual process that took days moved to a repeatable run that
-                        finished in hours.</p>
-                    <p class="meta">Role: architecture, QA, batch processing.</p>
-                </li>
-                <li class="card">
-                    <h3>Surrogate-Assisted Optimization &amp; Model-Guided Experimentation</h3>
-                    <p>Built classical ML and surrogate-modeling workflows to identify crystallization-rate drivers,
-                        prioritize simulation grids, and support experimental planning. Later returned to help extend
-                        the workflow toward surrogate-guided optimization for carbon-capture R&amp;D decisions.</p>
-                    <p class="meta">Role: analysis, surrogate modeling, optimization support, experiment linkage,
-                        reporting.</p>
-                </li>
-            </ul>
-        </section>
-
-        <!-- PRACTICES -->
-        <section aria-labelledby="practice-title">
-            <header class="section-head">
-                <h2 id="practice-title">How I Work</h2>
-                <p class="section-subtitle">What I try to be consistent about</p>
-            </header>
-
-            <article class="card">
-                <ul class="tight">
-                    <li><strong>Rigor &amp; Reproducibility:</strong> uncertainty quantification, seeded runs,
-                        CI-checked scripts, baselines, and small test cases for fast iteration.</li>
-                    <li><strong>Reviewability:</strong> tools should produce outputs that engineers can inspect,
-                        challenge, trace, and hand off.</li>
-                    <li><strong>Bridging Domains:</strong> connect atomistic modeling, continuum assumptions,
-                        instrumentation logic, EPC documents, and AI workflows without hiding the assumptions.</li>
-                    <li><strong>Automation:</strong> pipelines that keep analyses current as new images, tables, vendor
-                        documents, or project data arrive.</li>
-                    <li><strong>Communication:</strong> concise memos, plots with units, and enough context for
-                        non-specialists to disagree productively.</li>
-                </ul>
-            </article>
-        </section>
-
-        <!-- EARLIER WORK -->
-        <section aria-labelledby="earlier-title">
-            <header class="section-head">
-                <h2 id="earlier-title">Earlier Work &amp; Projects</h2>
-                <p class="section-subtitle">University of Michigan (BSE Engineering Physics, Minors: Electrical
-                    Engineering, Computer Science, Entrepreneurship)</p>
-            </header>
-
-            <article class="card">
-                <p>Projects linking physical modeling, embedded systems, and control: vision-guided robot,
-                    microcontroller-based controllers, small-scale energy experiments. Teaching assistantship in circuit
-                    design; prior aerospace/robotics lab experience on quadcopter stacks and nanosatellite plasma work.
-                </p>
-            </article>
-        </section>
+        </div>
     </main>
 
-    <footer class="site-footer" role="contentinfo">
-        <div class="wrap">
-            <nav aria-label="Contact">
-                <ul class="contact">
-                    <li><a href="mailto:guptaaryanr@gmail.com">guptaaryanr@gmail.com</a></li>
-                    <li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li>
-                    <li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li>
-                    <li><a href="https://scholar.google.com/citations?hl=en&amp;user=FsIchOAAAAAJ" target="_blank"
-                            rel="noopener">Google Scholar</a></li>
-                    <li><span aria-label="Location">Houston, TX</span></li>
-                </ul>
-            </nav>
-            <small class="meta">© <span id="year">2026</span> Aryan Gupta</small>
-        </div>
-    </footer>
+    <footer class="site-footer" role="contentinfo"><div class="shell footer-grid"><div><p class="footer-name">Aryan Gupta</p><p class="footer-note">Abu Dhabi → Ann Arbor → Houston → London</p></div><nav aria-label="Contact"><ul class="contact"><li><a href="mailto:guptaaryanr@gmail.com">Email</a></li><li><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a></li><li><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://scholar.google.com/citations?hl=en&amp;user=FsIchOAAAAAJ" target="_blank" rel="noopener">Scholar</a></li><li><a href="https://orcid.org/0009-0001-8179-5145" target="_blank" rel="noopener">ORCID</a></li></ul></nav><small class="footer-meta">© <span id="year">2026</span> Aryan Gupta</small></div></footer>
 </body>
-
 </html>
