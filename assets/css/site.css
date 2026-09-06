@@ -247,8 +247,16 @@ p { margin: 0; }
 :where(a, button, [tabindex]):focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 
 @media (max-width: 920px) {
-    .home-hero { grid-template-columns: 1fr; min-height: auto; }
-    .profile-panel { display: grid; grid-template-columns: minmax(12rem, .5fr) 1fr; gap: 1.5rem; align-items: start; }
+    .home-hero { grid-template-columns: 1fr; min-height: auto; gap: 3.5rem; }
+    .hero-copy { max-width: none; }
+    .hero-copy h1 { max-width: 16ch; }
+    .hero-deck { max-width: 40rem; }
+    .profile-panel {
+        width: 100%; max-width: none; justify-self: stretch;
+        display: grid; grid-template-columns: minmax(15rem, .7fr) minmax(18rem, 1fr);
+        gap: 2rem; align-items: start;
+    }
+    .portrait { width: min(100%, 20rem); justify-self: start; }
     .profile-details { margin-top: 0; }
     .split-heading, .about-split, .page-hero, .cv-panel { grid-template-columns: 1fr; gap: 2rem; }
     .split-heading > p { justify-self: start; }
@@ -261,6 +269,14 @@ p { margin: 0; }
     .section-rail a { padding: 0; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
     .footer-meta { grid-column: 1 / -1; }
+}
+
+@media (max-width: 780px) {
+    .home-hero { gap: 3rem; }
+    .hero-copy h1 { max-width: 14ch; }
+    .profile-panel { grid-template-columns: 1fr; gap: 1.25rem; }
+    .portrait { width: min(100%, 22rem); }
+    .profile-details { width: min(100%, 32rem); }
 }
 
 @media (max-width: 700px) {
@@ -276,9 +292,11 @@ p { margin: 0; }
     .site-nav a { display: block; padding: .9rem 0; font-size: 1rem; }
     .site-nav a::after { display: none; }
     h1 { font-size: clamp(3rem, 14vw, 4.6rem); }
-    .home-hero { padding-block: 3.5rem 5rem; }
+    .home-hero { padding-block: 3.5rem 5rem; gap: 2.75rem; }
+    .hero-copy h1 { max-width: none; }
     .profile-panel { grid-template-columns: 1fr; }
     .portrait { max-width: 22rem; }
+    .profile-row { grid-template-columns: 4.7rem minmax(0, 1fr); gap: .8rem; }
     .home-section { padding-block: 4.5rem; }
     .feature-row { grid-template-columns: 2.4rem minmax(0, 1fr) 1.5rem; gap: .8rem; }
     .feature-meta { grid-column: 2 / 3; grid-row: 1; }
