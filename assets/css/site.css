@@ -553,24 +553,44 @@ body[data-site-mode="explore"] .site-header { border-bottom-color:rgba(63,59,50,
 
 .explore-footer { background:#efeadf;border-top:1px solid rgba(70,63,51,.18);padding:2.3rem 0 3rem; }.trail-end{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.5rem;align-items:center}.trail-end>p{max-width:38rem;color:var(--muted);font-size:.84rem}.footer-read-button{appearance:none;border:1px solid var(--line-strong);background:transparent;color:var(--ink);padding:.68rem .95rem;cursor:pointer}.trail-end nav{grid-column:1/-1;display:flex;gap:1rem}.trail-end nav a{font-size:.72rem;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
 
+
+@media (max-width:1180px) {
+    .trail-stage{gap:clamp(2.2rem,3.8vw,3.4rem);min-height:clamp(36rem,68vh,48rem)}
+    .trail-card,.landmark-copy{max-width:33rem}
+    .trail-card h2,.landmark-copy h2{font-size:clamp(2.45rem,4.6vw,4.85rem)}
+    .trail-interlude{width:min(40rem,84%);padding:2.4rem 2.5rem}
+}
 @media (max-width:1020px) {
     .field-hero-grid{grid-template-columns:minmax(0,1fr) minmax(15rem,.55fr)}
     .field-intro h1{font-size:clamp(4.8rem,11vw,8.5rem)}
-    .trail-stage{grid-template-columns:minmax(0,1fr) 5rem minmax(0,1fr);gap:2rem;min-height:38rem}
-    .branch-field,.convergence-field{min-height:19rem}.project-landmark{min-height:46rem}
+    .trail-stage{grid-template-columns:minmax(0,1fr) 5rem minmax(0,1fr);gap:2.2rem;min-height:40rem}
+    .branch-field,.convergence-field{min-height:21rem;padding-inline:1rem}
+    .project-landmark{min-height:48rem}
+    .b1{left:6%;top:38%}.b2{right:7%;top:34%}.b3{left:18%;top:71%}.b4{right:4%;top:71%}.b5{left:36%;top:20%}.b6{right:23%;top:8%}
+    .thread.t1{left:4%;top:12%}.thread.t2{left:4%;top:45%}.thread.t3{left:4%;top:78%}.convergence-field strong{right:5%}
 }
 @media (max-width:860px) {
     .site-header .nav-toggle{display:block;margin-left:0}.site-header .site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line-strong)}body[data-nav-open="true"] .site-header .site-nav:not([hidden]){display:block}.site-header .site-nav ul{flex-direction:column;align-items:stretch;gap:0;padding:.8rem 1rem 1rem}.site-header .site-nav li{border-bottom:1px solid var(--line)}.site-header .site-nav a{display:block;padding:.9rem 0;font-size:1rem}.site-header .site-nav a::after{display:none}
     .mode-switch{margin-left:auto}
     .field-hero-grid{grid-template-columns:1fr;grid-template-rows:auto auto auto;align-items:start;padding-top:4rem}.field-photo-card{justify-self:center;width:min(72vw,22rem)}.trailhead-route{grid-column:auto;flex-wrap:wrap}.trailhead-route i{width:1.5rem}.field-compass{right:1rem;bottom:1rem;width:4.8rem}
-    .trail-route-map{left:2.4rem;transform:none;width:3.5rem}.trail-readout{display:none}.trail-journey{padding-left:3.5rem}.trail-stage{display:block;min-height:auto;padding:5.5rem 0}.trail-pin{position:absolute;left:-3.65rem;top:5.7rem;transform:none!important}.stage-left>.trail-card,.stage-right>.trail-card,.project-landmark>.instrument,.project-landmark.stage-right>.instrument,.project-landmark.stage-right>.landmark-copy,.project-landmark.stage-left>.landmark-copy,.stage-branches>.branch-field,.stage-convergence>.convergence-field{grid-column:auto}.trail-card,.landmark-copy{max-width:42rem}.branch-field,.convergence-field{margin-top:2rem;min-height:18rem}.project-landmark>.instrument{margin-top:2rem}.trail-interlude{width:auto;margin:5rem 0}.side-path{width:auto;margin:5rem 0}.side-path-inner{grid-template-columns:1fr}.side-path-inner article{min-height:auto}.london-stage{min-height:75vh}.london-blank{min-height:16rem;margin-bottom:1rem}.trail-end{grid-template-columns:1fr}.trail-end nav{grid-column:auto}
+    .trail-route-map{left:2.4rem;transform:none;width:3.5rem}.trail-readout{display:none}.trail-journey{padding-left:3.5rem}.trail-stage{display:block;min-height:auto;padding:6rem 0 5.25rem}.trail-pin{position:absolute;left:-3.65rem;top:5.8rem;transform:none!important}.stage-left>.trail-card,.stage-right>.trail-card,.project-landmark>.instrument,.project-landmark.stage-right>.instrument,.project-landmark.stage-right>.landmark-copy,.project-landmark.stage-left>.landmark-copy,.stage-branches>.branch-field,.stage-convergence>.convergence-field{grid-column:auto}.trail-card,.landmark-copy{max-width:43rem}.branch-field,.convergence-field{margin-top:2.5rem;min-height:20rem;padding-inline:.6rem}.project-landmark>.instrument{margin-top:2.5rem}.trail-interlude{width:auto;margin:5.5rem 0;padding:2.4rem 2rem}.side-path{width:auto;margin:5rem 0}.side-path-inner{grid-template-columns:1fr}.side-path-inner article{min-height:auto;padding:1.7rem 1.45rem}.london-stage{min-height:76vh;padding-bottom:2rem}.london-blank{min-height:18rem;margin-bottom:1.2rem}.trail-end{grid-template-columns:1fr}.trail-end nav{grid-column:auto}
+    .field-scrap-note{max-width:18rem;margin:2rem 0 0 .2rem}
     .check-row{grid-template-columns:repeat(2,1fr)}.check-row span:nth-child(2){border-right:0}.check-row span:nth-child(-n+2){border-bottom:1px solid var(--line)}
 }
 @media (max-width:700px) {
     .mode-switch{order:2;margin-left:auto;margin-right:.2rem}.field-header .nav-toggle{order:3}.field-header .nav-stack{order:4}
     .field-hero{min-height:auto}.field-hero-grid{min-height:auto;padding-block:3.8rem 2rem;gap:2.5rem}.field-intro h1{font-size:clamp(4.2rem,22vw,6.5rem)}.field-lede{font-size:1.05rem}.field-compass{display:none}.field-photo-card{justify-self:center;width:min(82vw,22rem)}.trailhead-route{font-size:.67rem}
-    .trail-journey{padding-left:2.6rem;width:min(var(--shell),calc(100% - 1.4rem))}.trail-route-map{left:1.1rem;width:2.5rem}.trail-pin{left:-2.7rem;width:2rem;height:2rem}.trail-stage{padding:4.3rem 0}.trail-card h2,.landmark-copy h2{font-size:clamp(2.3rem,13vw,4rem)}.branch-field,.convergence-field{min-height:16rem}.branch-tag,.thread{font-size:.64rem}.convergence-field strong{font-size:1.05rem}.trail-interlude{padding:2rem 1.2rem}.trail-interlude p:last-child{font-size:1.3rem}
-    .instrument-slider{display:grid}.instrument-slider input{width:100%;min-width:0}.detector-readout{grid-template-columns:1fr auto}.detector-readout em{grid-column:1/-1}.cost-readout{grid-template-columns:1fr}.cost-readout>div{border-right:0;border-bottom:1px solid var(--line)}.cost-readout>div:last-child{border-bottom:0}.london-blank{display:none}.london-stage{min-height:60vh}.side-path summary{display:grid;gap:.3rem}.side-path summary small{margin-left:0}.trail-end nav{flex-wrap:wrap}
+    .trail-journey{padding-left:2.6rem;width:min(var(--shell),calc(100% - 1.4rem))}.trail-route-map{left:1.1rem;width:2.5rem}.trail-pin{left:-2.7rem;width:2rem;height:2rem}.trail-stage{padding:4.9rem 0 4.35rem}.trail-card h2,.landmark-copy h2{font-size:clamp(2.15rem,12.2vw,3.75rem);line-height:.96}.trail-card>p:not(.trail-eyebrow),.landmark-copy>p:not(.trail-eyebrow){font-size:1rem;line-height:1.7}.branch-field,.convergence-field{min-height:18.5rem;margin-top:2.3rem;padding-inline:.35rem}.branch-tag,.thread{font-size:.68rem;padding:.4rem .52rem;white-space:normal;max-width:7.6rem;text-align:center;line-height:1.25}.b1{left:2%;top:38%}.b2{right:2%;top:35%}.b3{left:11%;top:73%}.b4{right:0;top:73%}.b5{left:33%;top:9%}.b6{right:19%;top:1%}.thread.t1{left:1%;top:11%}.thread.t2{left:1%;top:44%}.thread.t3{left:1%;top:77%}.convergence-field strong{font-size:1rem;right:2%;max-width:8.8rem;line-height:1.1;text-align:right}.trail-interlude{padding:2rem 1.2rem}.trail-interlude p:last-child{font-size:1.3rem}
+    .instrument-slider{display:grid}.instrument-slider input{width:100%;min-width:0}.detector-readout{grid-template-columns:1fr auto}.detector-readout em{grid-column:1/-1}.cost-readout{grid-template-columns:1fr}.cost-readout>div{border-right:0;border-bottom:1px solid var(--line)}.cost-readout>div:last-child{border-bottom:0}.field-scrap-note{max-width:100%;margin:1.8rem 0 0;padding:.78rem .85rem}.london-blank{display:none}.london-stage{min-height:60vh;padding-bottom:.8rem}.london-stage .trail-card p:last-child{max-width:none}.side-path summary{display:grid;gap:.3rem;padding:1rem 1.1rem}.side-path summary small{margin-left:0}.trail-end nav{flex-wrap:wrap}
+}
+
+@media (max-width:520px) {
+    .trail-stage{padding:4.7rem 0 4rem}
+    .trail-card h2,.landmark-copy h2{font-size:clamp(2rem,11.2vw,3.2rem)}
+    .branch-field,.convergence-field{min-height:19.2rem}
+    .branch-tag,.thread{max-width:6.8rem;font-size:.66rem}
+    .convergence-field strong{max-width:7.5rem;font-size:.95rem}
+    .side-path-inner article{padding:1.4rem 1.15rem}
 }
 @media (prefers-reduced-motion:reduce) { .field-photo-card,.trail-pin{transition:none!important} }
 body[data-site-mode="read"].field-home { background:var(--bg); }
