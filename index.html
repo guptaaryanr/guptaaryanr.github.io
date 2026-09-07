@@ -26,7 +26,7 @@
             </div>
             <button class="nav-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false"><span class="nav-toggle-box" aria-hidden="true"></span><span class="nav-toggle-label">Menu</span></button>
             <div id="primary-nav" class="nav-stack">
-                <nav class="site-nav explore-nav" aria-label="Explore navigation"><ul><li><a href="#field-map">Map</a></li><li><a href="#field-work">Work</a></li><li><a href="#route">Route</a></li><li><a href="#off-trail">Off trail</a></li></ul></nav>
+                <nav class="site-nav explore-nav" aria-label="Explore navigation"><ul><li><a href="#trail">Trail</a></li><li><a href="#work-trail">Work</a></li><li><a href="#london">London</a></li></ul></nav>
                 <nav class="site-nav read-nav" aria-label="Read navigation"><ul><li><a href="index.html" aria-current="page">About</a></li><li><a href="research.html?mode=read">Research &amp; Software</a></li><li><a href="work.html?mode=read">Experience</a></li><li><a href="cv.html?mode=read">CV</a></li></ul></nav>
             </div>
         </div>
@@ -37,10 +37,10 @@
             <canvas class="terrain-canvas" id="terrain-canvas" aria-hidden="true"></canvas>
             <div class="shell field-hero-grid">
                 <div class="field-intro">
-                    <p class="field-stamp">Field study / 01</p>
+                    <p class="field-stamp">Trailhead / field notes</p>
                     <h1 id="field-title">Aryan Gupta</h1>
-                    <p class="field-lede">I like puzzles. I like long hikes. I also have a bad habit of following an interesting problem until it turns into a project.</p>
-                    <div class="field-actions"><a href="#field-map" class="trail-link">Pick a trail <span aria-hidden="true">↓</span></a><button type="button" class="plain-mode-link" data-mode-choice="read">Or just read the site</button></div>
+                    <p class="field-lede">I like puzzles. I like long hikes. I have basically the same problem with technical questions. If one catches me, I tend to follow it much further than I probably need to.</p>
+                    <div class="field-actions"><a href="#trail" class="trail-link">Start walking <span aria-hidden="true">↓</span></a><button type="button" class="plain-mode-link" data-mode-choice="read">Or skip to the detailed version</button></div>
                 </div>
 
                 <figure class="field-photo-card" data-tilt>
@@ -53,61 +53,80 @@
                     <span>Move around</span>
                 </div>
 
-                <aside class="field-current">
-                    <p>Next stop</p>
-                    <strong>London</strong>
-                    <span>MSc Applied Computational Science &amp; Engineering<br />Imperial College London</span>
-                </aside>
+                <div class="trailhead-route" aria-label="Route so far">
+                    <span>Abu Dhabi</span><i aria-hidden="true"></i><span>Ann Arbor</span><i aria-hidden="true"></i><span>Houston</span><i aria-hidden="true"></i><strong>London</strong>
+                </div>
             </div>
         </section>
 
-        <section class="explore-section atlas-section shell" id="field-map" aria-labelledby="map-title">
-            <header class="explore-heading">
-                <div><p class="field-stamp">The atlas</p><h2 id="map-title">Start anywhere.</h2></div>
-                <p>The paths cross more than the labels make it look. That is sort of the point.</p>
-            </header>
-            <div class="atlas-board" aria-label="Map of selected projects">
-                <svg class="atlas-route" viewBox="0 0 1000 480" preserveAspectRatio="none" aria-hidden="true">
-                    <path class="route-shadow" d="M90 355 C205 260 265 300 365 210 S560 110 670 185 S835 350 930 260"></path>
-                    <path class="route-main" d="M90 355 C205 260 265 300 365 210 S560 110 670 185 S835 350 930 260"></path>
-                    <path class="side-trail" d="M365 210 C340 335 270 390 205 420"></path>
-                    <path class="side-trail" d="M670 185 C725 75 815 72 875 100"></path>
-                </svg>
-                <button class="waypoint wp-waves" type="button" data-scroll-target="station-waves"><span>01</span><strong>WaveSleuth</strong><small>inverse problems</small></button>
-                <button class="waypoint wp-traj" type="button" data-scroll-target="station-traj"><span>02</span><strong>Trajectory</strong><small>regime detection</small></button>
-                <button class="waypoint wp-thermo" type="button" data-scroll-target="station-thermo"><span>03</span><strong>ThermoBench</strong><small>physical consistency</small></button>
-                <button class="waypoint wp-cost" type="button" data-scroll-target="station-cost"><span>04</span><strong>Costgate</strong><small>LLM evaluation</small></button>
-                <a class="waypoint wp-archive" href="research.html?mode=read#engineering-projects"><span>↘</span><strong>Old builds</strong><small>the longer trail</small></a>
-                <a class="waypoint wp-offtrail" href="#off-trail"><span>?</span><strong>Off trail</strong><small>not really work</small></a>
-                <div class="atlas-key"><span><i class="key-dot major"></i>selected work</span><span><i class="key-dot side"></i>detour</span></div>
-            </div>
-        </section>
+        <section class="trail-world" id="trail" aria-label="A trail through Aryan Gupta's work and background">
+            <svg class="trail-route-map" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <path class="trail-route-shadow" d="M50 0 C44 7 55 13 49 20 S45 31 53 38 S56 49 48 56 S43 68 52 75 S57 86 49 93 S50 98 50 100"></path>
+                <path class="trail-route-base" d="M50 0 C44 7 55 13 49 20 S45 31 53 38 S56 49 48 56 S43 68 52 75 S57 86 49 93 S50 98 50 100"></path>
+                <path class="trail-route-progress" id="trail-route-progress" d="M50 0 C44 7 55 13 49 20 S45 31 53 38 S56 49 48 56 S43 68 52 75 S57 86 49 93 S50 98 50 100"></path>
+            </svg>
 
-        <section class="explore-section field-work shell" id="field-work" aria-labelledby="field-work-title">
-            <header class="explore-heading">
-                <div><p class="field-stamp">Four stops</p><h2 id="field-work-title">The short version.</h2></div>
-                <p>Each one has a tiny toy attached. They explain the idea, not the result. The actual papers, code, and numbers are in Read mode.</p>
-            </header>
+            <div class="trail-readout" aria-hidden="true"><span>on the trail</span><strong id="trail-current">Abu Dhabi</strong></div>
 
-            <div class="station-stack">
-                <article class="field-station" id="station-waves">
-                    <div class="station-copy"><p class="station-no">01 / inverse problems</p><h3>WaveSleuth</h3><p>I wanted to learn Devito properly. So I made myself solve a small inverse problem instead of doing the tutorial.</p><a href="research.html?mode=read#wavesleuth-title" class="station-link">Full project <span aria-hidden="true">↗</span></a></div>
-                    <div class="instrument wave-instrument">
-                        <canvas id="wave-toy" width="720" height="380" aria-label="Toy acoustic inverse problem with a hidden anomaly, one source, and several receivers"></canvas>
-                        <div class="instrument-controls"><button type="button" id="wave-fire">Fire pulse</button><button type="button" id="wave-shuffle">Move hidden object</button><span>Toy explainer. The project itself uses the Devito forward model.</span></div>
+            <div class="shell trail-journey">
+                <article class="trail-stage stage-left stage-quiet" id="abu-dhabi" data-trail-stage data-trail-label="Abu Dhabi">
+                    <div class="trail-card">
+                        <p class="trail-eyebrow">Abu Dhabi / start</p>
+                        <h2>This is where the map starts.</h2>
+                        <p>I grew up here. Most of the things on this site happened somewhere else, but this is home and the place I keep coming back to.</p>
+                    </div>
+                    <div class="trail-pin" aria-hidden="true"><span>01</span></div>
+                    <div class="trail-empty"></div>
+                </article>
+
+                <article class="trail-stage stage-right stage-branches" id="ann-arbor" data-trail-stage data-trail-label="Ann Arbor">
+                    <div class="branch-field" aria-label="Things explored at Michigan">
+                        <a href="research.html?mode=read#engineering-projects" class="branch-tag b1">circuits</a>
+                        <a href="work.html?mode=read#research-teaching" class="branch-tag b2">quadcopters</a>
+                        <a href="work.html?mode=read#research-teaching" class="branch-tag b3">nanosatellites</a>
+                        <a href="research.html?mode=read#engineering-projects" class="branch-tag b4">computer architecture</a>
+                        <a href="research.html?mode=read#engineering-projects" class="branch-tag b5">embedded systems</a>
+                        <a href="work.html?mode=read#entrepreneurship-service" class="branch-tag b6">startups</a>
+                        <svg viewBox="0 0 500 300" preserveAspectRatio="none" aria-hidden="true"><path d="M250 280 C248 210 210 190 108 138"></path><path d="M250 280 C255 208 296 190 395 128"></path><path d="M250 280 C230 214 156 225 72 225"></path><path d="M250 280 C272 220 345 230 448 223"></path><path d="M250 280 C235 235 226 184 230 105"></path><path d="M250 280 C274 234 296 183 300 72"></path></svg>
+                    </div>
+                    <div class="trail-pin" aria-hidden="true"><span>02</span></div>
+                    <div class="trail-card">
+                        <p class="trail-eyebrow">Ann Arbor / 2019 to 2023</p>
+                        <h2>This is where it branches.</h2>
+                        <p>I picked engineering physics because I did not want to choose between physics and engineering. Michigan gave me enough room to take that very literally. I bounced between circuits, robots, satellites, processors, and whatever else I had talked myself into that semester.</p>
+                        <a class="trail-text-link" href="research.html?mode=read#engineering-projects">The older builds <span aria-hidden="true">↗</span></a>
                     </div>
                 </article>
 
-                <article class="field-station station-reverse" id="station-traj">
-                    <div class="station-copy"><p class="station-no">02 / nonlinear dynamics</p><h3>Trajectory only detection</h3><p>The detector gets trajectories. No equations. No regime labels. Then I ask whether it can notice a qualitative change anyway.</p><a href="research.html?mode=read#traj-title" class="station-link">Full project <span aria-hidden="true">↗</span></a></div>
-                    <div class="instrument trajectory-instrument">
-                        <svg id="trajectory-toy" viewBox="0 0 720 320" role="img" aria-label="Trajectory that changes as the parameter slider moves"><line x1="40" y1="270" x2="680" y2="270" class="toy-axis"></line><path id="trajectory-path" d=""></path><line id="trajectory-boundary" x1="360" y1="42" x2="360" y2="270"></line></svg>
-                        <div class="instrument-slider"><label for="trajectory-param">parameter <output id="trajectory-param-output">0.35</output></label><input id="trajectory-param" type="range" min="0" max="100" value="35" /><div class="detector-readout"><span>trajectory only score</span><strong id="trajectory-score">0.18</strong><em id="trajectory-status">nothing interesting yet</em></div></div>
+                <article class="trail-stage stage-left stage-convergence" id="houston" data-trail-stage data-trail-label="Houston">
+                    <div class="trail-card">
+                        <p class="trail-eyebrow">Houston / 2023 to 2026</p>
+                        <h2>Then the branches started meeting again.</h2>
+                        <p>At Technip I spent most of my time in applied physics R&amp;D, building molecular simulation and analysis workflows for carbon capture. Later came instrumentation and controls, while an internal AI initiative grew alongside the day job. They look separate on a CV. They did not feel separate while I was doing them.</p>
+                        <a class="trail-text-link" href="work.html?mode=read#industry">The full work history <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="trail-pin" aria-hidden="true"><span>03</span></div>
+                    <div class="convergence-field" aria-label="Technical threads that converged in Houston">
+                        <span class="thread t1">simulation</span><span class="thread t2">real engineering</span><span class="thread t3">AI tooling</span><strong>scientific computing</strong>
+                        <svg viewBox="0 0 440 300" preserveAspectRatio="none" aria-hidden="true"><path d="M38 58 C160 76 176 132 221 151"></path><path d="M39 149 C139 149 175 150 221 151"></path><path d="M38 244 C151 224 181 173 221 151"></path><path class="out" d="M221 151 C286 151 340 151 405 151"></path></svg>
                     </div>
                 </article>
 
-                <article class="field-station" id="station-thermo">
-                    <div class="station-copy"><p class="station-no">03 / scientific ML</p><h3>ThermoBench</h3><p>This exists because a surrogate once looked fine until I asked the solver to use it. Drag the distortion until the physics starts complaining.</p><a href="research.html?mode=read#tb-title" class="station-link">Full project <span aria-hidden="true">↗</span></a></div>
+                <div class="trail-interlude" data-trail-stage data-trail-label="Independent work">
+                    <p class="trail-eyebrow">Somewhere around here</p>
+                    <p>By 2025 the side projects were taking up a lot more of the map. That is where the next stretch comes from.</p>
+                </div>
+
+                <div id="work-trail" class="work-trail-anchor" aria-hidden="true"></div>
+
+                <article class="trail-stage project-landmark stage-left" id="station-thermo" data-trail-stage data-trail-label="ThermoBench">
+                    <div class="landmark-copy">
+                        <p class="trail-eyebrow">A useful wrong turn</p>
+                        <h2>ThermoBench</h2>
+                        <p>A GNN surrogate once looked fine until I asked the actual VLE solver to use it. The derivatives were bad enough to make the model useless. ThermoBench is the set of cheap physical checks I wished I had run first.</p>
+                        <a href="research.html?mode=read#tb-title" class="trail-text-link">Full project <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="trail-pin project-pin" aria-hidden="true"><span>04</span></div>
                     <div class="instrument thermo-instrument">
                         <div class="thermo-surface" aria-hidden="true"><svg viewBox="0 0 720 190"><path id="thermo-reference" d="M35 150 C150 132 215 96 330 92 S520 70 685 34"></path><path id="thermo-surrogate" d=""></path></svg></div>
                         <div class="instrument-slider"><label for="thermo-distortion">surface distortion <output id="thermo-distortion-output">12%</output></label><input id="thermo-distortion" type="range" min="0" max="100" value="12" /></div>
@@ -115,41 +134,78 @@
                     </div>
                 </article>
 
-                <article class="field-station station-reverse" id="station-cost">
-                    <div class="station-copy"><p class="station-no">04 / LLM evaluation</p><h3>Costgate</h3><p>Nothing broke. The bill did. Push the candidate cost up and see when CI decides that counts as a regression.</p><a href="research.html?mode=read#costgate-title" class="station-link">Full project <span aria-hidden="true">↗</span></a></div>
+                <article class="trail-stage project-landmark stage-right" id="station-traj" data-trail-stage data-trail-label="Trajectory">
+                    <div class="instrument trajectory-instrument">
+                        <svg id="trajectory-toy" viewBox="0 0 720 320" role="img" aria-label="Trajectory that changes as the parameter slider moves"><line x1="40" y1="270" x2="680" y2="270" class="toy-axis"></line><path id="trajectory-path" d=""></path><line id="trajectory-boundary" x1="360" y1="42" x2="360" y2="270"></line></svg>
+                        <div class="instrument-slider"><label for="trajectory-param">parameter <output id="trajectory-param-output">0.35</output></label><input id="trajectory-param" type="range" min="0" max="100" value="35" /><div class="detector-readout"><span>trajectory only score</span><strong id="trajectory-score">0.18</strong><em id="trajectory-status">nothing interesting yet</em></div></div>
+                    </div>
+                    <div class="trail-pin project-pin" aria-hidden="true"><span>05</span></div>
+                    <div class="landmark-copy">
+                        <p class="trail-eyebrow">A question I kept poking at</p>
+                        <h2>Trajectory only detection</h2>
+                        <p>Could you notice that a dynamical system had changed qualitatively if all you got were the trajectories? No equations. No regime labels. I kept the answer key away from the detector and made the question testable.</p>
+                        <a href="research.html?mode=read#traj-title" class="trail-text-link">Full project <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+
+                <article class="trail-stage project-landmark stage-left" id="station-waves" data-trail-stage data-trail-label="WaveSleuth">
+                    <div class="landmark-copy">
+                        <p class="trail-eyebrow">Built because the tutorial was not enough</p>
+                        <h2>WaveSleuth</h2>
+                        <p>I wanted to learn Devito properly, so I made myself build a small inverse problem end to end. Hide something in a 2D medium, fire waves through it, and try to reconstruct what you cannot see.</p>
+                        <a href="research.html?mode=read#wavesleuth-title" class="trail-text-link">Full project <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="trail-pin project-pin" aria-hidden="true"><span>06</span></div>
+                    <div class="instrument wave-instrument">
+                        <canvas id="wave-toy" width="720" height="380" aria-label="Toy acoustic inverse problem with a hidden anomaly, one source, and several receivers"></canvas>
+                        <div class="instrument-controls"><button type="button" id="wave-fire">Fire pulse</button><button type="button" id="wave-shuffle">Move hidden object</button><span>The project itself uses the Devito forward model.</span></div>
+                    </div>
+                </article>
+
+                <article class="trail-stage project-landmark stage-right" id="station-cost" data-trail-stage data-trail-label="Costgate">
                     <div class="instrument cost-instrument">
                         <div class="cost-readout"><div><span>baseline</span><strong>$1.00</strong></div><div><span>candidate</span><strong id="candidate-cost">$1.04</strong></div><div class="build-verdict pass" id="build-verdict"><span>build</span><strong>PASS</strong></div></div>
                         <div class="instrument-slider"><label for="cost-increase">candidate cost increase <output id="cost-increase-output">4%</output></label><input id="cost-increase" type="range" min="0" max="30" value="4" /></div>
-                        <p class="instrument-note">The toy only illustrates the policy idea. Costgate also tracks valid success, tokens, latency, repeats, and significance.</p>
+                        <p class="instrument-note">This only shows the policy idea. The real tool also tracks valid success, tokens, latency, repeats, and significance.</p>
+                    </div>
+                    <div class="trail-pin project-pin" aria-hidden="true"><span>07</span></div>
+                    <div class="landmark-copy">
+                        <p class="trail-eyebrow">Different branch. Same instinct.</p>
+                        <h2>Costgate</h2>
+                        <p>Nothing has to crash for a system to get worse. An LLM change can quietly become much more expensive while every normal test still passes. I wanted CI to be allowed to care about that too.</p>
+                        <a href="research.html?mode=read#costgate-title" class="trail-text-link">Full project <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+
+                <details class="side-path" id="off-trail" data-trail-stage data-trail-label="Off trail">
+                    <summary><span>There is a side path here.</span><small>Completely optional.</small></summary>
+                    <div class="side-path-inner">
+                        <article><p class="trail-eyebrow">Mountains</p><h3>A reliable way to get me away from a screen.</h3><p>The photo at the top was not taken for LinkedIn. That is why I like it.</p></article>
+                        <article class="puzzle-nook"><p class="trail-eyebrow">Puzzles</p><h3>I like the bit between “I have no idea” and “hang on.”</h3><button type="button" id="open-puzzle">Take a small detour</button><div class="lights-puzzle" id="lights-puzzle" hidden aria-label="A small three by three lights puzzle"><div class="puzzle-grid" role="group" aria-label="Toggle the lights until they are all off"></div><div class="puzzle-footer"><span id="puzzle-status">Turn them all off.</span><button type="button" id="reset-puzzle">reset</button></div></div></article>
+                        <article><p class="trail-eyebrow">Older layers</p><h3>Longboard remotes, follower robots, processors, and other things I built before any of the work above.</h3><a href="research.html?mode=read#engineering-projects" class="trail-text-link">Open the archive <span aria-hidden="true">↗</span></a></article>
+                    </div>
+                </details>
+
+                <article class="trail-stage stage-right london-stage" id="london" data-trail-stage data-trail-label="London">
+                    <div class="london-blank" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+                    <div class="trail-pin next-pin" aria-hidden="true"><span>08</span></div>
+                    <div class="trail-card">
+                        <p class="trail-eyebrow">London / next</p>
+                        <h2>Nothing plotted past this point yet.</h2>
+                        <p>MSc Applied Computational Science &amp; Engineering at Imperial. I know what I am going there to learn. I do not know yet what it will turn into, which is the interesting part.</p>
                     </div>
                 </article>
             </div>
         </section>
-
-        <section class="explore-section route-section" id="route" aria-labelledby="route-title">
-            <div class="shell">
-                <header class="explore-heading route-heading"><div><p class="field-stamp">The route so far</p><h2 id="route-title">No straight line.</h2></div><p>It makes more sense backwards than it did while I was doing it.</p></header>
-                <div class="life-route">
-                    <div class="life-line" aria-hidden="true"></div>
-                    <article class="route-stop"><span>01</span><h3>Abu Dhabi</h3><p>Where I grew up.</p></article>
-                    <article class="route-stop"><span>02</span><h3>Ann Arbor</h3><p>Engineering physics. Circuits, robots, satellites, computer architecture, and an impressive number of side quests.</p></article>
-                    <article class="route-stop"><span>03</span><h3>Houston</h3><p>Applied physics R&amp;D, molecular simulation, controls, AI work, and my first real encounter with the fact that useful engineering has paperwork.</p></article>
-                    <article class="route-stop route-next"><span>04</span><h3>London</h3><p>Next. Scientific computing gets to be the main subject for a while.</p></article>
-                </div>
-            </div>
-        </section>
-
-        <section class="explore-section offtrail-section shell" id="off-trail" aria-labelledby="offtrail-title">
-            <header class="explore-heading"><div><p class="field-stamp">Off trail</p><h2 id="offtrail-title">The cabinet, sort of.</h2></div><p>Not everything useful about a person belongs in the professional bit.</p></header>
-            <div class="cabinet">
-                <article class="cabinet-drawer"><span class="drawer-handle" aria-hidden="true"></span><p>Mountains</p><h3>A reliable way to get me away from a screen.</h3><small>The photo at the top was not taken for LinkedIn. That is why I like it.</small></article>
-                <article class="cabinet-drawer puzzle-drawer"><span class="drawer-handle" aria-hidden="true"></span><p>Puzzles</p><h3>I like the bit between “I have no idea” and “hang on.”</h3><button type="button" id="open-puzzle">Take a small detour</button><div class="lights-puzzle" id="lights-puzzle" hidden aria-label="A small three by three lights puzzle"><div class="puzzle-grid" role="group" aria-label="Toggle the lights until they are all off"></div><div class="puzzle-footer"><span id="puzzle-status">Turn them all off.</span><button type="button" id="reset-puzzle">reset</button></div></div></article>
-                <article class="cabinet-drawer"><span class="drawer-handle" aria-hidden="true"></span><p>Old builds</p><h3>Longboard remotes, follower robots, processors, and other archaeological layers.</h3><a href="research.html?mode=read#engineering-projects">Open the archive <span aria-hidden="true">↗</span></a></article>
-            </div>
-        </section>
     </main>
 
-    <footer class="explore-footer explore-layer" role="contentinfo"><div class="shell explore-footer-grid"><div><p class="footer-name">Aryan Gupta</p><p>There is more detail than this. That is what Read mode is for.</p></div><button type="button" data-mode-choice="read" class="footer-read-button">Read the full site</button><small>Abu Dhabi → Ann Arbor → Houston → London</small></div></footer>
+    <footer class="explore-footer explore-layer" role="contentinfo">
+        <div class="shell trail-end">
+            <p>If you want the dates, papers, numbers, and all the older work, the detailed version is still here.</p>
+            <button type="button" data-mode-choice="read" class="footer-read-button">Switch to Read</button>
+            <nav aria-label="Contact"><a href="mailto:guptaaryanr@gmail.com">Email</a><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></nav>
+        </div>
+    </footer>
 
     <div class="read-layer" hidden>
     <main id="read-content" tabindex="-1">
