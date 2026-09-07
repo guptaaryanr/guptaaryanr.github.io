@@ -37,10 +37,11 @@
             <canvas class="terrain-canvas" id="terrain-canvas" aria-hidden="true"></canvas>
             <div class="shell field-hero-grid">
                 <div class="field-intro">
-                    <p class="field-stamp">Trailhead / field notes</p>
+                    <p class="field-stamp">Field study / working map</p>
                     <h1 id="field-title">Aryan Gupta</h1>
-                    <p class="field-lede">I like puzzles. I like long hikes. I have basically the same problem with technical questions. If one catches me, I tend to follow it much further than I probably need to.</p>
+                    <p class="field-lede">I have a hard time leaving an interesting problem alone. Usually I end up taking it apart, building some version of it, and then trying to break what I built. This is roughly where that habit has taken me so far.</p>
                     <div class="field-actions"><a href="#trail" class="trail-link">Start walking <span aria-hidden="true">↓</span></a><button type="button" class="plain-mode-link" data-mode-choice="read">Or skip to the detailed version</button></div>
+                    <p class="field-scrap-note">The map is cleaner than the process was.</p>
                 </div>
 
                 <figure class="field-photo-card" data-tilt>
@@ -81,12 +82,12 @@
 
                 <article class="trail-stage stage-right stage-branches" id="ann-arbor" data-trail-stage data-trail-label="Ann Arbor">
                     <div class="branch-field" aria-label="Things explored at Michigan">
-                        <a href="research.html?mode=read#engineering-projects" class="branch-tag b1">circuits</a>
-                        <a href="work.html?mode=read#research-teaching" class="branch-tag b2">quadcopters</a>
-                        <a href="work.html?mode=read#research-teaching" class="branch-tag b3">nanosatellites</a>
-                        <a href="research.html?mode=read#engineering-projects" class="branch-tag b4">computer architecture</a>
-                        <a href="research.html?mode=read#engineering-projects" class="branch-tag b5">embedded systems</a>
-                        <a href="work.html?mode=read#entrepreneurship-service" class="branch-tag b6">startups</a>
+                        <a href="research.html?mode=read#engineering-projects" class="branch-tag b1" data-explore-key="circuits">circuits</a>
+                        <a href="work.html?mode=read#research-teaching" class="branch-tag b2" data-explore-key="quadcopters">quadcopters</a>
+                        <a href="work.html?mode=read#research-teaching" class="branch-tag b3" data-explore-key="nanosatellites">nanosatellites</a>
+                        <a href="research.html?mode=read#engineering-projects" class="branch-tag b4" data-explore-key="architecture">computer architecture</a>
+                        <a href="research.html?mode=read#engineering-projects" class="branch-tag b5" data-explore-key="embedded">embedded systems</a>
+                        <a href="work.html?mode=read#entrepreneurship-service" class="branch-tag b6" data-explore-key="startups">startups</a>
                         <svg viewBox="0 0 500 300" preserveAspectRatio="none" aria-hidden="true"><path d="M250 280 C248 210 210 190 108 138"></path><path d="M250 280 C255 208 296 190 395 128"></path><path d="M250 280 C230 214 156 225 72 225"></path><path d="M250 280 C272 220 345 230 448 223"></path><path d="M250 280 C235 235 226 184 230 105"></path><path d="M250 280 C274 234 296 183 300 72"></path></svg>
                     </div>
                     <div class="trail-pin" aria-hidden="true"><span>02</span></div>
@@ -94,7 +95,8 @@
                         <p class="trail-eyebrow">Ann Arbor / 2019 to 2023</p>
                         <h2>This is where it branches.</h2>
                         <p>I picked engineering physics because I did not want to choose between physics and engineering. Michigan gave me enough room to take that very literally. I bounced between circuits, robots, satellites, processors, and whatever else I had talked myself into that semester.</p>
-                        <a class="trail-text-link" href="research.html?mode=read#engineering-projects">The older builds <span aria-hidden="true">↗</span></a>
+                        <a class="trail-text-link" href="research.html?mode=read#engineering-projects" data-explore-key="older-builds">The older builds <span aria-hidden="true">↗</span></a>
+                        <aside class="margin-note">I like a plan. I am also very capable of getting distracted by the more interesting branch.</aside>
                     </div>
                 </article>
 
@@ -103,7 +105,8 @@
                         <p class="trail-eyebrow">Houston / 2023 to 2026</p>
                         <h2>Then the branches started meeting again.</h2>
                         <p>At Technip I spent most of my time in applied physics R&amp;D, building molecular simulation and analysis workflows for carbon capture. Later came instrumentation and controls, while an internal AI initiative grew alongside the day job. They look separate on a CV. They did not feel separate while I was doing them.</p>
-                        <a class="trail-text-link" href="work.html?mode=read#industry">The full work history <span aria-hidden="true">↗</span></a>
+                        <a class="trail-text-link" href="work.html?mode=read#industry" data-explore-key="houston">The full work history <span aria-hidden="true">↗</span></a>
+                        <aside class="margin-note tilt-right">I like elegant systems. I care more about whether somebody else can actually use them.</aside>
                     </div>
                     <div class="trail-pin" aria-hidden="true"><span>03</span></div>
                     <div class="convergence-field" aria-label="Technical threads that converged in Houston">
@@ -114,7 +117,7 @@
 
                 <div class="trail-interlude" data-trail-stage data-trail-label="Independent work">
                     <p class="trail-eyebrow">Somewhere around here</p>
-                    <p>By 2025 the side projects were taking up a lot more of the map. That is where the next stretch comes from.</p>
+                    <p>At some point the things I did because I had to and the things I did because I could not leave them alone started overlapping.</p>
                 </div>
 
                 <div id="work-trail" class="work-trail-anchor" aria-hidden="true"></div>
@@ -124,7 +127,8 @@
                         <p class="trail-eyebrow">A useful wrong turn</p>
                         <h2>ThermoBench</h2>
                         <p>A GNN surrogate once looked fine until I asked the actual VLE solver to use it. The derivatives were bad enough to make the model useless. ThermoBench is the set of cheap physical checks I wished I had run first.</p>
-                        <a href="research.html?mode=read#tb-title" class="trail-text-link">Full project <span aria-hidden="true">↗</span></a>
+                        <a href="research.html?mode=read#tb-title" class="trail-text-link" data-explore-key="thermobench">Full project <span aria-hidden="true">↗</span></a>
+                        <aside class="margin-note">A negative result is still useful if it tells you where the idea actually fails.</aside>
                     </div>
                     <div class="trail-pin project-pin" aria-hidden="true"><span>04</span></div>
                     <div class="instrument thermo-instrument">
@@ -144,7 +148,7 @@
                         <p class="trail-eyebrow">A question I kept poking at</p>
                         <h2>Trajectory only detection</h2>
                         <p>Could you notice that a dynamical system had changed qualitatively if all you got were the trajectories? No equations. No regime labels. I kept the answer key away from the detector and made the question testable.</p>
-                        <a href="research.html?mode=read#traj-title" class="trail-text-link">Full project <span aria-hidden="true">↗</span></a>
+                        <a href="research.html?mode=read#traj-title" class="trail-text-link" data-explore-key="trajectory">Full project <span aria-hidden="true">↗</span></a>
                     </div>
                 </article>
 
@@ -153,7 +157,7 @@
                         <p class="trail-eyebrow">Built because the tutorial was not enough</p>
                         <h2>WaveSleuth</h2>
                         <p>I wanted to learn Devito properly, so I made myself build a small inverse problem end to end. Hide something in a 2D medium, fire waves through it, and try to reconstruct what you cannot see.</p>
-                        <a href="research.html?mode=read#wavesleuth-title" class="trail-text-link">Full project <span aria-hidden="true">↗</span></a>
+                        <a href="research.html?mode=read#wavesleuth-title" class="trail-text-link" data-explore-key="wavesleuth">Full project <span aria-hidden="true">↗</span></a>
                     </div>
                     <div class="trail-pin project-pin" aria-hidden="true"><span>06</span></div>
                     <div class="instrument wave-instrument">
@@ -173,16 +177,50 @@
                         <p class="trail-eyebrow">Different branch. Same instinct.</p>
                         <h2>Costgate</h2>
                         <p>Nothing has to crash for a system to get worse. An LLM change can quietly become much more expensive while every normal test still passes. I wanted CI to be allowed to care about that too.</p>
-                        <a href="research.html?mode=read#costgate-title" class="trail-text-link">Full project <span aria-hidden="true">↗</span></a>
+                        <a href="research.html?mode=read#costgate-title" class="trail-text-link" data-explore-key="costgate">Full project <span aria-hidden="true">↗</span></a>
+                        <aside class="margin-note tilt-right">Different domain. Same reflex. What can quietly go wrong?</aside>
                     </div>
                 </article>
 
-                <details class="side-path" id="off-trail" data-trail-stage data-trail-label="Off trail">
-                    <summary><span>There is a side path here.</span><small>Completely optional.</small></summary>
-                    <div class="side-path-inner">
-                        <article><p class="trail-eyebrow">Mountains</p><h3>A reliable way to get me away from a screen.</h3><p>The photo at the top was not taken for LinkedIn. That is why I like it.</p></article>
-                        <article class="puzzle-nook"><p class="trail-eyebrow">Puzzles</p><h3>I like the bit between “I have no idea” and “hang on.”</h3><button type="button" id="open-puzzle">Take a small detour</button><div class="lights-puzzle" id="lights-puzzle" hidden aria-label="A small three by three lights puzzle"><div class="puzzle-grid" role="group" aria-label="Toggle the lights until they are all off"></div><div class="puzzle-footer"><span id="puzzle-status">Turn them all off.</span><button type="button" id="reset-puzzle">reset</button></div></div></article>
-                        <article><p class="trail-eyebrow">Older layers</p><h3>Longboard remotes, follower robots, processors, and other things I built before any of the work above.</h3><a href="research.html?mode=read#engineering-projects" class="trail-text-link">Open the archive <span aria-hidden="true">↗</span></a></article>
+                <div class="quiet-thought" data-trail-stage data-trail-label="Off trail">
+                    <p>Not everything I care about needs to become useful.</p>
+                </div>
+
+                <details class="side-path" id="off-trail">
+                    <summary><span>Some things do not belong on the CV.</span><small>They still belong here.</small></summary>
+                    <div class="side-path-inner personal-drawer">
+                        <article class="photo-nook">
+                            <p class="trail-eyebrow">Away from the desk</p>
+                            <div class="personal-photo-stack" aria-label="Two personal travel photographs">
+                                <figure class="mini-photo photo-a"><img src="assets/img/personal/mountain-profile.jpg" alt="Aryan Gupta outdoors in the mountains" loading="lazy" /></figure>
+                                <figure class="mini-photo photo-b"><img src="assets/img/personal/niagara.jpg" alt="Aryan Gupta at Niagara Falls in a red rain poncho" loading="lazy" /></figure>
+                            </div>
+                            <p>I like being outside enough that I have learned not to turn it into another productivity system.</p>
+                        </article>
+
+                        <article class="puzzle-nook">
+                            <p class="trail-eyebrow">A small thing I left here</p>
+                            <h3>I like the bit between “I have no idea” and “hang on.”</h3>
+                            <button type="button" id="open-puzzle">See what this does</button>
+                            <div class="lights-puzzle" id="lights-puzzle" hidden aria-label="A small three by three lights puzzle"><div class="puzzle-grid" role="group" aria-label="Toggle the lights until they are all off"></div><div class="puzzle-footer"><span id="puzzle-status">Turn them all off.</span><button type="button" id="reset-puzzle">reset</button></div></div>
+                        </article>
+
+                        <article class="questions-nook">
+                            <p class="trail-eyebrow">Questions I keep around</p>
+                            <h3>Some questions matter to me even when I have no idea what I would do with the answer.</h3>
+                            <ul class="loose-questions">
+                                <li>When does a useful simplification become a lie?</li>
+                                <li>Why do some ideas refuse to leave you alone?</li>
+                                <li>What is worth making even if nobody asked for it?</li>
+                            </ul>
+                        </article>
+
+                        <article>
+                            <p class="trail-eyebrow">Older layers</p>
+                            <h3>I keep the old work around because I like seeing the trail.</h3>
+                            <p>Longboard remotes, follower robots, processors, satellite work, startup experiments. Not everything still deserves the front page. It still happened.</p>
+                            <a href="research.html?mode=read#engineering-projects" class="trail-text-link" data-explore-key="archive">Open the archive <span aria-hidden="true">↗</span></a>
+                        </article>
                     </div>
                 </details>
 
@@ -192,16 +230,30 @@
                     <div class="trail-card">
                         <p class="trail-eyebrow">London / next</p>
                         <h2>Nothing plotted past this point yet.</h2>
-                        <p>MSc Applied Computational Science &amp; Engineering at Imperial. I know what I am going there to learn. I do not know yet what it will turn into, which is the interesting part.</p>
+                        <p>MSc Applied Computational Science &amp; Engineering at Imperial. I know what I am going there to learn. I care a lot about where it goes after that. The rest is still blank, and I would rather leave it blank than pretend otherwise.</p>
+                        <aside class="margin-note">Ambitious, yes. Certain, no.</aside>
                     </div>
                 </article>
             </div>
         </section>
+
+        <dialog class="field-note-dialog" id="explore-note-dialog" aria-labelledby="explore-note-title">
+            <div class="field-note-sheet">
+                <form method="dialog" class="field-note-close-form"><button class="field-note-close" aria-label="Close note">×</button></form>
+                <p class="trail-eyebrow" id="explore-note-eyebrow">Field note</p>
+                <h2 id="explore-note-title"></h2>
+                <div class="field-note-body" id="explore-note-body"></div>
+                <div class="field-note-actions">
+                    <a class="trail-text-link field-note-learn" id="explore-note-learn" href="#">Learn more <span aria-hidden="true">↗</span></a>
+                    <button type="button" class="field-note-stay" id="explore-note-stay">Keep exploring</button>
+                </div>
+            </div>
+        </dialog>
     </main>
 
     <footer class="explore-footer explore-layer" role="contentinfo">
         <div class="shell trail-end">
-            <p>If you want the dates, papers, numbers, and all the older work, the detailed version is still here.</p>
+            <p>If you want the dates, papers, numbers, and the complete record, the detailed version is still here.</p>
             <button type="button" data-mode-choice="read" class="footer-read-button">Switch to Read</button>
             <nav aria-label="Contact"><a href="mailto:guptaaryanr@gmail.com">Email</a><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></nav>
         </div>
@@ -230,7 +282,7 @@
         <section class="home-section shell" aria-labelledby="selected-work-title">
             <header class="split-heading">
                 <div><p class="section-number">01 / Selected work</p><h2 id="selected-work-title">If you only look at four things, make it these.</h2></div>
-                <p>Not necessarily the biggest things I’ve done. They are simply the four closest to where I’m going.</p>
+                <p>Not necessarily the biggest things I’ve done. Just the four closest to where I’m going.</p>
             </header>
 
             <div class="feature-stack">
