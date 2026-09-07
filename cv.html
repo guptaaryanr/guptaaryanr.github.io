@@ -10,9 +10,16 @@
     <link rel="stylesheet" href="assets/css/site.css" />
     <script defer src="assets/js/site.js"></script>
 </head>
-<body>
+<body data-page="read">
     <a class="skip-link" href="#content">Skip to content</a>
-    <header class="site-header" role="banner"><div class="shell nav-shell"><a class="brand" href="index.html" aria-label="Aryan Gupta home"><span class="brand-name">Aryan Gupta</span><span class="brand-mark" aria-hidden="true">AG</span></a><button class="nav-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false"><span class="nav-toggle-box" aria-hidden="true"></span><span class="nav-toggle-label">Menu</span></button><nav id="primary-nav" class="site-nav" aria-label="Primary"><ul><li><a href="index.html">About</a></li><li><a href="research.html">Research &amp; Software</a></li><li><a href="work.html">Experience</a></li><li><a href="cv.html" aria-current="page">CV</a></li></ul></nav></div></header>
+    <header class="site-header" role="banner">
+        <div class="shell nav-shell">
+            <a class="brand" href="index.html?mode=read" aria-label="Aryan Gupta home"><span class="brand-name">Aryan Gupta</span><span class="brand-mark" aria-hidden="true">AG</span></a>
+            <div class="mode-switch mode-links" aria-label="Site mode"><a href="index.html?mode=explore">Explore</a><span aria-current="page">Read</span></div>
+            <button class="nav-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false"><span class="nav-toggle-box" aria-hidden="true"></span><span class="nav-toggle-label">Menu</span></button>
+            <nav id="primary-nav" class="site-nav" aria-label="Primary"><ul><li><a href="index.html?mode=read">About</a></li><li><a href="research.html?mode=read">Research &amp; Software</a></li><li><a href="work.html?mode=read">Experience</a></li><li><a href="cv.html?mode=read" aria-current="page">CV</a></li></ul></nav>
+        </div>
+    </header>
     <main id="content" tabindex="-1">
         <section class="cv-panel shell" aria-labelledby="cv-title">
             <div class="cv-copy"><p class="kicker">Curriculum vitae</p><h1 id="cv-title">The website is the long version. This is the two page one.</h1><p>Dates, roles, papers, and projects without the rest of the wandering.</p><div class="cv-actions"><a class="action-button primary" href="assets/cv/Aryan-Gupta-CV.pdf" download>Download PDF</a><a class="action-button" href="assets/cv/Aryan-Gupta-CV.pdf" target="_blank" rel="noopener">Open in browser ↗</a></div></div>
