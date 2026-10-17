@@ -1,8 +1,23 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local tools and configuration
 .agents
 .codex
+.env
+.env.*
+.venv/
+__pycache__/
+*.py[cod]
 
+# Browser tests and downloaded dependencies
 node_modules/
 test-results/
 playwright-report/
-__pycache__/
-*.pyc
+coverage/
+*.log
