@@ -1,0 +1,33 @@
+name: Site quality
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  integrity-and-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check local pages, anchors, assets, and metadata
+        run: python3 tools/verify_site.py
+      - name: Install browser tests
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run browser and accessibility smoke tests
+        run: npm test
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-traces
+          path: test-results/
+          retention-days: 7

@@ -4,7 +4,7 @@
     --paper: #fbfaf7;
     --ink: #11151b;
     --ink-soft: #343a43;
-    --muted: #72757b;
+    --muted: #60646b;
     --line: #d7d3ca;
     --line-strong: #b9b4aa;
     --accent: #233f67;
@@ -720,4 +720,42 @@ body:has(.field-note-dialog[open]) { overflow: hidden; }
     .field-note-dialog { width: calc(100vw - 1rem); max-height: calc(100dvh - 1rem); }
     .field-note-sheet { padding: 1.5rem 1.2rem 1.3rem; transform: none; }
     .field-note-sheet h2 { max-width: 13ch; }
+}
+
+/* October 2026 quality pass. Maintain the existing field-journal layout. */
+.no-js .explore-layer, .no-js .explore-nav { display: none !important; }
+.no-js .read-layer, .no-js .read-nav { display: block !important; }
+.no-js .mode-switch, .no-js .nav-toggle, .no-js .explore-skip { display: none !important; }
+.js body[data-site-mode="explore"] .read-skip { display: none !important; }
+.js body[data-site-mode="explore"] .read-layer { display: none !important; }
+.js body[data-site-mode="explore"] .read-nav, .js body[data-site-mode="read"] .explore-nav { display: none !important; }
+:where(a, button, summary, input, [tabindex]):focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+.field-shortcuts { margin-top: 1.35rem; display: flex; flex-wrap: wrap; gap: .55rem 1.2rem; }
+.field-shortcuts a { color: var(--ink-soft); font-size: .82rem; text-decoration: none; border-bottom: 1px solid var(--line-strong); }
+.field-shortcuts a:hover { color: var(--warm); border-bottom-color: var(--warm); }
+.demo-disclaimer { padding: .6rem .9rem; border-top: 1px solid var(--line); background: rgba(250,248,242,.85); color: var(--ink-soft); font-size: .78rem; line-height: 1.5; }
+.instrument-note { line-height: 1.5; }
+.evidence-eyebrow { margin: 1.2rem 0 .55rem; font: 700 .73rem/1.5 ui-monospace, Menlo, monospace; color: var(--warm); }
+.project-result { margin: 1rem 0 1.2rem; max-width: 50rem; }
+.project-result img { width: 100%; height: auto; border: 1px solid var(--line); background: var(--paper); }
+.project-result figcaption, .result-caption { display: block; margin: .55rem 0 1rem; font-size: .83rem; line-height: 1.6; color: var(--ink-soft); }
+.project-evidence[open] { margin-top: 1.25rem; }
+.field-note-dialog { overflow-y: auto; overscroll-behavior: contain; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 860px) {
+    .no-js .nav-shell { flex-wrap: wrap; }
+    .no-js .read-nav { position: static !important; width: 100%; border: 0; background: transparent; }
+    .no-js .read-nav ul { flex-direction: row; flex-wrap: wrap; gap: .25rem 1rem; padding: 0 0 .75rem; }
+    .no-js .read-nav li { border: 0; }
+    .no-js .read-nav a { padding: .35rem 0; }
+}
+@media (max-width: 700px) {
+    .field-shortcuts { gap: .7rem 1.1rem; }
+    .project-result figcaption { font-size: .84rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
 }

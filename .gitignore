@@ -1,2 +1,9 @@
 .agents
 .codex
+
+node_modules/
+test-results/
+playwright-report/
+__pycache__/
+*.pyc
+*.py

@@ -1,27 +1,33 @@
-// /assets/js/site.js
-(function () {
-    document.querySelectorAll('#year').forEach(el => { el.textContent = new Date().getFullYear(); });
+// Shared navigation and home-mode handling.
+(() => {
+    document.querySelectorAll('#year').forEach(el => {
+        el.textContent = new Date().getFullYear();
+    });
 
-    const btn = document.querySelector('.nav-toggle');
+    const toggle = document.querySelector('.nav-toggle');
     const nav = document.getElementById('primary-nav');
-    const closeNav = () => {
-        if (!btn) return;
-        btn.setAttribute('aria-expanded', 'false');
+    function closeMenu() {
+        if (!toggle) return;
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
         document.body.removeAttribute('data-nav-open');
-    };
-
-    if (btn && nav) {
-        btn.addEventListener('click', () => {
-            const open = btn.getAttribute('aria-expanded') !== 'true';
-            btn.setAttribute('aria-expanded', String(open));
-            if (open) document.body.setAttribute('data-nav-open', 'true');
+    }
+    if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+            const shouldOpen = toggle.getAttribute('aria-expanded') !== 'true';
+            toggle.setAttribute('aria-expanded', String(shouldOpen));
+            toggle.setAttribute('aria-label', shouldOpen ? 'Close menu' : 'Open menu');
+            if (shouldOpen) document.body.setAttribute('data-nav-open', 'true');
             else document.body.removeAttribute('data-nav-open');
         });
-        nav.addEventListener('click', (event) => {
-            if (event.target instanceof HTMLAnchorElement) closeNav();
+        nav.addEventListener('click', event => {
+            if (event.target.closest('a')) closeMenu();
         });
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape') closeNav();
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') closeMenu();
+        });
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 860) closeMenu();
         });
     }
 
@@ -34,15 +40,20 @@
     const exploreSkip = document.querySelector('.explore-skip');
     const readSkip = document.querySelector('.read-skip');
     const choices = document.querySelectorAll('[data-mode-choice]');
-
     const params = new URLSearchParams(window.location.search);
     const explicit = params.get('mode');
     let stored = null;
-    try { stored = localStorage.getItem('aryan-site-mode'); } catch (_) {}
-    let mode = explicit === 'read' || explicit === 'explore' ? explicit : (stored || 'explore');
+    try { stored = localStorage.getItem('aryan-site-mode'); } catch (_) { /* Storage optional. */ }
+    const initialMode = explicit === 'explore' || explicit === 'read'
+        ? explicit
+        : (stored === 'explore' || stored === 'read' ? stored : 'explore');
 
-    function setMode(next, { persist = true } = {}) {
-        mode = next === 'read' ? 'read' : 'explore';
+    function setMode(next, { persist = true, fromUser = false } = {}) {
+        const mode = next === 'read' ? 'read' : 'explore';
+        const active = document.activeElement;
+        const focusWillDisappear = fromUser && active instanceof Element &&
+            Boolean(active.closest(mode === 'read' ? '.explore-layer' : '.read-layer'));
+
         document.body.dataset.siteMode = mode;
         explore.forEach(el => { el.hidden = mode !== 'explore'; });
         read.forEach(el => { el.hidden = mode !== 'read'; });
@@ -51,27 +62,33 @@
         if (exploreSkip) exploreSkip.hidden = mode !== 'explore';
         if (readSkip) readSkip.hidden = mode !== 'read';
         choices.forEach(choice => {
-            const active = choice.dataset.modeChoice === mode;
-            if (choice.tagName === 'BUTTON') choice.setAttribute('aria-pressed', String(active));
+            if (choice.tagName === 'BUTTON') {
+                choice.setAttribute('aria-pressed', String(choice.dataset.modeChoice === mode));
+            }
         });
-        closeNav();
+        closeMenu();
         if (persist) {
-            try { localStorage.setItem('aryan-site-mode', mode); } catch (_) {}
+            try { localStorage.setItem('aryan-site-mode', mode); } catch (_) { /* Storage optional. */ }
         }
         const url = new URL(window.location.href);
         url.searchParams.set('mode', mode);
         history.replaceState(null, '', url.pathname + url.search + url.hash);
         window.dispatchEvent(new CustomEvent('site-mode-change', { detail: { mode } }));
+
+        if (focusWillDisappear) {
+            const main = document.getElementById(mode === 'read' ? 'read-content' : 'explore-content');
+            requestAnimationFrame(() => main?.focus({ preventScroll: true }));
+        }
     }
 
     choices.forEach(choice => {
         if (choice.tagName !== 'BUTTON') return;
         choice.addEventListener('click', () => {
-            const next = choice.dataset.modeChoice;
-            setMode(next);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setMode(choice.dataset.modeChoice, { fromUser: true });
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
         });
     });
 
-    setMode(mode, { persist: Boolean(explicit) || Boolean(stored) });
+    setMode(initialMode, { persist: Boolean(explicit) || Boolean(stored) });
 })();

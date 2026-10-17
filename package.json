@@ -1,0 +1,16 @@
+{
+  "name": "aryan-gupta-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Tests for the GitHub Pages portfolio",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:site": "python3 tools/verify_site.py",
+    "test:all": "npm run test:site && npm test"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.11.0",
+    "@playwright/test": "^1.56.1"
+  }
+}

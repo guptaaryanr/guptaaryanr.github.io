@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="370" viewBox="0 0 900 370" role="img" aria-labelledby="chart-title chart-desc">
+<title id="chart-title">WaveSleuth v1.0.0 reference reconstruction scores</title>
+<desc id="chart-desc">Intersection over union: mask-cell-easy 1.000, staged circle 0.895, circle-easy 0.800 and ellipse-easy 0.787.</desc>
+<rect width="900" height="370" fill="#fbfaf7"/>
+<text x="32" y="42" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#8d4d38" letter-spacing="1">REFERENCE IoU  /  v1.0.0</text>
+<text x="32" y="68" font-family="Georgia, serif" font-size="21" fill="#11151b">Different challenges, different reconstruction conditions</text>
+<line x1="275" y1="96" x2="275" y2="319" stroke="#d7d3ca"/>
+<line x1="565" y1="96" x2="565" y2="319" stroke="#d7d3ca" stroke-dasharray="4 5"/>
+<line x1="855" y1="96" x2="855" y2="319" stroke="#d7d3ca"/>
+<text x="272" y="337" fill="#60646b" font-family="Arial, sans-serif" font-size="13">0.0</text>
+<text x="554" y="337" fill="#60646b" font-family="Arial, sans-serif" font-size="13">0.5</text>
+<text x="842" y="337" fill="#60646b" font-family="Arial, sans-serif" font-size="13">1.0</text>
+<text x="32" y="132" font-family="Arial, sans-serif" font-size="16" fill="#343a43">Mask cell · easy</text>
+<rect x="275" y="111" width="580" height="30" rx="3" fill="#e9e4d9"/>
+<rect x="275" y="111" width="580" height="30" rx="3" fill="#233f67"/>
+<text x="843" y="132" text-anchor="end" fill="#ffffff" font-family="Arial, sans-serif" font-weight="700" font-size="15">1.000</text>
+<text x="32" y="186" font-family="Arial, sans-serif" font-size="16" fill="#343a43">Circle · staged radius/velocity</text>
+<rect x="275" y="165" width="580" height="30" rx="3" fill="#e9e4d9"/>
+<rect x="275" y="165" width="519" height="30" rx="3" fill="#233f67"/>
+<text x="782" y="186" text-anchor="end" fill="#ffffff" font-family="Arial, sans-serif" font-weight="700" font-size="15">0.895</text>
+<text x="32" y="240" font-family="Arial, sans-serif" font-size="16" fill="#343a43">Circle · easy</text>
+<rect x="275" y="219" width="580" height="30" rx="3" fill="#e9e4d9"/>
+<rect x="275" y="219" width="464" height="30" rx="3" fill="#233f67"/>
+<text x="727" y="240" text-anchor="end" fill="#ffffff" font-family="Arial, sans-serif" font-weight="700" font-size="15">0.800</text>
+<text x="32" y="294" font-family="Arial, sans-serif" font-size="16" fill="#343a43">Ellipse · easy</text>
+<rect x="275" y="273" width="580" height="30" rx="3" fill="#e9e4d9"/>
+<rect x="275" y="273" width="456" height="30" rx="3" fill="#233f67"/>
+<text x="719" y="294" text-anchor="end" fill="#ffffff" font-family="Arial, sans-serif" font-weight="700" font-size="15">0.787</text>
+</svg>
