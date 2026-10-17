@@ -1,0 +1,320 @@
+[
+  {
+    "file": "index.html",
+    "old": "Then the branches started meeting again.",
+    "new": "A few of those branches followed me to Houston.",
+    "reason": "Overextended tree metaphor used as a chapter heading."
+  },
+  {
+    "file": "index.html",
+    "old": "They look separate on a CV. They did not feel separate while I was doing them.",
+    "new": "The job titles make the work look more separate than it was.",
+    "reason": "Mirrored conclusion without new information."
+  },
+  {
+    "file": "index.html",
+    "old": "I like elegant systems. I care more about whether somebody else can actually use them.",
+    "new": "I got a lot fussier about whether someone else could pick up my work and run it.",
+    "reason": "Generic values statement replaced with a concrete engineering concern."
+  },
+  {
+    "file": "index.html",
+    "old": "At some point the things I did because I had to and the things I did because I could not leave them alone started overlapping.",
+    "new": "The projects below started with questions I wanted to test for myself.",
+    "reason": "Sentimental parallel phrasing repeated elsewhere on the page."
+  },
+  {
+    "file": "index.html",
+    "old": "A negative result is still useful if it tells you where the idea actually fails.",
+    "new": "That failed GNN is why I ended up building ThermoBench.",
+    "reason": "Generic moral replaced with the actual link between projects."
+  },
+  {
+    "file": "index.html",
+    "old": "The boundary comparisons happen afterward.",
+    "new": "I compared the detected boundaries against the known transitions only after the detector had made its call.",
+    "reason": "Vague technical conclusion, rewritten to describe the evaluation sequence."
+  },
+  {
+    "file": "index.html",
+    "old": "I built a reproducible inverse-wave playground on Devito, with sparse observations, inversion baselines, blind challenges, and scoring. It began as a way to learn the framework by making something end to end.",
+    "new": "I wanted to learn Devito by actually using it. I built a 2D acoustic inverse problem, then added different sensor layouts, blind challenges, and a way to score the reconstructions.",
+    "reason": "Inventory-like project description replaced with sequence of work."
+  },
+  {
+    "file": "index.html",
+    "old": "Different branch. Same instinct.",
+    "new": "A different sort of regression",
+    "reason": "Slogan that repeats the site’s stated thesis."
+  },
+  {
+    "file": "index.html",
+    "old": "Nothing has to crash for a system to get worse. An LLM change can quietly become much more expensive while every normal test still passes. I wanted CI to be allowed to care about that too.",
+    "new": "An LLM pipeline can pass all its usual tests while the cost per valid answer keeps climbing. Costgate checks for that in CI.",
+    "reason": "Avoids three polished beats and personifying CI."
+  },
+  {
+    "file": "index.html",
+    "old": "Different domain. Same reflex. What can quietly go wrong?",
+    "new": "I would rather catch a cost increase in CI than notice it on a bill.",
+    "reason": "Another slogan replaced with the practical motivation."
+  },
+  {
+    "file": "index.html",
+    "old": "I keep the old work around because I like seeing the trail.",
+    "new": "Things I built before the recent research.",
+    "reason": "Avoids yet another retrospective about the trail."
+  },
+  {
+    "file": "index.html",
+    "old": "Longboard remotes, follower robots, processors, satellite work, startup experiments. Not everything still deserves the front page. It still happened.",
+    "new": "Longboard remote, follower robot, out-of-order processor, satellite work, and an early startup. All from my Michigan years.",
+    "reason": "Removes deliberate fragmented emphasis and needless self-defense."
+  },
+  {
+    "file": "index.html",
+    "old": "This bit is still being drawn.",
+    "new": "Back in a classroom, for now.",
+    "reason": "Sweeping metaphor where a simple, personal heading works better."
+  },
+  {
+    "file": "index.html",
+    "old": "I am at Imperial now, studying Applied Computational Science &amp; Engineering. I wanted to spend a year learning the mathematics and numerical methods behind the scientific software I had been building on the job. Where that work goes next is still taking shape.",
+    "new": "I am at Imperial studying Applied Computational Science &amp; Engineering. I spent a few years learning scientific computing whenever a project demanded it. I wanted time to study the mathematics and numerical methods properly. I have a lot I want to try after this year, but I have not settled on what comes first.",
+    "reason": "Gets rid of a vague, boilerplate future-facing close while preserving uncertainty."
+  },
+  {
+    "file": "index.html",
+    "old": "<aside class=\"margin-note\">Ambitious, yes. Certain, no.</aside>",
+    "new": "",
+    "reason": "Formulaic two-word antithesis replaced with a less rehearsed observation."
+  },
+  {
+    "file": "index.html",
+    "old": "If you want the dates, papers, numbers, and the complete record, the detailed version is still here.",
+    "new": "For dates, papers, and the technical details, switch to Read.",
+    "reason": "Functional page copy, no narration about the site."
+  },
+  {
+    "file": "index.html",
+    "old": "That turned out to describe the rest of it pretty well too. Since then I’ve bounced through embedded systems, robotics, molecular simulation, controls, AI tooling, and a lot of scientific software. I usually end up in the same place. Some physical mess has to become something computable, and the model has to survive enough checks that I can trust it.",
+    "new": "That took me through embedded systems, robotics, molecular simulation, controls, and a lot of code. At Technip I worked on carbon capture R&amp;D, instrumentation, and internal AI tools. I am now studying applied computational science at Imperial.",
+    "reason": "Replaces a grand unifying conclusion with concrete work and chronology."
+  },
+  {
+    "file": "index.html",
+    "old": "Not necessarily the biggest things I’ve done. Just the four closest to where I’m going.",
+    "new": "They are not necessarily the biggest things on my CV, but they are the ones I would rather talk about.",
+    "reason": "Less polished forecast of a personal trajectory."
+  },
+  {
+    "file": "index.html",
+    "old": "I made this mostly because I wanted to learn Devito properly. You hide a structure in a 2D acoustic medium, put a few sources and receivers around it, and try to recover the geometry from the traces. It grew into a versioned testbed with blind challenges and reconstruction scoring.",
+    "new": "I wanted to learn Devito, so I built an inverse problem around it. The idea is to hide a structure in a 2D acoustic medium and try to reconstruct it from a handful of receiver traces. The v1 release has blind challenges and scoring, too.",
+    "reason": "Less product-pitch phrasing; explains the problem as a person might explain it."
+  },
+  {
+    "file": "index.html",
+    "old": "I wanted to know whether you could spot a qualitative change in a dynamical system from the trajectories alone. No equations and no answer key. The paper is my attempt to make that precise enough to test.",
+    "new": "Can you find structural changes in a dynamical system using only its trajectories, without giving the detector the equations or the transition labels? I tested that on two deterministic systems, then compared its boundaries against separately defined transitions.",
+    "reason": "Removes theatrical sentence fragments and clarifies the technical claim."
+  },
+  {
+    "file": "index.html",
+    "old": "LLM changes can get quietly more expensive even when nothing obviously breaks. I wanted CI to be allowed to care about that too.",
+    "new": "A change to an LLM pipeline can raise the cost per valid answer without breaking its functional tests. Costgate checks that in CI.",
+    "reason": "Removes personification, keeps the purpose."
+  },
+  {
+    "file": "index.html",
+    "old": "I came to Imperial because scientific computing is what I had mostly taught myself sideways through all of this. I wanted a year where it was the main subject, not the thing I learned because a problem forced me to.",
+    "new": "I learned most of my scientific computing on the job, one problem at a time. Imperial is a chance to study the numerical methods behind it rather than picking them up as I go.",
+    "reason": "Avoids a repeated metaphor and tidy not-X-but-Y construction."
+  },
+  {
+    "file": "research.html",
+    "old": "WaveSleuth is a reproducible inverse-wave playground built around Devito: sparse acoustic observations, inversion baselines, blind challenges, and explicit scores. I started it to learn the solver end to end. The v1 release grew into a small, versioned testbed for reconstruction experiments.",
+    "new": "I built WaveSleuth to learn Devito by implementing an inverse problem from start to finish. A 2D acoustic model generates traces from a hidden medium, and the inversion tries to reconstruct it from sparse observations. The v1 release adds blind challenges, scoring, and checks that the results can be reproduced.",
+    "reason": "Abstract-like opening replaced with what the code does and why it exists."
+  },
+  {
+    "file": "research.html",
+    "old": "The actual v1.0 loop. Sources and receivers are sparse on purpose. Ambiguity is part of the game.",
+    "new": "This is the v1.0 workflow. The small number of sources and receivers leaves room for ambiguous reconstructions.",
+    "reason": "Removes the slogan-like last sentence."
+  },
+  {
+    "file": "research.html",
+    "old": "I wanted to know whether a detector could pick up structural change without being told what kind of change it should expect. I kept the governing equations, regime labels, and transition definitions away from it and only gave it trajectories across an ordered parameter sweep.",
+    "new": "The detector gets full-state trajectories and the order of a parameter sweep, but no equations, regime labels, or transition definitions. I wanted to see whether it could still identify a structural boundary.",
+    "reason": "Makes the information barrier clearer, cuts vague framing."
+  },
+  {
+    "file": "research.html",
+    "old": "The qualitative boundary is computed separately with model specific information and only brought back at evaluation. On the two deterministic benchmark families in the paper, using multivariate/full-state trajectories, the structural boundary appears earlier than the separately defined qualitative boundary. No general-purpose bifurcation guarantee is claimed.",
+    "new": "I defined the qualitative transitions separately and withheld them until evaluation. In both deterministic benchmark families, the boundary detected from multivariate/full-state trajectories appeared earlier. That is a result on two systems, not a general result about every dynamical system.",
+    "reason": "Replaces legalistic caveat with a plain statement of scope."
+  },
+  {
+    "file": "research.html",
+    "old": "Before a learned equation of state goes anywhere near a CFD or VLE solver, make it pass a few cheap physical consistency checks.",
+    "new": "C1–C4 check monotonicity, mechanical stability, phase consistency, and sound speed before the surrogate is used in a solver.",
+    "reason": "Turns generic advice into the actual tests."
+  },
+  {
+    "file": "research.html",
+    "old": "An LLM change can get more expensive while all the normal tests still pass. The API returns, the output looks fine, and the bill quietly moves in the wrong direction. Costgate gives that kind of regression a place in CI.",
+    "new": "A code change can leave an LLM pipeline’s answers unchanged while raising the cost per valid answer. Costgate compares a candidate run against a baseline in CI and checks it against a policy.",
+    "reason": "Removes familiar metaphor and personification; adds concrete operation."
+  },
+  {
+    "file": "research.html",
+    "old": "Kept deliberately small",
+    "new": "What it produces",
+    "reason": "Repetitive “deliberately small” framing."
+  },
+  {
+    "file": "research.html",
+    "old": "I did not want a giant eval platform. The policy is a file, the artifacts are inspectable, and the useful output at the end is still just pass, warn, or fail.",
+    "new": "A YAML policy, inspectable run artifacts, and a pass, warn, or fail verdict.",
+    "reason": "Specifies the output without self-conscious product positioning."
+  },
+  {
+    "file": "research.html",
+    "old": "<p class=\"section-note\">Trajectory appears again here because this section is the publication record too.</p>",
+    "new": "",
+    "reason": "Unnecessary explanation about page organization."
+  },
+  {
+    "file": "research.html",
+    "old": "This was supposed to be a surrogate model paper. It turned into a negative result when the learned pressure surface and its derivatives failed in the regions the VLE solver actually needed. That failure became the useful part.",
+    "new": "The GNN’s average prediction errors looked acceptable, but the pressure surface and derivatives failed where the VLE solver needed them. The surrogate also offered no useful speed advantage over the reference calculation.",
+    "reason": "Lets the specific failure speak for itself."
+  },
+  {
+    "file": "research.html",
+    "old": "A compact benchmark for checking whether learned thermodynamic surrogates still satisfy basic physical constraints before they are trusted inside VLE, CFD, or related solver workflows.",
+    "new": "Four consistency checks for learned pure-fluid equations of state, including monotonicity, compressibility, the Clapeyron relation, and sound speed.",
+    "reason": "Substitutes details for generic benefit language, preserves pure-fluid scope."
+  },
+  {
+    "file": "work.html",
+    "old": "<p>There is a throughline in there, but I’d be lying if I said I planned it that neatly at the time.</p>",
+    "new": "",
+    "reason": "Avoids familiar “throughline” rhetoric."
+  },
+  {
+    "file": "work.html",
+    "old": "A lot of the work around that was less glamorous and just as necessary. I ran parameter sweeps, worked through terabytes of image data, did the uncertainty work, built surrogate models, and spent a fair amount of time deciding which simulation or experiment was actually worth running next.",
+    "new": "That also meant parameter sweeps, terabytes of image data, uncertainty analysis, surrogate models, and deciding which simulation or experiment was worth the next run.",
+    "reason": "Removes an empty qualifier before a strong set of facts."
+  },
+  {
+    "file": "work.html",
+    "old": "The projects were very specific to engineering work. Natural language to SQL, P&amp;ID intelligence, vendor document review, bid tabulation, and similar document heavy workflows. One bid tabulation pipeline cut manual review effort by about 80%.",
+    "new": "The projects covered natural-language-to-SQL queries, P&amp;ID analysis, vendor-document review, and bid tabulation. One bid tabulation pipeline reduced manual review effort by about 80%.",
+    "reason": "Cuts generic framing, improves terminology without raising claims."
+  },
+  {
+    "file": "work.html",
+    "old": "It was useful for a reason that has nothing to do with fancy models. Real engineering systems are full of standards, traceability, document control, QA, and change management. If the software ignores that, it is not very useful software.",
+    "new": "Working with P&amp;IDs, specifications, and change-controlled documents changed how I thought about engineering software. Traceability, document control, and QA have to be built into the workflow.",
+    "reason": "Removes a lecture-like conclusion and grounds it in actual engineering work."
+  },
+  {
+    "file": "work.html",
+    "old": "<p class=\"section-note\">Not central to what I work on now, but still part of the record.</p>",
+    "new": "",
+    "reason": "The older work needs no apology."
+  },
+  {
+    "file": "work.html",
+    "old": "At Imperial now, studying the numerical and computational foundations of work I had previously learned mainly through research and engineering problems.",
+    "new": "Studying numerical methods and scientific computing after several years of learning them mainly through engineering and research projects.",
+    "reason": "Removes empty temporal phrasing and awkward abstraction."
+  },
+  {
+    "file": "cv.html",
+    "old": "Dates, roles, papers, and projects without the rest of the wandering.",
+    "new": "Two pages covering my work history, education, publications, and projects.",
+    "reason": "Too cute for a download page."
+  },
+  {
+    "file": "assets/js/explore-notes.js",
+    "old": "Circuits were part coursework, part teaching, and part of learning to trust the bench as much as the equation. I later taught EECS 314, running discussions and labs on everything from RLC transients to op amps.",
+    "new": "I took circuits classes at Michigan and later helped teach EECS 314, running discussions and labs on RLC transients, op amps, and instrumentation.",
+    "reason": "Removes three-part parallel prose; specifies teaching experience."
+  },
+  {
+    "file": "assets/js/explore-notes.js",
+    "old": "It was one of the earlier places where the abstract model and the physical thing on the table had to agree.",
+    "new": "You learn quickly to check the probes before blaming the equation.",
+    "reason": "More natural observation based on circuit labs."
+  },
+  {
+    "file": "assets/js/explore-notes.js",
+    "old": "It was messy systems work, which is probably why I liked it.",
+    "new": "A problem in one subsystem had a habit of looking like a problem somewhere else.",
+    "reason": "Replaces a generic personality aside with a systems observation."
+  },
+  {
+    "file": "assets/js/explore-notes.js",
+    "old": "I mostly remember discovering how quickly a clean idea becomes an interface problem once several disciplines touch it.",
+    "new": "I worked across plasma, structures, and electronics, where the interfaces were often the difficult part.",
+    "reason": "Removes generic clean-idea-to-interface aphorism."
+  },
+  {
+    "file": "assets/js/explore-notes.js",
+    "old": "This is the sort of project I mean when I say I tend to learn by building the whole thing.",
+    "new": "The visual debugger turned out to be one of the most useful pieces.",
+    "reason": "Less self-branding; more concrete detail."
+  },
+  {
+    "file": "assets/js/explore-notes.js",
+    "old": "None of it is what I work on now. I still like that it existed in the world and had to behave.",
+    "new": "The part I remember is having to make the hardware do what the code said it should.",
+    "reason": "Replaces rehearsed sentiment with something concrete."
+  },
+  {
+    "file": "assets/js/explore-notes.js",
+    "old": "Longboard remote. Follower robots. Processor architecture. Satellite work. They are not the center of the portfolio anymore, but I do not want to erase the earlier layers just because the current work is different.",
+    "new": "The earlier work includes a longboard remote, follower robots, processor architecture, and satellite research. Some of it was coursework and some was lab work.",
+    "reason": "Removes conspicuous fragments and repeated archival defense."
+  },
+  {
+    "file": "assets/js/explore-notes.js",
+    "old": "The Read side keeps the full record.",
+    "new": "The engineering-project archive has the details.",
+    "reason": "Straightforward navigation."
+  },
+  {
+    "file": "assets/js/explore-notes.js",
+    "old": "On paper those are separate jobs. In practice the interesting part was usually at the boundary between them.",
+    "new": "I kept switching between simulation work, engineering documents, and tools meant to make both easier to use.",
+    "reason": "Eliminates the site’s most repeated contrast construction."
+  },
+  {
+    "file": "assets/js/explore-notes.js",
+    "old": "The question is whether structural change leaves enough evidence in the trajectories themselves to recover a meaningful boundary.",
+    "new": "I let the detector pick a boundary from the trajectories, then compared it with a separately defined transition.",
+    "reason": "Concrete account of method, not generic inquiry."
+  },
+  {
+    "file": "assets/js/explore-notes.js",
+    "old": "An LLM system can get materially more expensive while every ordinary functional test still passes. Costgate treats cost as another thing CI is allowed to call a regression.",
+    "new": "An LLM pipeline can pass all its functional tests while the cost per valid answer rises. Costgate checks for that in CI.",
+    "reason": "Removes CI personification and vague adjective."
+  },
+  {
+    "file": "assets/js/explore-notes.js",
+    "old": "The site keeps the older projects because I want a record of the trail, not a portfolio that quietly rewrites the past every time my interests change.",
+    "new": "The older projects are still here: robots, processors, embedded work, and the things I tried before getting into scientific computing.",
+    "reason": "Avoids another polished site-manifesto sentence."
+  },
+  {
+    "file": "assets/js/explore-notes.js",
+    "old": "The Read side has the engineering projects and the rest of the longer record.",
+    "new": "The engineering-project section has the full descriptions.",
+    "reason": "Simple pointer."
+  }
+]

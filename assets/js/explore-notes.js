@@ -12,8 +12,8 @@
             eyebrow: 'Ann Arbor / one branch',
             title: 'Circuits',
             body: [
-                'Circuits were part coursework, part teaching, and part of learning to trust the bench as much as the equation. I later taught EECS 314, running discussions and labs on everything from RLC transients to op amps.',
-                'It was one of the earlier places where the abstract model and the physical thing on the table had to agree.'
+                'I took circuits classes at Michigan and later helped teach EECS 314, running discussions and labs on RLC transients, op amps, and instrumentation.',
+                'You learn quickly to check the probes before blaming the equation.'
             ],
             href: 'work.html?mode=read#research-teaching'
         },
@@ -22,7 +22,7 @@
             title: 'Quadcopters',
             body: [
                 'At BIRDS Lab I worked on an adaptable quadcopter platform. That meant telemetry links, embedded electronics, power boards, flight control, and debugging whichever layer was currently upsetting the others.',
-                'It was messy systems work, which is probably why I liked it.'
+                'A problem in one subsystem had a habit of looking like a problem somewhere else.'
             ],
             href: 'work.html?mode=read#research-teaching'
         },
@@ -31,7 +31,7 @@
             title: 'Nanosatellites',
             body: [
                 'MiTEE was my first proper research project. The team was studying electrodynamic tether propulsion for tiny satellites, and I worked around the plasma and structures interface, thermodynamic analysis, and electronics prototyping.',
-                'I mostly remember discovering how quickly a clean idea becomes an interface problem once several disciplines touch it.'
+                'I worked across plasma, structures, and electronics, where the interfaces were often the difficult part.'
             ],
             href: 'work.html?mode=read#research-teaching'
         },
@@ -40,7 +40,7 @@
             title: 'An out of order processor',
             body: [
                 'A MIPS R10K style superscalar core in SystemVerilog, with caches, a load store queue, branch recovery, precise exceptions, some baseline SMT, and a visual debugger because bringing it up without one was miserable.',
-                'This is the sort of project I mean when I say I tend to learn by building the whole thing.'
+                'The visual debugger turned out to be one of the most useful pieces.'
             ],
             href: 'research.html?mode=read#engineering-projects'
         },
@@ -49,7 +49,7 @@
             title: 'Small machines, lots of plumbing',
             body: [
                 'The older embedded work includes an STM32 longboard remote and a two robot follower system built around Nucleo boards, vision, ultrasonic sensing, and PID control.',
-                'None of it is what I work on now. I still like that it existed in the world and had to behave.'
+                'The part I remember is having to make the hardware do what the code said it should.'
             ],
             href: 'research.html?mode=read#engineering-projects'
         },
@@ -66,8 +66,8 @@
             eyebrow: 'Ann Arbor / archive',
             title: 'The older builds',
             body: [
-                'Longboard remote. Follower robots. Processor architecture. Satellite work. They are not the center of the portfolio anymore, but I do not want to erase the earlier layers just because the current work is different.',
-                'The Read side keeps the full record.'
+                'The earlier work includes a longboard remote, follower robots, processor architecture, and satellite research. Some of it was coursework and some was lab work.',
+                'The engineering-project archive has the details.'
             ],
             href: 'research.html?mode=read#engineering-projects'
         },
@@ -76,7 +76,7 @@
             title: 'Three roles that kept bleeding together',
             body: [
                 'Most of my Technip time was applied physics R&D for carbon capture, especially molecular simulation, analysis, HPC, and carrying atomistic results into larger scale models. Later I moved into instrumentation and controls while helping build an internal AI initiative across the Americas.',
-                'On paper those are separate jobs. In practice the interesting part was usually at the boundary between them.'
+                'I kept switching between simulation work, engineering documents, and tools meant to make both easier to use.'
             ],
             href: 'work.html?mode=read#industry'
         },
@@ -94,7 +94,7 @@
             title: 'Trajectory only regime detection',
             body: [
                 'The paper tests full-state trajectories from two deterministic benchmark families across ordered parameter sweeps. The detector sees no governing equations, regime labels, or model-specific transition definitions.',
-                'The question is whether structural change leaves enough evidence in the trajectories themselves to recover a meaningful boundary.'
+                'I let the detector pick a boundary from the trajectories, then compared it with a separately defined transition.'
             ],
             href: 'research.html?mode=read#traj-title'
         },
@@ -111,7 +111,7 @@
             eyebrow: 'Featured work / evaluation tooling',
             title: 'Costgate',
             body: [
-                'An LLM system can get materially more expensive while every ordinary functional test still passes. Costgate treats cost as another thing CI is allowed to call a regression.',
+                'An LLM pipeline can pass all its functional tests while the cost per valid answer rises. Costgate checks for that in CI.',
                 'The real tool compares baseline and candidate runs under explicit policies for cost, valid success, tokens, latency, repeat variability, and significance.'
             ],
             href: 'research.html?mode=read#costgate-title'
@@ -120,8 +120,8 @@
             eyebrow: 'Off trail / older layers',
             title: 'The archive',
             body: [
-                'The site keeps the older projects because I want a record of the trail, not a portfolio that quietly rewrites the past every time my interests change.',
-                'The Read side has the engineering projects and the rest of the longer record.'
+                'The older projects are still here: robots, processors, embedded work, and the things I tried before getting into scientific computing.',
+                'The engineering-project section has the full descriptions.'
             ],
             href: 'research.html?mode=read#engineering-projects'
         }

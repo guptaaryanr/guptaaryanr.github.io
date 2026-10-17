@@ -1,32 +1,45 @@
-# Portfolio v3.2: narrow-header / enlarged-text repair
+# Portfolio language edit (October 2026)
 
-The last v3.1 visual test revealed horizontal document overflow at a 320px viewport with `html { font-size: 20px !important; }`. The likely culprit is the header. Its original `2rem` flex gaps grow with the root font, leaving too little room for the AG mark, Explore/Read switch, and menu button. Reproducing the header independently produces a 32px overflow, consistent with the reported 35px.
+A copy-only editorial pass for `guptaaryanr.github.io`. It removes formulaic transitions, repeated self-commentary, and generic research descriptions while keeping the website's field-journal voice and technical evidence.
 
-The fix changes only the **mobile header** (700px and below). It reduces flex gaps and mode-button padding, retains 44px minimum control heights, and allows a second row when users enlarge text further. It does not use `overflow-x: hidden` or clip interactive controls.
+No CSS, layout, navigation, animations, interactive behaviour, figures, numerical results, or external links are changed.
 
-## Install
+## Use
 
-Extract this ZIP into the root of your **already updated v3 + v3.1** repository, preserving folders. Then run:
+Unzip this folder **into the root of your current local GitHub Pages repository** so that `apply_language_edit.py` and `language_replacements.json` are beside `index.html`. Do not rerun any earlier v1/v2/v3 installer.
 
 ```bash
-python apply_v3_2.py --check
-python apply_v3_2.py
-npx playwright test tests/header-zoom.spec.mjs tests/visual-layout.spec.mjs
-npm test
+python apply_language_edit.py --check
+python apply_language_edit.py
+git diff --check
+git diff -- index.html research.html work.html cv.html assets/js/explore-notes.js
 ```
 
-The installer **appends** the CSS to `assets/css/visual-repair.css` without replacing existing changes. It checks for the v3 marker and is idempotent, so running it again changes nothing. A separate test file checks component geometry and menu functionality at multiple viewport/font combinations.
+If your existing site test dependencies are installed, run `npm test` too. The modifications are text-only except removal of three redundant `<p>`/`<aside>` elements.
 
-## Verification
+The updater validates **all 53 edits** before writing. If your local copy differs, it stops without making partial edits. You can inspect the affected source and the exact before/after pair in `language_replacements.json`. Do not force mismatched replacements.
 
-A Chromium rendering of the header matching the site's markup and CSS was tested with root fonts 16, 18, 20, 22, 24 and 28px at viewport widths 320, 360, 390, 430, 520, 700 and 820px. The original header exceeded the 320px viewport by approximately 32px at a 20px root font; the patched version did not overflow in any of those cases.
+It is safe to run twice: already-applied edits are skipped.
 
-The v3 representative layout fixture with the same header added was also checked at 8 widths × 4 root font sizes (32 combinations), with no document overflow after this patch. **These are controlled reconstructions, not a full run of the user's local repository.** The included Playwright tests should verify the actual website before pushing.
+## Files changed
 
-## Files
+- `index.html` (22 edits): Explore timeline, captions and margin notes, Read homepage descriptions, project previews.
+- `research.html` (11 edits): project introductions, scope phrasing, unnecessary explanations.
+- `work.html` (6 edits): work history and education prose.
+- `cv.html` (1 edit): short CV page description.
+- `assets/js/explore-notes.js` (13 edits): text in the field-note pop-ups.
 
-- `apply_v3_2.py`: guarded, repeatable installer
-- `tools/header-zoom.css`: mobile-header CSS fix
-- `tests/header-zoom.spec.mjs`: new regression tests
+**No other website files are modified.** The manifest records all 53 proposed replacements verbatim with a short reason for each.
 
-No site copy, project layout, or external links are changed.
+## What stays
+
+The field-journal design, intentional first-person voice, technical figures, benchmarks and caveats, specific results, and idiosyncratic lines that already sound like a person. Not every personal or poetic sentence is a problem. The target is repetitive polish, not personality.
+
+## Scope and validation
+
+- All 53 original phrases were found uniquely in GitHub `main` on 17 October 2026.
+- Installer dry-run, actual application, repeat application and mismatch refusal passed against a synthetic fixture containing those exact phrases.
+- JavaScript replacement strings passed `node --check` and HTML edit tags were checked for accidental structural changes.
+- Browser screenshot tests and full-site Playwright tests were **not** rerun against your local repository; run them before pushing.
+
+The HTML order modifications from v3 are unaffected because this package matches exact text, not the arrangement of entire elements.

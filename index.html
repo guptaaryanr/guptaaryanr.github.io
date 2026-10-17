@@ -119,10 +119,10 @@
                 <article class="trail-stage stage-left stage-convergence" id="houston" data-trail-stage data-trail-label="Houston">
                     <div class="trail-card">
                         <p class="trail-eyebrow">Houston / 2023 to 2026</p>
-                        <h2>Then the branches started meeting again.</h2>
-                        <p>At Technip I spent most of my time in applied physics R&amp;D, building molecular simulation and analysis workflows for carbon capture. Later came instrumentation and controls, while an internal AI initiative grew alongside the day job. They look separate on a CV. They did not feel separate while I was doing them.</p>
+                        <h2>A few of those branches followed me to Houston.</h2>
+                        <p>At Technip I spent most of my time in applied physics R&amp;D, building molecular simulation and analysis workflows for carbon capture. Later came instrumentation and controls, while an internal AI initiative grew alongside the day job. The job titles make the work look more separate than it was.</p>
                         <a class="trail-text-link" href="work.html?mode=read#industry" data-explore-key="houston">The full work history <span aria-hidden="true">↗</span></a>
-                        <aside class="margin-note tilt-right">I like elegant systems. I care more about whether somebody else can actually use them.</aside>
+                        <aside class="margin-note tilt-right">I got a lot fussier about whether someone else could pick up my work and run it.</aside>
                     </div>
                     <div class="trail-pin" aria-hidden="true"><span>03</span></div>
                     <div class="convergence-field" role="group" aria-label="Technical threads that converged in Houston">
@@ -133,7 +133,7 @@
 
                 <div class="trail-interlude" data-trail-stage data-trail-label="Independent work">
                     <p class="trail-eyebrow">Somewhere around here</p>
-                    <p>At some point the things I did because I had to and the things I did because I could not leave them alone started overlapping.</p>
+                    <p>The projects below started with questions I wanted to test for myself.</p>
                 </div>
 
                 <div id="work-trail" class="work-trail-anchor" aria-hidden="true"></div>
@@ -144,7 +144,7 @@
                         <h2>ThermoBench</h2>
                         <p>A GNN surrogate once looked fine until I asked the actual VLE solver to use it. The derivatives were bad enough to make the model useless. ThermoBench is the set of cheap physical checks I wished I had run first.</p>
                         <a href="research.html?mode=read#tb-title" class="trail-text-link" data-explore-key="thermobench">Full project <span aria-hidden="true">↗</span></a>
-                        <aside class="margin-note">A negative result is still useful if it tells you where the idea actually fails.</aside>
+                        <aside class="margin-note">That failed GNN is why I ended up building ThermoBench.</aside>
                     </div>
                     <div class="trail-pin project-pin" aria-hidden="true"><span>04</span></div>
                     <div class="instrument thermo-instrument">
@@ -158,7 +158,7 @@
                     <div class="landmark-copy">
                         <p class="trail-eyebrow">A question I kept poking at</p>
                         <h2>Trajectory only detection</h2>
-                        <p>Could you detect a structural change from trajectories alone? I tested that question on two deterministic systems, without giving the detector their equations or regime labels. The boundary comparisons happen afterward.</p>
+                        <p>Could you detect a structural change from trajectories alone? I tested that question on two deterministic systems, without giving the detector their equations or regime labels. I compared the detected boundaries against the known transitions only after the detector had made its call.</p>
                         <a href="research.html?mode=read#traj-title" class="trail-text-link" data-explore-key="trajectory">Full project <span aria-hidden="true">↗</span></a>
                     </div>
                     <div class="trail-pin project-pin" aria-hidden="true"><span>05</span></div>
@@ -172,7 +172,7 @@
                     <div class="landmark-copy">
                         <p class="trail-eyebrow">Built because the tutorial was not enough</p>
                         <h2>WaveSleuth</h2>
-                        <p>I built a reproducible inverse-wave playground on Devito, with sparse observations, inversion baselines, blind challenges, and scoring. It began as a way to learn the framework by making something end to end.</p>
+                        <p>I wanted to learn Devito by actually using it. I built a 2D acoustic inverse problem, then added different sensor layouts, blind challenges, and a way to score the reconstructions.</p>
                         <a href="research.html?mode=read#wavesleuth-title" class="trail-text-link" data-explore-key="wavesleuth">Full project <span aria-hidden="true">↗</span></a>
                     </div>
                     <div class="trail-pin project-pin" aria-hidden="true"><span>06</span></div>
@@ -184,11 +184,11 @@
 
                 <article class="trail-stage project-landmark stage-right" id="station-cost" data-trail-stage data-trail-label="Costgate">
                     <div class="landmark-copy">
-                        <p class="trail-eyebrow">Different branch. Same instinct.</p>
+                        <p class="trail-eyebrow">A different sort of regression</p>
                         <h2>Costgate</h2>
-                        <p>Nothing has to crash for a system to get worse. An LLM change can quietly become much more expensive while every normal test still passes. I wanted CI to be allowed to care about that too.</p>
+                        <p>An LLM pipeline can pass all its usual tests while the cost per valid answer keeps climbing. Costgate checks for that in CI.</p>
                         <a href="research.html?mode=read#costgate-title" class="trail-text-link" data-explore-key="costgate">Full project <span aria-hidden="true">↗</span></a>
-                        <aside class="margin-note tilt-right">Different domain. Same reflex. What can quietly go wrong?</aside>
+                        <aside class="margin-note tilt-right">I would rather catch a cost increase in CI than notice it on a bill.</aside>
                     </div>
                     <div class="trail-pin project-pin" aria-hidden="true"><span>07</span></div>
                     <div class="instrument cost-instrument">
@@ -233,8 +233,8 @@
 
                         <article>
                             <p class="trail-eyebrow">Older layers</p>
-                            <h3>I keep the old work around because I like seeing the trail.</h3>
-                            <p>Longboard remotes, follower robots, processors, satellite work, startup experiments. Not everything still deserves the front page. It still happened.</p>
+                            <h3>Things I built before the recent research.</h3>
+                            <p>Longboard remote, follower robot, out-of-order processor, satellite work, and an early startup. All from my Michigan years.</p>
                             <a href="research.html?mode=read#engineering-projects" class="trail-text-link" data-explore-key="archive">Open the archive <span aria-hidden="true">↗</span></a>
                         </article>
                     </div>
@@ -243,9 +243,9 @@
                 <article class="trail-stage stage-right london-stage" id="london" data-trail-stage data-trail-label="London">
                     <div class="trail-card">
                         <p class="trail-eyebrow">London / now</p>
-                        <h2>This bit is still being drawn.</h2>
-                        <p>I am at Imperial now, studying Applied Computational Science &amp; Engineering. I wanted to spend a year learning the mathematics and numerical methods behind the scientific software I had been building on the job. Where that work goes next is still taking shape.</p>
-                        <aside class="margin-note">Ambitious, yes. Certain, no.</aside>
+                        <h2>Back in a classroom, for now.</h2>
+                        <p>I am at Imperial studying Applied Computational Science &amp; Engineering. I spent a few years learning scientific computing whenever a project demanded it. I wanted time to study the mathematics and numerical methods properly. I have a lot I want to try after this year, but I have not settled on what comes first.</p>
+                        
                     </div>
                     <div class="trail-pin next-pin" aria-hidden="true"><span>08</span></div>
                     <div class="london-blank" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
@@ -269,7 +269,7 @@
 
     <footer class="explore-footer explore-layer" role="contentinfo">
         <div class="shell trail-end">
-            <p>If you want the dates, papers, numbers, and the complete record, the detailed version is still here.</p>
+            <p>For dates, papers, and the technical details, switch to Read.</p>
             <button type="button" data-mode-choice="read" class="footer-read-button">Switch to Read</button>
             <nav aria-label="Contact"><a href="mailto:guptaaryanr@gmail.com">Email</a><a href="https://github.com/guptaaryanr" target="_blank" rel="noopener">GitHub</a><a href="https://linkedin.com/in/guptaaryanr" target="_blank" rel="noopener">LinkedIn</a></nav>
         </div>
@@ -281,7 +281,7 @@
             <div class="hero-copy">
                 <p class="kicker">Applied physicist · research engineer · Imperial MSc ACSE</p>
                 <h1 id="hero-title">I chose engineering physics because I didn’t want to choose between physics and engineering.</h1>
-                <p class="hero-deck">That turned out to describe the rest of it pretty well too. Since then I’ve bounced through embedded systems, robotics, molecular simulation, controls, AI tooling, and a lot of scientific software. I usually end up in the same place. Some physical mess has to become something computable, and the model has to survive enough checks that I can trust it.</p>
+                <p class="hero-deck">That took me through embedded systems, robotics, molecular simulation, controls, and a lot of code. At Technip I worked on carbon capture R&amp;D, instrumentation, and internal AI tools. I am now studying applied computational science at Imperial.</p>
                 <div class="hero-actions" aria-label="Primary links"><a class="text-link strong" href="research.html?mode=read">See the work <span aria-hidden="true">↗</span></a><a class="text-link" href="cv.html?mode=read">CV</a><a class="text-link" href="mailto:guptaaryanr@gmail.com">Email</a></div>
             </div>
 
@@ -298,18 +298,18 @@
         <section class="home-section shell" aria-labelledby="selected-work-title">
             <header class="split-heading">
                 <div><p class="section-number">01 / Selected work</p><h2 id="selected-work-title">If you only look at four things, make it these.</h2></div>
-                <p>Not necessarily the biggest things I’ve done. Just the four closest to where I’m going.</p>
+                <p>They are not necessarily the biggest things on my CV, but they are the ones I would rather talk about.</p>
             </header>
 
             <div class="feature-stack">
                 <article class="feature-row">
                     <div class="feature-index" aria-hidden="true">01</div><div class="feature-meta">Inverse problems · PDE simulation · 2026</div>
-                    <div class="feature-main"><h3><a href="research.html#wavesleuth-title">WaveSleuth-Devito</a></h3><p>I made this mostly because I wanted to learn Devito properly. You hide a structure in a 2D acoustic medium, put a few sources and receivers around it, and try to recover the geometry from the traces. It grew into a versioned testbed with blind challenges and reconstruction scoring.</p></div>
+                    <div class="feature-main"><h3><a href="research.html#wavesleuth-title">WaveSleuth-Devito</a></h3><p>I wanted to learn Devito, so I built an inverse problem around it. The idea is to hide a structure in a 2D acoustic medium and try to reconstruct it from a handful of receiver traces. The v1 release has blind challenges and scoring, too.</p></div>
                     <a class="feature-arrow" href="research.html#wavesleuth-title" aria-label="Read about WaveSleuth-Devito">↗</a>
                 </article>
                 <article class="feature-row">
                     <div class="feature-index" aria-hidden="true">02</div><div class="feature-meta">Nonlinear dynamics · 2026</div>
-                    <div class="feature-main"><h3><a href="research.html#traj-title">Trajectory-Only Structural Regime Detection</a></h3><p>I wanted to know whether you could spot a qualitative change in a dynamical system from the trajectories alone. No equations and no answer key. The paper is my attempt to make that precise enough to test.</p></div>
+                    <div class="feature-main"><h3><a href="research.html#traj-title">Trajectory-Only Structural Regime Detection</a></h3><p>Can you find structural changes in a dynamical system using only its trajectories, without giving the detector the equations or the transition labels? I tested that on two deterministic systems, then compared its boundaries against separately defined transitions.</p></div>
                     <a class="feature-arrow" href="research.html#traj-title" aria-label="Read about Trajectory-Only Structural Regime Detection">↗</a>
                 </article>
                 <article class="feature-row">
@@ -319,7 +319,7 @@
                 </article>
                 <article class="feature-row">
                     <div class="feature-index" aria-hidden="true">04</div><div class="feature-meta">LLM evaluation tooling · 2026</div>
-                    <div class="feature-main"><h3><a href="research.html#costgate-title">Costgate</a></h3><p>LLM changes can get quietly more expensive even when nothing obviously breaks. I wanted CI to be allowed to care about that too.</p></div>
+                    <div class="feature-main"><h3><a href="research.html#costgate-title">Costgate</a></h3><p>A change to an LLM pipeline can raise the cost per valid answer without breaking its functional tests. Costgate checks that in CI.</p></div>
                     <a class="feature-arrow" href="research.html#costgate-title" aria-label="Read about Costgate">↗</a>
                 </article>
             </div>
@@ -330,7 +330,7 @@
             <div class="about-copy">
                 <p>Michigan was a lot of trying things. Embedded systems, computer architecture, circuits, robotics, a nanosatellite project. Engineering physics gave me enough room to keep following whatever I found interesting without pretending it all belonged to one neat specialty.</p>
                 <p>At Technip I ended up much deeper in computational work than I expected. Most of my time was in carbon capture R&amp;D building molecular simulation and analysis workflows. Later I moved into instrumentation and controls, while also helping start an internal AI initiative across the Americas. They look like separate branches on a résumé. In practice they kept bleeding into each other.</p>
-                <p>I came to Imperial because scientific computing is what I had mostly taught myself sideways through all of this. I wanted a year where it was the main subject, not the thing I learned because a problem forced me to.</p>
+                <p>I learned most of my scientific computing on the job, one problem at a time. Imperial is a chance to study the numerical methods behind it rather than picking them up as I go.</p>
                 <a class="text-link strong" href="work.html">The full chronology <span aria-hidden="true">↗</span></a>
             </div>
         </section>
