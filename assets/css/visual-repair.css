@@ -1,6 +1,6 @@
-/* Visual repair, October 2026.
-   The route is decorative; labels, paragraphs and images must keep their own space.
-   These rules intentionally follow site.css's existing responsive sections. */
+/* V3 RESPONSIVE REPAIR | October 2026.
+   One narrative order on narrow screens; intentional asymmetry on wide ones.
+   This stylesheet follows site.css and replaces the earlier visual-repair.css. */
 
 /* Branches are a set of six navigable topics, not six fixed coordinates. */
 .branch-field {
@@ -235,7 +235,6 @@
         gap: .8rem 1rem;
     }
     .convergence-field { min-height: 0; max-width: 38rem; margin-top: 1.8rem; padding: .5rem 0; }
-    .project-landmark.stage-right > .landmark-copy { margin-top: 2rem; }
     .personal-photo-stack { width: min(100%, 24rem); height: auto; min-height: 0; }
     .personal-photo-stack .mini-photo, .personal-photo-stack .mini-photo.photo-a,
     .personal-photo-stack .mini-photo.photo-b { width: min(43%, 10rem); }
@@ -279,7 +278,6 @@
     .metric-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .metric-strip span:nth-child(2) { border-right: 0; }
     .metric-strip span:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
-    .project-landmark.stage-right > .landmark-copy { margin-top: 2.2rem; }
     .instrument-slider { gap: .65rem; }
     .instrument-slider label { min-width: 0; width: 100%; max-width: 100%; flex-wrap: wrap; }
     .instrument-slider output { margin-left: auto; }
@@ -298,7 +296,182 @@
     .personal-photo-stack { padding-inline: .15rem; }
     .quiet-thought p { font-size: clamp(1.3rem, 7vw, 1.8rem); }
 }
+
+/* A project has one reading order. On wide screens grid placement provides the
+   alternating composition; below the breakpoint, the DOM has copy before art.
+   Numbered pins sit on the left rail and never occupy layout height. */
+@media (max-width: 1020px) {
+    .trail-world {
+        --v3-rail-center: clamp(1.6rem, 2.7vw, 2.2rem);
+        --v3-rail-width: clamp(2.1rem, 3.6vw, 3.15rem);
+        --v3-content-offset: clamp(3.55rem, 6.8vw, 4.7rem);
+        --v3-stage-top: clamp(4.4rem, 7vw, 5.7rem);
+        --v3-pin-size: 2.3rem;
+    }
+    .trail-world .trail-route-map {
+        left: calc(var(--v3-rail-center) - var(--v3-rail-width) / 2);
+        width: var(--v3-rail-width);
+        transform: none;
+    }
+    .trail-world .trail-readout { display: none; }
+    .trail-world .trail-journey.shell {
+        width: 100%;
+        max-width: none;
+        margin-inline: 0;
+        padding-left: var(--v3-content-offset);
+        padding-right: clamp(.95rem, 3vw, 2.25rem);
+    }
+    .trail-world .trail-stage {
+        display: block;
+        min-height: 0;
+        padding: var(--v3-stage-top) 0 clamp(3.8rem, 7vw, 5.2rem);
+    }
+    .trail-world .trail-stage > .trail-pin {
+        --node-shift: 0rem;
+        position: absolute;
+        box-sizing: border-box;
+        grid-column: auto;
+        grid-row: auto;
+        width: var(--v3-pin-size);
+        height: var(--v3-pin-size);
+        left: calc(var(--v3-rail-center) - var(--v3-content-offset) - var(--v3-pin-size) / 2);
+        top: var(--v3-stage-top);
+        transform: none !important;
+    }
+    .trail-world .trail-card,
+    .trail-world .landmark-copy {
+        max-width: 42rem;
+        margin: 0;
+        min-width: 0;
+    }
+    .trail-world .branch-field,
+    .trail-world .convergence-field {
+        margin-top: clamp(1.4rem, 3.6vw, 2rem);
+        margin-bottom: 0;
+    }
+    .trail-world .project-landmark > .instrument {
+        width: 100%;
+        max-width: 42rem;
+        min-width: 0;
+        margin: clamp(1.55rem, 4.5vw, 2.4rem) 0 0;
+    }
+    .trail-world .project-landmark.stage-right > .landmark-copy {
+        margin-top: 0;
+    }
+    .trail-world .london-stage { min-height: 0; }
+    .trail-world .london-blank { display: none; }
+    /* Desktop central route must not bleed through stacked content. */
+    .trail-world .trail-journey > .quiet-thought,
+    .trail-world .trail-journey > .side-path {
+        max-width: 42rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .trail-world {
+        --v3-rail-center: 1.65rem;
+        --v3-rail-width: 2.25rem;
+        --v3-content-offset: 3.65rem;
+        --v3-stage-top: 4.4rem;
+        --v3-pin-size: 2.05rem;
+    }
+    .trail-world .trail-journey.shell { padding-right: .9rem; }
+    .trail-world .trail-stage { padding-bottom: 3.7rem; }
+    .trail-world .project-landmark > .instrument { margin-top: 1.65rem; }
+    .trail-world .landmark-copy h2 { max-width: 100%; }
+    .trail-world .project-landmark .trail-text-link { margin-top: 1.1rem; }
+    .trail-world .project-landmark .margin-note { margin-top: 1.4rem; }
+    /* Compact dashboard: comparable values share a row, verdict gets its own. */
+    .cost-readout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .cost-readout > div { min-width: 0; padding: .9rem .85rem; border-bottom: 1px solid var(--line); }
+    .cost-readout > div:nth-child(2) { border-right: 0; }
+    .cost-readout > div:last-child { grid-column: 1 / -1; border-bottom: 0; }
+    .instrument-controls { gap: .6rem; }
+    .instrument-controls button { min-height: 2.6rem; }
+    .instrument-slider label { line-height: 1.35; }
+    .instrument-slider input { min-height: 2rem; }
+    .instrument-note, .demo-disclaimer { font-size: .8rem; }
+    .field-note-dialog { max-width: calc(100vw - 1rem); }
+}
+
+@media (max-width: 380px) {
+    .trail-world {
+        --v3-rail-center: 1.45rem;
+        --v3-content-offset: 3.25rem;
+        --v3-rail-width: 2rem;
+    }
+    .trail-world .trail-stage > .trail-pin { box-shadow: 0 0 0 .3rem rgba(141, 77, 56, .06); }
+    .trail-world .branch-field { gap: .65rem; }
+    .instrument-controls button { font-size: .75rem; }
+    .cost-readout strong { font-size: 1.55rem; }
+}
+
+/* CSS Grid must not infer a second row from the corrected DOM order. */
+@media (min-width: 1021px) {
+    .trail-world .trail-stage > .trail-card,
+    .trail-world .trail-stage > .landmark-copy,
+    .trail-world .trail-stage > .instrument,
+    .trail-world .trail-stage > .branch-field,
+    .trail-world .trail-stage > .convergence-field,
+    .trail-world .trail-stage > .london-blank,
+    .trail-world .trail-stage > .trail-empty {
+        grid-row: 1;
+        align-self: center;
+    }
+}
+
+/* Images remain decorative as a collage, not absolute overlays on copy. */
+.photo-nook > p:last-child { isolation: isolate; }
+.personal-photo-stack { z-index: 0; }
+.personal-photo-stack .mini-photo img { object-fit: cover; }
+
+/* The hidden project drawings are not an excuse for tiny controls. */
+@media (pointer: coarse) {
+    .instrument button,
+    .side-path summary { min-height: 2.75rem; }
+}
+
 @media print {
     .trail-route-map, .trail-world::before, .trail-world::after { display: none !important; }
     .branch-field .branch-tag, .convergence-field .thread, .convergence-field > strong { break-inside: avoid; }
+}
+
+/* v3.2: Keep the mobile header inside its column when text is enlarged.
+   The default nav-shell 2rem gap is too wide beside the AG mark, mode pills,
+   and menu toggle at 320px when the root font increases to 20px. */
+@media (max-width: 700px) {
+    .site-header .nav-shell {
+        flex-wrap: wrap;
+        column-gap: .55rem;
+        row-gap: .3rem;
+    }
+    .site-header .brand { flex: 0 0 auto; }
+    .site-header .mode-switch {
+        flex: 0 0 auto;
+        margin-left: auto;
+        margin-right: 0;
+        gap: .1rem;
+        padding: .1rem;
+    }
+    .site-header .mode-switch button,
+    .site-header .mode-switch a,
+    .site-header .mode-switch span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: .43rem .5rem;
+    }
+    .site-header .nav-toggle {
+        display: grid;
+        place-items: center;
+        flex: 0 0 auto;
+        min-width: 44px;
+        min-height: 44px;
+        margin-left: auto;
+        padding: .45rem;
+    }
+}
+@media (max-width: 360px) {
+    .site-header .nav-shell { column-gap: .4rem; }
 }

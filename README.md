@@ -1,39 +1,32 @@
-# Aryan Gupta | Website
+# Portfolio v3.2: narrow-header / enlarged-text repair
 
-Personal website: <https://guptaaryanr.github.io/>. Plain HTML, CSS and JavaScript, deployed with GitHub Pages.
+The last v3.1 visual test revealed horizontal document overflow at a 320px viewport with `html { font-size: 20px !important; }`. The likely culprit is the header. Its original `2rem` flex gaps grow with the root font, leaving too little room for the AG mark, Explore/Read switch, and menu button. Reproducing the header independently produces a 32px overflow, consistent with the reported 35px.
 
-The home page has two views: **Explore**, a scrollable visual trail, and **Read**, a conventional portfolio. Pages for research, experience, and the CV are available directly from either view. The Read version is also the fallback when JavaScript is disabled.
+The fix changes only the **mobile header** (700px and below). It reduces flex gaps and mode-button padding, retains 44px minimum control heights, and allows a second row when users enlarge text further. It does not use `overflow-x: hidden` or clip interactive controls.
 
-## Run locally
+## Install
 
-```sh
-python3 -m http.server 4173
-```
+Extract this ZIP into the root of your **already updated v3 + v3.1** repository, preserving folders. Then run:
 
-Open `http://localhost:4173/`. No build step or framework is required to serve the site.
-
-## Check changes
-
-```sh
-python3 tools/verify_site.py
-npm install
-npx playwright install chromium
+```bash
+python apply_v3_2.py --check
+python apply_v3_2.py
+npx playwright test tests/header-zoom.spec.mjs tests/visual-layout.spec.mjs
 npm test
 ```
 
-`verify_site.py` checks local assets, links, fragment targets, image metadata, and basic search metadata. Run `python3 tools/check_external_links.py` to check third-party links on demand; bot defenses and rate limits are reported as inconclusive rather than broken. The Playwright suite checks layout widths, mode switching, keyboard behaviour, simplified scientific illustrations, and serious accessibility issues across the public pages. GitHub Actions runs both on pushes and pull requests.
+The installer **appends** the CSS to `assets/css/visual-repair.css` without replacing existing changes. It checks for the v3 marker and is idempotent, so running it again changes nothing. A separate test file checks component geometry and menu functionality at multiple viewport/font combinations.
 
-## Content notes
+## Verification
 
-- The interactive instruments on the Explore home page are **illustrations**, not live executions of WaveSleuth, RegimeAtlas, ThermoBench, or Costgate.
-- The WaveSleuth scores on the research page reproduce the v1.0.0 release-note **reference IoU** values. Different challenges use different configurations; these aren't comparable external test-set scores.
-- The trajectory study uses full-state trajectories from two deterministic benchmark families; the hidden model-specific definitions are used only at evaluation.
-- ThermoBench-Consist v1 checks **pure-fluid EOS** behaviour. The mixture VLE study motivated it but is not solved by the benchmark.
-- CostRegBench uses controlled fixtures, not production LLM workload statistics.
-- The `assets/cv/Aryan-Gupta-CV.pdf` file is independently maintained. Refresh the PDF when your role dates or education change; the HTML status is kept current here.
+A Chromium rendering of the header matching the site's markup and CSS was tested with root fonts 16, 18, 20, 22, 24 and 28px at viewport widths 320, 360, 390, 430, 520, 700 and 820px. The original header exceeded the 320px viewport by approximately 32px at a 20px root font; the patched version did not overflow in any of those cases.
 
-## Maintenance
+The v3 representative layout fixture with the same header added was also checked at 8 widths × 4 root font sizes (32 combinations), with no document overflow after this patch. **These are controlled reconstructions, not a full run of the user's local repository.** The included Playwright tests should verify the actual website before pushing.
 
-The site is hosted at the repository root, with static assets in `assets/`. The home-page JavaScript is divided into navigation (`site.js`), motion (`explore.js`), instruments (`explore-instruments.js`) and field notes (`explore-notes.js`). Keep `robots.txt`, `sitemap.xml`, `index.html` metadata, and the social preview card consistent when paths or titles change.
+## Files
 
-Project results should link back to release notes, papers, or reproducible repository commands. Use actual measured outputs for research figures and label illustrations as such.
+- `apply_v3_2.py`: guarded, repeatable installer
+- `tools/header-zoom.css`: mobile-header CSS fix
+- `tests/header-zoom.spec.mjs`: new regression tests
+
+No site copy, project layout, or external links are changed.

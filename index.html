@@ -97,6 +97,14 @@
                 </article>
 
                 <article class="trail-stage stage-right stage-branches" id="ann-arbor" data-trail-stage data-trail-label="Ann Arbor">
+                    <div class="trail-card">
+                        <p class="trail-eyebrow">Ann Arbor / 2019 to 2023</p>
+                        <h2>This is where it branches.</h2>
+                        <p>I picked engineering physics because I did not want to choose between physics and engineering. Michigan gave me enough room to take that very literally. I bounced between circuits, robots, satellites, processors, and whatever else I had talked myself into that semester.</p>
+                        <a class="trail-text-link" href="research.html?mode=read#engineering-projects" data-explore-key="older-builds">The older builds <span aria-hidden="true">↗</span></a>
+                        <aside class="margin-note">I like a plan. I am also very capable of getting distracted by the more interesting branch.</aside>
+                    </div>
+                    <div class="trail-pin" aria-hidden="true"><span>02</span></div>
                     <div class="branch-field" role="group" aria-label="Things explored at Michigan">
                         <a href="research.html?mode=read#engineering-projects" class="branch-tag b1" data-explore-key="circuits">circuits</a>
                         <a href="work.html?mode=read#research-teaching" class="branch-tag b2" data-explore-key="quadcopters">quadcopters</a>
@@ -105,14 +113,6 @@
                         <a href="research.html?mode=read#engineering-projects" class="branch-tag b5" data-explore-key="embedded">embedded systems</a>
                         <a href="work.html?mode=read#entrepreneurship-service" class="branch-tag b6" data-explore-key="startups">startups</a>
                         <svg viewBox="0 0 500 300" preserveAspectRatio="none" aria-hidden="true"><path d="M250 280 C248 210 210 190 108 138"></path><path d="M250 280 C255 208 296 190 395 128"></path><path d="M250 280 C230 214 156 225 72 225"></path><path d="M250 280 C272 220 345 230 448 223"></path><path d="M250 280 C235 235 226 184 230 105"></path><path d="M250 280 C274 234 296 183 300 72"></path></svg>
-                    </div>
-                    <div class="trail-pin" aria-hidden="true"><span>02</span></div>
-                    <div class="trail-card">
-                        <p class="trail-eyebrow">Ann Arbor / 2019 to 2023</p>
-                        <h2>This is where it branches.</h2>
-                        <p>I picked engineering physics because I did not want to choose between physics and engineering. Michigan gave me enough room to take that very literally. I bounced between circuits, robots, satellites, processors, and whatever else I had talked myself into that semester.</p>
-                        <a class="trail-text-link" href="research.html?mode=read#engineering-projects" data-explore-key="older-builds">The older builds <span aria-hidden="true">↗</span></a>
-                        <aside class="margin-note">I like a plan. I am also very capable of getting distracted by the more interesting branch.</aside>
                     </div>
                 </article>
 
@@ -155,16 +155,16 @@
                 </article>
 
                 <article class="trail-stage project-landmark stage-right" id="station-traj" data-trail-stage data-trail-label="Trajectory">
-                    <div class="instrument trajectory-instrument">
-                        <svg id="trajectory-toy" viewBox="0 0 720 320" role="img" aria-label="Trajectory that changes as the parameter slider moves"><line x1="40" y1="270" x2="680" y2="270" class="toy-axis"></line><path id="trajectory-path" d=""></path><line id="trajectory-boundary" x1="360" y1="42" x2="360" y2="270"></line></svg>
-                        <p class="demo-disclaimer">This trace and its score are drawn for illustration. The research detector runs on computed trajectories.</p><div class="instrument-slider"><label for="trajectory-param">illustrative parameter <output id="trajectory-param-output">0.35</output></label><input id="trajectory-param" type="range" min="0" max="100" value="35" /><div class="detector-readout"><span>illustrative shape index</span><strong id="trajectory-score" aria-live="polite">0.18</strong><em id="trajectory-status">low</em></div></div>
-                    </div>
-                    <div class="trail-pin project-pin" aria-hidden="true"><span>05</span></div>
                     <div class="landmark-copy">
                         <p class="trail-eyebrow">A question I kept poking at</p>
                         <h2>Trajectory only detection</h2>
                         <p>Could you detect a structural change from trajectories alone? I tested that question on two deterministic systems, without giving the detector their equations or regime labels. The boundary comparisons happen afterward.</p>
                         <a href="research.html?mode=read#traj-title" class="trail-text-link" data-explore-key="trajectory">Full project <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="trail-pin project-pin" aria-hidden="true"><span>05</span></div>
+                    <div class="instrument trajectory-instrument">
+                        <svg id="trajectory-toy" viewBox="0 0 720 320" role="img" aria-label="Trajectory that changes as the parameter slider moves"><line x1="40" y1="270" x2="680" y2="270" class="toy-axis"></line><path id="trajectory-path" d=""></path><line id="trajectory-boundary" x1="360" y1="42" x2="360" y2="270"></line></svg>
+                        <p class="demo-disclaimer">This trace and its score are drawn for illustration. The research detector runs on computed trajectories.</p><div class="instrument-slider"><label for="trajectory-param">illustrative parameter <output id="trajectory-param-output">0.35</output></label><input id="trajectory-param" type="range" min="0" max="100" value="35" /><div class="detector-readout"><span>illustrative shape index</span><strong id="trajectory-score" aria-live="polite">0.18</strong><em id="trajectory-status">low</em></div></div>
                     </div>
                 </article>
 
@@ -183,18 +183,18 @@
                 </article>
 
                 <article class="trail-stage project-landmark stage-right" id="station-cost" data-trail-stage data-trail-label="Costgate">
-                    <div class="instrument cost-instrument">
-                        <div class="cost-readout"><div><span>baseline</span><strong>$1.00</strong></div><div><span>candidate</span><strong id="candidate-cost" aria-live="polite">$1.04</strong></div><div class="build-verdict pass" id="build-verdict"><span>example gate</span><strong aria-live="polite">PASS</strong></div></div>
-                        <div class="instrument-slider"><label for="cost-increase">candidate cost increase <output id="cost-increase-output">4%</output></label><input id="cost-increase" type="range" min="0" max="30" value="4" /></div>
-                        <p class="instrument-note">Example rule only: warn at 8%, fail above 10%. The actual tool compares task-valid success, token use, latency, repeats, and statistical evidence.</p>
-                    </div>
-                    <div class="trail-pin project-pin" aria-hidden="true"><span>07</span></div>
                     <div class="landmark-copy">
                         <p class="trail-eyebrow">Different branch. Same instinct.</p>
                         <h2>Costgate</h2>
                         <p>Nothing has to crash for a system to get worse. An LLM change can quietly become much more expensive while every normal test still passes. I wanted CI to be allowed to care about that too.</p>
                         <a href="research.html?mode=read#costgate-title" class="trail-text-link" data-explore-key="costgate">Full project <span aria-hidden="true">↗</span></a>
                         <aside class="margin-note tilt-right">Different domain. Same reflex. What can quietly go wrong?</aside>
+                    </div>
+                    <div class="trail-pin project-pin" aria-hidden="true"><span>07</span></div>
+                    <div class="instrument cost-instrument">
+                        <div class="cost-readout"><div><span>baseline</span><strong>$1.00</strong></div><div><span>candidate</span><strong id="candidate-cost" aria-live="polite">$1.04</strong></div><div class="build-verdict pass" id="build-verdict"><span>example gate</span><strong aria-live="polite">PASS</strong></div></div>
+                        <div class="instrument-slider"><label for="cost-increase">candidate cost increase <output id="cost-increase-output">4%</output></label><input id="cost-increase" type="range" min="0" max="30" value="4" /></div>
+                        <p class="instrument-note">Example rule only: warn at 8%, fail above 10%. The actual tool compares task-valid success, token use, latency, repeats, and statistical evidence.</p>
                     </div>
                 </article>
 
@@ -241,14 +241,14 @@
                 </details>
 
                 <article class="trail-stage stage-right london-stage" id="london" data-trail-stage data-trail-label="London">
-                    <div class="london-blank" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-                    <div class="trail-pin next-pin" aria-hidden="true"><span>08</span></div>
                     <div class="trail-card">
                         <p class="trail-eyebrow">London / now</p>
                         <h2>This bit is still being drawn.</h2>
                         <p>I am at Imperial now, studying Applied Computational Science &amp; Engineering. I wanted to spend a year learning the mathematics and numerical methods behind the scientific software I had been building on the job. Where that work goes next is still taking shape.</p>
                         <aside class="margin-note">Ambitious, yes. Certain, no.</aside>
                     </div>
+                    <div class="trail-pin next-pin" aria-hidden="true"><span>08</span></div>
+                    <div class="london-blank" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
                 </article>
             </div>
         </section>
