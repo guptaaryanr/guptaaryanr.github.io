@@ -114,9 +114,9 @@
                     <article class="project-dossier" aria-labelledby="costgate-title">
                         <div class="project-number">04</div>
                         <div>
-                            <header class="project-head"><div><p class="eyebrow">LLM evaluation tooling · CI</p><h3 id="costgate-title">Costgate</h3><p class="project-subtitle">CI cost regression gate for LLM inference</p></div><span class="project-year">2026</span></header>
-                            <p class="project-abstract">A code change can leave an LLM pipeline’s answers unchanged while raising the cost per valid answer. Costgate compares a candidate run against a baseline in CI and checks it against a policy.</p>
-                            <dl class="project-facts"><div><dt>Compared</dt><dd>Baseline and candidate runs over the same suite. It looks at cost per valid success, token use, task success, latency, repeat variability, and explicit thresholds.</dd></div><div><dt>What it produces</dt><dd>A YAML policy, inspectable run artifacts, and a pass, warn, or fail verdict.</dd></div></dl>
+                            <header class="project-head"><div><p class="eyebrow">LLM evaluation tooling · CI</p><h3 id="costgate-title">Costgate v1.0.0</h3><p class="project-subtitle">CI-native regression testing for LLM inference cost</p></div><span class="project-year">2026</span></header>
+                            <p class="project-abstract">Costgate v1.0.0 executes fixed LLM task suites, compares compatible baseline and candidate runs, and applies configurable CI policies to cost per valid answer, token use, task success, and latency.</p>
+                            <dl class="project-facts"><div><dt>Compared</dt><dd>Baseline and candidate runs over the same suite. It looks at cost per valid success, token use, task success, latency, repeat variability, and explicit thresholds.</dd></div><div><dt>What it produces</dt><dd>Versioned JSON run and comparison artifacts, Markdown reports, and pass/warn/fail verdicts based on a user-supplied YAML policy.</dd></div></dl>
 
                             <div class="project-visual costgate-visual" role="group" aria-label="Costgate compares baseline and candidate LLM runs, evaluates an explicit policy, and returns pass warn or fail">
                                 <div class="cost-run"><small>baseline</small><strong>fixed suite</strong><span>cost · success · tokens · latency</span></div>
@@ -134,7 +134,7 @@
   statistical_test: mann_whitney
   severity: fail</code></pre></details>
                             <p class="result-caption">For reproducible examples, CostRegBench runs controlled regression scenarios and checks the resulting pass, warn, or fail against the expected outcome. These are fixture-based tests, not measurements of an external production LLM.</p>
-                            <p class="project-links"><a href="https://github.com/guptaaryanr/costgate-v1/tree/main/benchmarks/costregbench" target="_blank" rel="noopener">Controlled benchmark ↗</a><a href="https://github.com/guptaaryanr/costgate-v1" target="_blank" rel="noopener">GitHub ↗</a><a href="https://doi.org/10.5281/zenodo.20148498" target="_blank" rel="noopener">Code DOI ↗</a></p>
+                            <p class="project-links"><a href="https://github.com/guptaaryanr/costgate-v1/tree/v1.0.0/benchmarks/costregbench" target="_blank" rel="noopener">Controlled benchmark ↗</a><a href="https://github.com/guptaaryanr/costgate-v1" target="_blank" rel="noopener">GitHub ↗</a><a href="https://doi.org/10.5281/zenodo.20148498" target="_blank" rel="noopener">Code DOI ↗</a></p>
                         </div>
                     </article>
                 </section>
